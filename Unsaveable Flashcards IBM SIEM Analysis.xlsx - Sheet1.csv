@@ -1,0 +1,1203 @@
+"When analyzing payloads for SQL injection attacks, which of the following patterns in the payload should trigger suspicion?","The pattern 'SELECT * FROM users' AND 1=1 -- is characteristic of a SQL injection attempt, as it involves manipulating the SQL query logic to bypass authentication or access unauthorized data. Other patterns like script tags indicate XSS, not SQL injection."
+Which right-click menu option is most useful for analyzing a specific dashboard widget's underlying search query?,"Right click > ""Open Search"" > Review the search criteria"
+Which setting should you adjust if you want a Qradar dashboard widget to display only data from the past 7 days?,"Set a ""Date Range Filter"" for the widget"
+"In a Qradar dashboard, what is the purpose of setting ""Widget Constraints""",To limit the display of data based on specific thresholds or conditions
+Which step is mandatory when customizing a scheduled report template?,"When customizing a scheduled report template, ""Add Data Source Parameters"" is mandatory to define what data will be included. Other options, like ""Template Permissions,"" are important but not mandatory for customization."
+"Why might a Qradar rule that correlates flow with event data use a flow session's ""duration"" field to detect suspicious activity?",Extended duration sessions might indicate unauthorized data transfer or prolonged system compromise
+Which action is required to share reports with external stakeholders who do not have QRadar access?,"Exporting the report to ""PDF Format"" allows sharing with external stakeholders who do not have QRadar access. This format ensures compatibility and readability. Other options, like ""External Report Link Tool,"" do not exist in QRadar."
+Which of the following represents an effective Qradar rule to detect an IoC related to brute force login attempts?,Monitor for repeated failed login attempts followed by a successful login within a short period
+Which of the following elements is least important to include in a simple offense name?,"What’s critical is the offense type and severity, as this information helps prioritize incidents. Naming offenses based on these elements ensures that they are sorted effectively, while details like location are available through deeper investigation."
+Which command can be used to programmatically add entries to a reference set in Qradar via the REST API?,POST /reference_data/sets
+What is a key benefit of using a QRadar content pack designed for threat intelligence integration?,It provides pre-configured rules for ingesting threat intelligence feeds and correlating them with local network activity
+What is the primary function of QRadar in a security environment?,To monitor and log network activity for security threats
+What distinguishes an Ariel offenses flows search from a flows search?,Displays raw logs for system events
+What is the most effective way to determine if an external IP involved in an offense is associated with a known botnet?,Cross-reference the IP with QRadar's threat intelligence feeds
+Which AQL query would you use to find the top 5 destination IPs with the highest number of connections?,"The correct AQL query to find the top 5 destination IPs with the highest number of connections is select destinationIP, COUNT(*) from flows group by destinationIP order by COUNT(*) desc LIMIT 5"
+"When scanning, the team notices that a firewall is blocking the default ICMP pings. What other options can they try?","If a firewall is blocking the default ICMP pings, they can try using one of the following commands: TCP ACK Ping -PA <portlist> UDP Ping -PU <portlist> SCTP Initiation Ping -sY <portlist> TCP SYN Ping -PS <portlist>"
+"After running a scan, Nmap reports that two of the ports are UNFILTERED. What does this mean?","UNFILTERED means the port is accessible; however, Nmap is unable to determine whether or not the port is open or closed"
+During fingerprinting the team can use passive or active OS fingerprinting. Which is the preferred method and why?,"During fingerprinting the preferred method is to use active scanning, which actively probes the target and returns more accurate results."
+List three spoofing options you can use to avoid detection when scanning. ,Use a decoy. Report a fake IP address. Advertise a fake MAC address. Modify the source port number. Slow the scan timing. 
+LoTL attacks are called fileless malware as there are no viruses used. List three tools that malicious actors can use in a LoTL attack. ,"Microsoft PowerShell PS, Windows Managment Instrumentation WMI, Visual Basic Scripts VBScript and Mimikatz"
+"To make it as difficult as possible for forensic investigators to identify how the attack began, and who is responsible, you’ll want to cover your tracks. List three methods you can use to cover your tracks.","Clear log entries.
+Remove specific entries.
+Change log entries.
+Modify the timestamps.
+Remove the history.
+Shred or overwrite files."
+How can you perform a quick search for events containing a specific phrase in their payload?,"payload CONTAINS ""phrase"""
+"What is the purpose of using ""Saved Searches"" when building a threat report in QRadar?",To enable recurring data retrieval for consistent reporting
+"During offense triage, an analyst notices multiple offenses from a single external IP address. What is the next logical step in QRadar to investigate this behavior?","The next logical step when noticing multiple offenses from a single external IP address is to query past offenses and event data involving that IP. This helps determine if the IP has been involved in similar suspicious activity previously, and can provide insight into whether it is part of a larger, ongoing attack campaign."
+Which of the following IoC types would most likely indicate the presence of malware attempting to communicate with a command and control server?,DNS query for a suspicious domain
+What is a key limitation of threshold-based rules in QRadar?,They are unable to adapt to changing behavior patterns
+How can QRadar's 'Rule Thresholds' influence the occurrence of partial matches?,By setting mininum event counts for full matches
+How can analysts ensure the integrity of data visualization in QRadar Pulse Dashboards?,"Validating saved searches against raw data ensures the accuracy and the integrity of the visualizations. Increasing refresh intervals, restricting access, or using system-generated widgets does not directly access data integrity. "
+How can you enhance the performance of log analysis when using reference-set based filters in QRadar?,Optimize the size and the content of reference sets by removing outdated entries
+What step is required to ensure an offense report includes details of correlated events?,"To include details of correlated events in an offense report, you must ""Add Event Details to Report.""This ensures the offense report covers relevant event data. Options like ""Configure Rule Impact"" or ""Event Columns"" are unrelated to offense reporting"
+How would you construct a regex to capture MAC addresses in raw data?,"MAC addresses consist of six groups of two hexadecimal digits (0-9, A-F, a-f) separated by colons. The regex ([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2} correctly captures this format by matching five groups of two hexadecimal digits followed by a colon, with the sixth group being two hexadecimal digits without a trailing colon."
+Which right-click action is most effective for directly viewing all associated events in an offense's flow data?,"Right click > ""View network activity"" > examine all flow events"
+"When creating a reference set in QRadar, which type of data cannot be directly stored in a reference set?","QRadar reference sets are used to store simple data types such as IP addresses, hostnames, or usernames. However, nested JSON objects, which contain complex structured data, cannot be directly stored in a reference set. Reference sets are designed for flat data structures and do not support hierarchical or complex object storage"
+"When defining a new custom property to capture the ""User-Agent"" field from HTTP logs, what must be ensured for the custom property to function correctly?",The custom property is applied only to relevant log sources that contain HTTP events
+"Which AQL operator would you use to filter events where the sourceIP is either ""192.168.1.1"" or ""10.0.0.5""","The IN operator is used in AQL to filter events where a field matches any value in a specified list. For example, SELECT * FROM events WHERE sourceIP IN (""192.168.1.1"", ""10.0.0.5""). The other options use incorrect syntax or operators (CONTAINS, LIKE, or AND) that do not support multi-value filtering in this context."
+How does QRadar normalize data?,"By converting logs into a common, structured format"
+"In the graphic ""Nmap scan to determine vulnerabiliities"" what does Nmap list as a likely vulnerability and how does Nmap explain the vulnerability to the analyst?","Nmap lists for the http -slowloris-check that the target is likely vulnerable. In addition to listing the Common Vulnerabilities Enumeration (CVE) number, Nmap outlines some basic information about the vulnerability"
+Why is it essential to test to see if the DNS nameservers are properly secured and configured correctly?,"If not properly configured, an unauthorized server can request the zone file from the host nameserver by posing as a client nameserver. If successful, this can leak resource record information. "
+The team is tasked to check the web server for vulnerabilities. What method(s) can they use?,"During the PenTesting exercise, the team can test the organization's web server using a few methods: Manually examine the source code and elements within the site for comments or other interesting artifacts
+Examine the web or access logs that show the activity for a website.
+Intercept traffic using a proxy between the web client and the server."
+"When creating a custom search in QRadar to identify anomalous behavior in network traffic, which of the following should be the first step?",Selecting relevant log sources
+"The MITRE ATT&CK Group ""Lazarus"" is best known for which type of cyber activity, as recognized in QRadar offenses?","The Lazarus Group is best known for its cyber-espionage campaigns and destructive attacks, including high-profile intrusions aimed at stealing information from organizations and government institutions. QRadar can detect TTPs linked to Lazarus by mapping observed techniques such as network exploitation, data exfiltration, and malware deployment to MITRE techniques."
+What is the primary purpose of offense suppression in QRadar offense management?,"Correct answer
+To prevent an offense from being generated for known false positives
+To reduce offense priority without closing it
+Overall explanation
+Offense suppression in QRadar is used to prevent offenses from being generated based on known false positives or benign conditions that would otherwise trigger alerts. This helps analysts focus on more meaningful offenses by reducing noise in the system and allowing them to prioritize actual threats.
+"
+Which right-click action provides the fastest way to isolate potential user-based attacks associated with an offense's source IP?,"Right-click > ""Show identity info"" > Inspect recent logins"
+"Which filter is the most efficient for finding all logs related to a specific application, such as SSH?",applicationName = 'SSH'
+How can you automate generating offense reports at regular intervals?,Schedule Report Generation
+How can QRadar use the network hierarchy to filter irrelevant traffic from rule evaluation?,"QRadar can use the network hierarchy to apply network-based exclusions in correlation rules. Administrators can create rules that exclude certain internal subnets or IP ranges from offense generation, filtering out traffic that is deemed irrelevant for security monitoring. This reduces the noise in the system and allows QRadar to focus on more significant threats. For instance, known benign traffic betweeen trusted systems can be excluded to prevent unnecessary alerts. "
+"In QRadar, which search feature allows analysts to visualize the results of custom searches, providing graphical representations of data for better analysis and reporting?",Custom Dashboards
+How can you verify if a property is indexed before running a search?,Review Indexed Fields Tab
+What is the primary purpose of QRadar in a security operations environment?,Detect and respond to security incidents
+"When configuring a reference set-based filter in the Log Activity tab, which operator should be used to match events against a list of IP addresses stored in the reference set?",CONTAINS
+Which QRadar feature allows you to track offenses associated with specific rules?,Offense Rule Mappings
+"In QRadar, which AQL keyword is used to filter results by events or flows matching a specific time range?",STARTTIME BETWEEN
+What makes flow data a valuable source of information for detecting stealthy attacks such as data exfiltration?,"Flow data in QRadar is valuable for detecting stealthy attacks like data exfiltration because it offers insights into network communications without relying on event logs. Flow data captures the metadata of network traffic (e.g., source/destination IPs, ports, and bandwidth usage), which can reveal suspicious behavior such as large outbound traffic to untrusted IPs, even if event logs are missing or tampered with. This makes flow analysis crucial for detecting advanced persistent threats (APTs) that attempt to evade detection by avoiding traditional event logs"
+What is a possible reason for an offense with a high severity score to still have a low overall magnitude?,The offense has a low relevance or credibility score
+What is the correct AQL query structure to filter events by a specific source IP address?,select * from events where sourceIP='10.0.0.1'
+How can flow parameters such as 'Bytes In' and 'Bytes Out' be utilized in QRadar investigations?,To monitor the volume of data transferred between internal and external hosts
+In which scenario would you create a building block that defines a set of known safe ports?,"A building block that defines a set of known safe ports can be used to exclude traffic using these ports from generating offenses. For example, common ports like 80 (HTTP) or 443 (HTTPS) used by legitimate traffic can be defined in a building block, and rules can reference this list to prevent benign traffic from triggering unnecessary alerts."
+Which method should be employed first to verify if a triggered rule based on anomaly detection is a true positive or false positive?,Compare the event pattern with baseline user and network behavior
+"During a right-click investigation on an offense, how can you quickly identify all assets impacted by a malicious IP within the network?","Right-click > ""View Destination Summary"" > List all connected assets."
+Why are Ariel logs searches critical for compliance audits?,"Provide raw, timestamped data"
+What kind of rule would you create in QRadar to detect a possible port scanning attempt by analyzing Flow data?,"Port scanning attempts often involve a single source IP making multiple connection attempts to different destination ports within a short time frame. By creating a rule in QRadar that monitors Flow data for this pattern, security analysts can detect scanning behavior, which may be indicative of an attacker mapping out network vulnerabilities."
+How can you identify rules contributing to performance bottlenecks in QRadar?,Sort Rules by Trigger Volume
+What is a key advantage of using Ariel events searches over offenses searches?,"Ariel events searches provide granular details about individual events, allowing deep inspection. Offenses searches group related incidents for correlation, but they lack the granularity of individual event analysis. Faster execution and predefined views are not unique to events searches."
+"Which regex pattern would match any word starting with ""admin"" in QRadar log data?",admin\w*
+Which is the primary advantage of using reference set-based filters in log analysis over static filters in QRadar?,Reference sets allow dynamic updates without needing to modify the filter logic
+"In which situation would a ""Flow"" search in QRadar be more appropriate than an ""Event"" search?",When investigating log-in attempts from unknown sources
+"Which of the following techniques, often linked to APT28 (Fancy Bear), should an analyst prioritize in QRadar for early detection of attacks?","APT28, known as Fancy Bear, has been documented using watering hole attacks to target specifc organizations or sectors by compromising websites their targets are likely to visit. QRadar can help identify these attacks by monitoring network traffic and correlating activity with known watering hole TTPs documented in MITRE ATT&CK"
+Which of the following is the most effective method to identify the exact condition in a rule that triggered an offense in QRadar?,"The most effective method to identify the exact condition that triggered an offense is to check the rule logic and correlation components in the Rules tab. This approach allows analysts to see the specific conditions and filters set in the rule that matched the incoming events, leading to the offense. While event properties and payloads provide context, the rule logic reveals the cause. "
+"When analyzing a fully matched rule, what should be the first step in determining the legitimacy of the offense?",Review the event count and magnitude
+"When you want to analyze the impact of a potential security threat across different geographic locations, which dashboard widget configuration would be most effective?",Use a world map widget that displays event counts per region.
+Which type of QRadar rule should be used to trigger an offense when both a specific event (e.g. multiple failed login attempts) and an unusual network flow (e.g. high outbound traffic volume) occur within a short period of time?,Custom Rule using Event and Flow Properties
+Which of the following best describes the role of calculated fields in QRadar Pulse Dashboards?,They enable custom data manipulation for widgets. 
+What three basic elements are required when using Digital Steganography?,"Digital steganography requires three basic elements.
+
+Some type of carrier, such as music or an image
+The payload, which is generally the secret message
+The steganography software"
+OpenStego is similar to most other tools in that you embed a message in a carrier file. What's unique about OpenStego?,"When using OpenStego, in addition to standard stegography functions, you can also embed a watermark"
+What methods do Coagula and SonicVisualizer use to manipulate a message?,they use sound to conceal an image and then convert the text within the spectrogram
+"When communicating with a remote Linux-based machine, it's common to use SSH. What happens during an SSH session?","A client initiates the communication process by contacting the server. If the server accepts the request, the client will provide host information and appropriate credentials.
+
+A server has an SSH daemon that listens for client requests. When a client initiates a request, the server will check the host information and appropriate credentials, and then once accepted, both parties will establish a connection."
+Two options to provide remote access are Netcat and Ncat. Compare the two. ,"Netcat(nc) is a versatile command-line utility that can create or connect to a TCP server, act as a simple proxy or relay, transfer files, launch executables when a connection is made, test services and daemons, and scan ports. Ncat is considered to be a successor of Netcat as it provides all of the same commands and options as nc along with advanced functionalities. Ncat can operate in one of two modes: Connect (or client) or Listen (or server) mode."
+Proxy servers are used on a network to mediate the communications between a client and another server. Why would the PenTest team use ProxyChains4?,ProxyChains4 is a command-line utility that enables PenTesters to mask their identity and/or source IP address by sending messages through intermediary or proxy servers.
+"During discovery, the team will most likely index network services and shares. List some common services to enumerate prior to exploiting the LAN.","Common services to enumerate include the following:
+
+File Transfer Protocol (FTP)
+
+Simple Mail Transfer Protocol (SMTP)
+
+Domain Name System (DNS)
+
+Hypertext Transfer Protocol (HTTP)
+
+Server Message Block (SMB)"
+"When enumerating Windows hosts, there are a number of tools you can use, including the built-in tools within the operating system. List some command line tools to enumerate Windows hosts.","net view, arp -a, net user, ipconfig /displaydns"
+Active Directory is the directory for a Microsoft environment. List some of the objects that make up the Active Directory.,"Active Directory includes the following: Trees, Domains and Organizational units"
+Which of the following is the most critical factor in defining a simple offense naming mechanism in QRadar?,Reflecting the severity and the type of the offense in the name.
+"What would be the primary reason for implementing a ""Threshold Alert"" in a QRadar dashboard widget?","A ""Threshold Alert"" provides real-time notifications when a critical level is reached, allowing for immediate action. This is particularly useful for monitoring critical security metrics that require prompt attention."
+Which search filter would you use to isolate logs that contain traffic from external IP addresses?,"sourceIP OUTSIDE('10.0.0.0/8', '192.168.0.0/16')"
+Which method would be most efficient when adding multiple related search widgets to a dashboard based on a specific use case?,"Use the ""Clone Widget"" function to duplicate similar searches"
+"Which of the following is NOT a key feature of IBM QRadar's ""Flow"" data?",Stores raw packets of data for long-term analysis
+Which tool in QRadar is best used for analyzing the sequence of rule conditions that led to an offense being triggered?,Rule Test Page
+"In QRadar, how can you use time series analysis to find abnormal spikes in event counts during specific time periods?",Configure BUCKET() to create time slices and compare counts
+Which of the following strategies is most effective for managing a high volume of offenses in QRadar?,"To manage a high volume of offenses efficiently, it is important to suppress known false positives. This reduces noise and helps analysts focus on true security incidents, rather than being overwhelmed by benign offenses. Proper suppression rules are key to maintaining an effective offense management workflow. "
+Which key metric should analysts consider when determining the importance of an IP address in an ongoing offense analysis?,Number of events associated with the IP
+Which method would you use to automatically trigger a notification when a dashboard widget based on a search exceeds a critical threshold?,"By linking an alert rule to a saved search, you can automatically trigger notification when certain conditions, such as exceeding a critical threshold, are met. This ensures that critical alerts are not missed, without the need for constant manual review. "
+Which QRadar feature is best suited for identifying the role of an internal IP address in an offense?,Asset profile lookup
+"When QRadar stores an event as ‘unknown’, which of the following should an analyst prioritize to resolve this classification?",Finding a matching pattern in the log source metadata
+"How can you ensure that sensitive data (e.g., personally identifiable information) is excluded from a QRadar threat report?","Use AQL to filter out sensitive fields from the query & exclude specific fields using the Log Activity Tab filter; Overall explanation
+Sensitive data can be excluded from threat reports by using AQL to filter out specific fields in the query. For example, excluding personally identifiable information (PII) ensures compliance and privacy. While masking, obfuscation, and filtering are useful in other contexts, they do not provide granular control over query-based report generation.
+"
+Which of the following scenarios best utilizes a reference set-based filter in QRadar log analysis?,A reference set-based filter is best utilized for filtering logs for traffic involving known malicious IP addresses. This allows for efficient comparison for incoming events against a list of known malicious entities stored in a reference set. Other scenarios like tracking transactions or monitoring bandwidth would require different data sources or filtering methods. 
+Which field is mandatory when creating a new offense report template?,Add Report Query Source
+"In QRadar, how can an analyst view the conditions of a partially matched rule diagnose why it did not fully match?",Open the Rule Wizard and check the test conditions
+Which of the following best practices should be followed when creating a custom property to extract IPv6 addresses from network flow payloads?,Validating the custom property with sample payloads containing various IPv6 formats ensures the extraction logic works accurately across different IPv6 representations. Using a pattern matching both IPv4 and IPv6 or applying it to all logs might cause performance issues or inaccuracies. 
+"When managing offenses in QRadar, which action should be prioritized when an offense involves multiple event sources?",Investigating the root cause of the correlated events
+How can you troubleshoot a failed scheduled report in QRadar?,Review Report Error Logs
+"In QRadar, what happens if you try to add a duplicate entry to a reference set?","QRadar ignores the duplicate entry. Reference sets in QRadar do not allow duplicate entries. If you attempt to add a value that already exists in the reference set, QRadar will simply ignore the duplicate and not add it again. This ensures that reference sets maintain only unique entries. "
+How would you modify an AQL query to exclude events with a null value in the IP reference field?,select * from events where destinationIP IS NOT NULL
+What is the primary benefit of using reference sets in QRadar rules?,"Correct answer: They allow rules to be triggered based on real-time updates without rule modifications. Overall explanation
+Reference sets allow rules to trigger actions based on data stored in the set, and because reference sets can be updated dynamically, they provide flexibility. Analysts can modify the content of a reference set (e.g., adding or removing IP addresses) without having to edit or redeploy the rules themselves, which makes managing rules much more efficient.
+"
+What is the impact of enabling advanced filtering on a QRadar pulse widget?,Displays only the most relevant data for analysis
+Why are anomaly rules particularly effective in detecting advanced persistent threats (APTs)?,"Overall explanation: anomaly rules are effective in detecting Advanced Persistent Threats (APTs) because they focus on deviations from baseline behavior over long periods. APTs often involve subtle, long-term deviations from normal patterns, such as unusual traffic to external IPs or minor changes in user behavior. Anomaly rules in QRadar can detect these shifts that are difficult to identify using signature-based detection methods, making them particularly useful in identifying stealthy and prolonged attacks."
+Which naming approach helps reduce ambiguity when multiple offenses with similar details occur simultaenously in QRadar?,Adding a sequential identifier to the offense name
+How does the severity score influence the magnitude of an offense?,The severity score in QRadar represents the potential business impact of an offense. 
+Which clause would you use in an AQL query to exclude event generated by a specific log source?,"WHERE logSourceName != 'Firewall' - In AQL, the != operator is used to exclude specific values from search results"
+What is an offense in QRadar? ,A set of correlated events that represent a potential security threat
+What is the purpose of the 'Rule Response Limiter' in QRadar during offense creation?,"The Rule Response Limiter in QRadar is used to prevent the creation of too many offenses triggered by the same rule within a specific time frame. This helps reduce offense clutter and ensures that analysts are not overwhelmed by repetitive or redundant offenses, allowing them to focus on the most important incidents."
+What step ensures a report is only shared with authorized QRadar users?,Set Permissions on Report
+"When customizing a QRadar Pulse widget, which parameter is essential for defining the date range displayed?",Time Interval
+Which QRadar feature helps track the number of offenses generated by a specific correlation rule?,Trigger Count in Rule Details
+What is the best practice when combining indexed and nonindexed fields in a query?,"Using ""Indexed Fields First"" ensures the query executes efficiently by narrowing the dataset before applying non-indexed field filters. This practice minimizes search time while maintaining query accuracy. "
+Which of the following is a typical component of a QRadar content pack?,"Pre-built correlation rules, searches and reports"
+"When using quick search, which operator allows you to filter for events where the destination port is less than 1024?",destinationPort < 1024
+Which of the following represents the best approach for identifying a potential IoC related to lateral movement within a network?,Identify SMB traffic between internal hosts that do not normally communicate
+How can you include a calculated field in an AQL query for QRadar?,"Correct answer - using an alias with the SELECT clause - In AQL, calculated fields are included in the SELECT clause, often with an alias to provide clarity. For example, SELECT sourceIP, COUNT(*) AS EventCount FROM events GROUP BY sourceIP creates a calculated field EventCount. While GROUP BY groups data and HAVING filters grouped results, they are not used to define calculated fields. JOIN combines tables but does not define calculations."
+Which function would you use in QRadar to refine a search that returns too many unrelated results?,Add a filter with more specific criteria
+Which payload property is critical to examine when assessing potential abuse of privileged user access?,Correct answer - commands executed in the payload body
+How does QRadar treat an event if both the source and the destination IP addresses are defined as internal in the network hierarchy?,"Since the traffic is taking place entirely within the organization's trusted network, it is less likely to represent a serious security threat"
+"When updating a correlation rule in QRadar, why is it important to review the building blocks associated with that rule?",To verify that building blocks include the latest threat indicators
+What is the significance of the QRadar Reference Data Collection?,"are used to store data such as IP addresses, usernames, or application lists in the form of lookup tables. These collections play a vital role in event correlation by allowing QRadar to cross-reference collected data against predefined values. "
+What challenge might arise if a multi-location enterprise does not implement an accurate network hierarchy in QRadar?,QRadar will misclassify cross-location traffic as external
+What is a limitation when exporting large search results in XML format?,Increased Processing Time
+What action would you take to simplify the monitoring of multiple related searches in a single dashboard?,"Using dynamic widgets that auto-update based on search results simplifies the monitoring process, as they adjust automatically to reflect the new data. This approach is more efficient than manually filtering or creating separate widgets for each search."
+Which option in QRadar's dashboard creation process helps to visually distinguish critical data from less urgent information in a dashboard widget?,Set conditional formatting for key metrics
+How can you validate that exported CSV data matches the original query results?,Match Records with Source Query
+"If an offense is triggered by multiple rules, how can you determine which specific rule condition contributed most to the offense?",Compare the number of events matched by each rule in the offense details
+Which right-click menu option helps to identify how often a suspicious domain has been queried in DNS logs within the last 7 days?,"Right-click > ""View in Log Activity"" > Filter by the domain and time range."
+"Which of the following best describes the role of ""Network Objects"" in QRadar's network hierarchy?",They define IP ragnes and specific assets for monitoring
+Which query type is best suited to generate a report summarizing all events correlated within an offense?,"The ""Advanced AQL Query Tool"" is best suited for generating a detailed report summarizing all events correlated within an offense. AQL provides flexibility and precision for retrieving offense-specific event data. Options like ""Offense Event Summary Query"" or ""Rule-Driven Query Mechanism"" do not exist in QRadar."
+"Which of the following scenarios would likely, require installing a content pack based on third-party offense monitoring?",Integrating security logs from a new cloud service provider
+Which type of rule in QRadar is most useful for detecting port scanning activities?,Threshold rule
+What is the appropriate QRadar search filter to find logs where an event involves more than 100 failed login attempts?,"To find logs where an event involves more than 100 failed login attempts, the correct filter is failedAttempts > 100. This query filters logs based on the number of failed login attempts in the failedAttempts field. Such a filter is useful for detecting brute force attacks or other malicious login activity. "
+An offense in QRadar shows activity from a previously unknown IP address within the network. What should be the first action to investigate this?,Check for associated log activity from the IP
+What is the first step in the QRadar offense triage process when an offense is first detected?,Evaluate the credibility and the relevance of the offense
+Which QRadar Pulse feature allows analysts to customize widget behavior based on real-time conditions,Dynamic Thresholds
+"Which search filter in QRadar should be used to limit results to logs containing specific event names like ""Login Failed""?",eventName='Login Failed'
+Which of the following scenarios would most likely require a review and update of a building block in QRadar?,"A change in corporate security policies would most likely require a review and update of building blocks in QRadar. For example, if new policies dictate more stringent monitoring of specific user groups or assets, the building blocks defining those groups or assets need to be updated to align with the new rules. Changes in network infrastrcture or QRadar versions do not usually necessistate building block updates unless they impact the scope of monitoring or event classification"
+"Which is the best course of action when an offense is triggered by a non-malicious event, but the same offense might be indicative of future malicious activity?",Investigate and monitor for reoccurrence
+VLAN hopping is the act of illegally moving from one VLAN to another. Describe one way a malicious actor can launch this attack. ,A malicious actor can launch a VLAN hopping attack by using a Macof attack. Another way is to configure the interface of an attacker machine to become a trunk port so the switch will then deliver packets to a restricted VLAN.
+"To launch an on-path attack, a malicious actor may need to employ protocol spoofing or cache poisoning. List some examples that will help achieve this goal. ","To launch an on-path attack, a malicious actor may need to use one or more of the following methods: Domain Name System (DNS) cache poisoning, Address Resolution Protocol (ARP) spoofing, and/or MAC address spoofing"
+Another way to circumvent an authentication process is by grabbing and using password hashes. Describe one way an actor can either use or obtain a password hash.,"A malicious actor can use a hash in a pass the hash attack. To obtain a hash, a malicious actor can use Kerberoasting."
+Metasploit's features are organized into modules. List three or four of the basic modules. ,"Exploits, Payloads, Post, Auxilary, Encoders, and Nops"
+"When using Metasploit, there may be times you will need to have multiple sessions.
+
+What is the command to put your current session in the background?
+
+What is the command to list all of the sessions you currently have running?
+
+What is the command to switch to session #2?","Press Ctrl+Z to put your current session in the background.
+
+msf> sessions -l will list all of the sessions you currently have running
+
+msf> sessions 2 will then switch to session #2"
+"There are many tools the PenTest team can use when working on a LAN. Describe the functions of the following: Impacket tools, Responder and mitm6","Impacket tools is an open-source collection of tools used when PenTesting in a Windows environment that provides methods for several attacks, such as pass the hash, credential dumping, and packet sniffing. Responder is a command line tool in Kali Linux used to poison NetBIOS, LLMNR, and MDNS name resolution requests. mitm6 is an IPv6 DNS hijacking tool that works by first replying to DHCPv6 messages that set the malicious actor as a DNS server. It will then reply to DNS queries with bogus IP addresses that redirect the victim to another malicious host."
+What is a likely result of having overly broad conditions in a fully matched rule?,Increased number of false positives
+What is required to include customized branding in a shared report?,"To include customized branding in a shared report, you must ""Add Branding in Report Template."" This allows logos and headers to be included. Other options, such as ""Custom Branding Feature,"" are not part of QRadar's functionality."
+What is a potential pitfall of using overly complex regular expressions when creating custom properties in QRadar?,They can significantly slow down the event processing performance.
+What is the main purpose of the FETCH FIRST clause in an AQL query?,"The FETCH FIRST clause in AQL limits the number of rows being returned by a query, ensuring the output is manageable and concise. For example, FETCH FIRST 10 ROWS ONLY retrieves the top 10 results. It does not prioritize events by chronology, grouping, or directly optimize performance, though limiting rows can indirectly speed up queries. "
+A penetration tester is gathering OSINT in an attempt to conduct a phishing campaign against an executive. Which of the following would be least effective in an OSINT campaign?,"Web server vulnerabilities are not as useful for a targeted phishing campaign. Campaigns are more effective with information like who they manage, email addresses, and profiles. "
+A security professional is checking for domains based on certificates that are no longer allowed. What could they check for this?,"The Certification Revocation List (CRL) is a list of certificates that in some way have been deemed invalid. Although effective, most online services have moved to the newer OCSP to check the validity of the certificate.
+Network Connections (ncpa.cpl) is a Control Panel applet for managing adapter devices, including IP address information.
+A more useful field in a digital certificate from a reconnaissance perspective is the subject alternative name (SAN). SANs can identify specific subdomains that can be covered by the certificate.
+The Social Engineering Toolkit (SET) is a Python-based collection of tools that can be used when conducting a social engineering PenTest."
+"A software engineer prepares a brief sheet on enumerating websites as part of the company's cybersecurity curriculum. Which is not a true statement regarding website enumeration? 
+A. It occurs during the footprinting and reconaissance sage. B. It is used to identify unlinked URLs or IPs from a website to gain access to unprotected resources. 
+C. It involves discovering resources that are in use. D. It is used to discover potential attack vectors and vulnerabilities.","B. It is used to identify unlinked URLs or IPs from a website to gain access to unprotected resources. In this scenario, forced browsing, and not website enumeration, is used to identify unlinked URLs or IPs from a website to gain access to unprotected resources. Forced browsing is an attack technique where an attacker manually iterates through possible URLs to find unprotected content. Website enumeration is done during the footprinting and reconaissance stage. The team will need to determine how the target hosts the site, which can either be self-hosted or cloud-based. Website enumeration involves discovering resources that are in use as well as the underlying technology used to host the server. According to OWASP, enumeration is also referred to as Predictable Resource Location, File Enumeration or Directory Enumeration."
+"Question
+A penetration tester wants to gather email information for a targeted phishing campaign. Which of the following tools could they use to collect this?
+A.Shodan
+B.Dirbuster
+C.Metagoofil
+D.theHarvester","theHarvester is an intuitive tool that can search a company's visible threat landscape. The tool gathers information on subdomain names, employee names, email addresses, PGP key entries, and open ports and service banners.
+Shodan is a search engine designed to locate and index IoT devices that are connected to the Internet.
+Dirbuster is specifically geared towards website enumeration. There are numerous tools and techniques available to evaluate a website.
+Metagoofil uses various python libraries such as PdfMiner, GoogleSearch, and Hachoir to scrape the metadata, and then displays the information using Hypertext Markup Language (HTML)."
+"A security professional has just finished setting up a new public-facing web server for their organization. 
+They want to ensure that search index crawlers don't index certain pages or directories on the site that represent duplicate content in order to avoid potential search penalties, but still allow those pages to be crawled to facilitate link discovery. What is the most direct step the security professional can take to achieve this goal?","Applying a noindex meta tag n each page you want to exclude from search indexing directly informs search engines to not index these pages. This method allows the pages to be crawled, facilitating link discovery, which precisely meets the requirement to manage duplicate content without incurring SEO penalties."
+A security analyst is trying to find older version's of a company website which contained sensitive information. They are worried that attackers might still be able to find older versions so they still want to try using web search commands. Which web search command would help them search? ,"D. cache. Use a standard cache search on a site, and you will see a recent view of the website. To do a quick check, simply type: cache in the search bar. For example, cache:https://comptia.org inanchor searches anchor text. For example, use inanchor: Certification report to search for any pages whose anchor text includes the text ""Certification"" and have the text ""report"" anywhere on the page."
+A security researcher wants to scan documents against a website for only pdf documents. Which metagoofil parameter should they use?,"metagoofil -t scans for pdf documents. Metagoofil scrapes the metadata, and then displays the information using Hypertext Markup Language (HTML). metagoofil -d comptia.org scans for documents on Comptia.org. Metagoofil uses various python libraries such as PdfMiner, GoogleSearch, and Hachoir.
+metagoofil -l 75 searches for 75 documents. The output can then be viewed in a standard browser. Another valuable tool is FOCA, which can discover metadata from a variety of sources.
+metagoofil -n 25 downloads 25 files. You can download a copy of Metagoofil from GitHub. In addition, the tool is built into Kali Linux."
+"A penetration tester is conducting an OSINT reconnaissance against key employees to try to find avenues into the network and notice that they belong to specific communities. What social media site promotes products and services in short statements and provides casual customer service?
+A.Facebook
+B.LinkedIn
+C.Twitter
+D.Instagram","Twitter is used to promote products and services in short statements called tweets, as well as to provide casual customer service and bolster brand loyalty and recognition. "
+"A security professional is looking for an organization's code that might have been posted publicly by developers. Which of the following sources or techniques is least likely to contain accidental posts by a company's developers?
+A.Reddit
+B.GitHub
+C.Bitbucket
+D.SourceForge","Reddit is less likely to contain code from developers, though it is possible it could exist on here. The other three options are specifically geared towards shared code repositories."
+"A social engineering attack observes a target's behavior without them noticing in order to gain passwords and unauthorized entry to systems. What is this called?
+A.Dumpster diving
+B.Piggybacking
+C.Mantrap
+D.Shoulder surfing",Shoulder surfing is a social engineering attack in which the malicious actor observes a target's behavior without them noticing.
+"A security consultant is attempting to look for default passwords for a client's D-Link phones. Which of the following should they use?A.intitle:""DPH"" ""web login setting""
+B.inurl:""ccmuser/logon.asp""
+C.intitle:""Grandstream Device Configuration"" password
+D.inurl:""CallManager""","intitle: ""DPH"" ""web login setting"" would be used to find information of D-Link phones. If they don't have the password, they can search online for the default password to try on the targeted system. inurl: ""ccmuser/logon.asp"" would be used to find Cisco Call Manager instances. They can also try some other Google Hacking to to find more information on VoIP phones you can use to launch the attack. "
+"Question
+A team is conducting a physical assessment and uses Styrofoam to mask a certain control. Which control are they likely bypassing?
+A.Motion sensor
+B.Fences
+C.Security badges
+D.Locks",The team can attempt to block the motion detector by using a piece of cardboard or Styrofoam over the sensor.
+"A cyber attacker has managed to manipulate DNS entries, leading victims to a malicious website that looks like a legitimate one, even when they type the correct URL in their browsers. What type of attack is this?
+A.Phishing
+B.Pharming
+C.Baiting
+D.Malvertising","Pharming is when an attacker entices the victim into navigating to a malicious web page that has been set up to look official.
+While this would fall under the phishing category, it more specifically falls under pharming. "
+"During a penetration testing engagement, one of the team members presents a fictitious situation as real. What is this tactic called? A. Elicitation B. Hoax C. Pretexting D. Phishing ",B. Hoax - a hoax is another element of social engineering in which the attacker presents a fictitious situation as real. A hoax could be a link that leads to malicious code. 
+Port Definition Building Block,Defines a set of ports for monitoring
+Non-Standard Ports,Ports not commonly used by standard applications
+Data Masking Rules,Excludes sensitive data during export processes
+"A social engineer is communicating, whether directly or indirectly, a lie or half-truth in order to get someone to believe a falsehood. What is this tactic called?
+A.Elicitation
+B.Hoax
+C.Pretexting
+D.Phishing","One social engineering tactic is to use pretexting, whereby the team will communicate, whether directly or indirectly, a lie or half-truth in order to get someone to believe a falsehood.
+Elicitation is acquiring data from the target in order to launch an attack. "
+"The Social Engineering Toolkit is being employed for a targeted attack towards personnel. Which of the following can SET NOT do?
+A.Mass mail attacks
+B.Infectious media
+C.Scaling
+D.PowerShell attacks","Scaling refers to a type of physical security breach where an individual overcomes physical barriers such as fences or walls to gain unauthorized access to a property. This kind of physical intrusion falls outside the scope of the Social Engineering Toolkit, which is designed for digital social engineering attacks."
+"Question
+A penetration tester covertly follows an authorized employee who is unaware that anyone is behind them. What is this called?
+A.Tailgating
+B.Piggybacking
+C.Badge cloning
+D.Scaling",Tailgating
+"Containers are an efficient and more agile way of handling virtualization. Each image contains everything needed to run a single application or microservice. However, a container image can have several vulnerabilities. List three to four vulnerabilites that can be present in a containerized environment.","Embedded malware, missing critical security updates, outdated software, configuration defects, hand-coded cleartext passwords"
+"To properly control access, it's essential to have a solid understanding of identity and account types along with potential risks involved when managing access. Outline the types of identities that can exist within an organization.","personnel, endpoints, servers, software, and roles"
+Malicious actors target employees as a means of gaining access to the network. One way to avoid an attack is to recognize account management risks. What possible risks can occur when dealing with using either privileged or shared accounts.,"A privileged account can be vulnerable for the following reasons:
+
+Users often adopt poor credential management habits, such as choosing bad passwords, writing down passwords, and reusing passwords on third-party sites.
+Administrators are often granted too many privileges or abuse accounts with ""super"" privileges for routine log-ons. A shared account is when the password (or other authentication credential) is shared with more than one person and a single ""Admin"" account is used to manage a device. A shared account should be avoided, as it breaks the principal of nonrepudiation and makes an accurate audit trail difficult to establish. "
+List a few attacks that can occur in the cloud computing infrastructure. ,"Answers may vary. The cloud infrastructure can suffer from attacks such as malware injection,side-channel and direct-to-origin attacks. "
+"One type of DoS attack is resource exhaustion, where the focus is on consuming system resources and can lead to a system crash or failure. Describe some of the techniques used to exhaust resource and deny service.","Amplification or volumetric attacks, which will focus on saturating the bandwidth of the resource - a denial-of-sleep attack will drain a device's battery, which in turn can render the device inactive. A slow HTTP attack sends fragemented requests to the server and can stress the server, as compiling the fragemented request can lead to depletion of processing resources."
+"Today, there are a number of tools available for the cloud infrastructure to perform automated vulnerability scanning and PenTesting. List a few tools used to PenTest the cloud infrastructure.","Some of the tools used to test security configurations or perform extensive compliance auditing on cloud assets include ScoutSuite, Prowler, Pacu, and Cloud Custodian."
+"Over the years, the predominant encryption standard, Wi-Fi Protected Access, has evolved to ensure improved protocols to secure wireless communication. Describe some of the features of WPA2 and WPA3.","WPA2 is an improvement of WPA and replaced RC4 and TKIP with Counter Mode CBC-MAC Protocol (CCMP) using AES. WPA3 includes advanced features to secure wireless transmissions such as 192-bit encryption when using WPA3-Enterprise mode. It also features improved authentication, employs a 48-bit initialization vector, and uses Protected Management Frames (PMFs) to prevent exposure of management traffic"
+"When launching an attack on Wi-Fi, many times a malicious actor will use a deauth attack. Describe a deauth attack and explain why it is used. ","A deauthentication (deauth) attack will boot the victim(s) from an AP, which will force them to reauthenticate. A deauth is used so the victim generates the required traffic needed for the malicious actor to capture the handshake. "
+"An evil twin is a rogue access point that attempts to trick users into believing it is a legitimate AP, such as an organization's official Wi-Fi network. Describe what is needed to create an evil twin. ","1) Set the SSID to be the same as the legitimate network, 2) place the evil twin close to the victim so its signal strength is high, and it is put at the top of the list of the victim's APs, 3) To get the victim to join the evil twin, a malicious actor can set up a convincing captive portal with open authentication. "
+Secure Export Mode,Not a feature in QRadar's export functionality. 
+"A PenTesting team supplied an organization with a report of findings and recommendations based on a recent penetration test. Who is responsible for making decisions on whether or not to heed the report's recommendations?
+A.C-Suite
+B.Third-Party stakeholders
+C.Technical Staff
+D.Developers",C-Suite are senior executives that are likely to be responsible for making decisions based on the results and recommendations from the PenTester's report. 
+Privacy Filter Settings,Settings to manage data visibility during export
+Data Sanitization Feature,Not available in QRadar for data export.
+What kind of information do log sources provide?,User login actions
+"What does this example of a YARA rule represent? 
+rule simple_forensics : qradar
+{
+    meta:
+        description = ""Simple Yara rule.""
+
+    strings:
+        $str1 = ""pattern of interest""
+
+    condition:
+        $str1 at 25
+}
+",Flags for str1 at an offset of 25 bytes into the file
+"The following example shows a more complex Yara rule that flags content that contains the hex sequence, and str1 at least three times","
+rule ibm_forensics : qradar
+{
+    meta:
+        description = ""Complex Yara rule.""
+
+
+    strings:
+        $hex1 = {4D 2B 68 00 ?? 14 99 F9 B? 00 30 C1 8D}
+        $str1 = ""IBM Security!""
+
+   
+    condition:
+        $hex1 and (#str1 > 3)
+}"
+Time Series Configuration,Method to analyze event trends over time
+What is the default number of notifications that the System Notification Dashboard can display?,10 notifications
+"When examining lime fields on Event information, which represents the time QRadar received the raw event?",Start Time
+The magnitude rating of an offense in QRadar is calculated based on which values?,"Relevance, credibility, severity"
+"Create a list that stores Username as the first key, source IP as the second key with an assigned CIDR data type, and Source Port as the value. The example above refers to which type of data collections?",Reference table
+What (2) guidelines should you follow when you define your network hierarchy?,"When defining the network hierarchy in QRadar, it is recommended to organize systems and networks by role or similar traffic patterns to differentiate network behavior effectively. Additionally, it is advised not to configure a network group with more than 15 objects to avoid difficulties in viewing detailed information for each object and to ensure efficient management of network groups."
+What is an effective method to fix an method that is parsed and determined to be unknown or in the wrong QRadar category?,Create a custom property to extract the proper Category from the payload
+"When searching for all events related to ""Login Failure"", which parameter should a security analyst use to filter the events?",A. Event Name
+"On the Offenses tab, which column explains the cause of the offense?",Offense Type
+Which type of rule should you use to test events or (lows for activities that are greater than or less than a specified range)?,Threshold rules
+A QRadar analyst wants to limit the time period for which an AQL query is evaluated. Which functions and clauses can be used for this?,"START, STOP, LAST, NOW, PARSEDATETIME"
+Which (2) types of data can be displayed by default in the Application Overview dashboard?,"Outbound Traffic by Country (Total Bytes), Top Applications (Total Bytes)"
+What (2) options are used to search offense data on the By Networks page?,"Network, Events/Flows"
+After how much time will QRadar mark an Event offense dormant if no new events or flows occur?,30 minutes
+Which are types of reference data collections in QRadar?,"Reference set, reference map, and reference map of maps"
+Which types of events does QRadar analyze to create an offense from the rule?,"Incoming events and flows, asset information and known vulnerabilities"
+Offense chaining is based on which field that is specified on the rule?,Offense index field
+Which QRadar application can you help you ensure that IBM QRadar is optimally configured to detect threats accurately throughout the attack chain?,Use Case Manager
+"How can an analyst search for all events that contain the keyword ""access""?","Go to the Log Activity tab and run a quick search with the ""access"" keyword"
+Which feature in QRadar uses existing asset profile data so administrators can define unknown server types and assign them to a server definition in building blocks and the network hierarchy?,Server discovery
+QRadar analysts can download different types of content extensions from the IBM X - Force Exchange portal. Which two (2) types of content extensions are supported by QRadar?,Custom Functions and Offenses
+BUCKET Function,Groups events by specified time intervals
+High Relevance Score ,Indicates criticality of assets involved in offense
+Low Severity Score ,Reflects less significant impact of events
+Medium Magnitude ,Indicates mixed impact from relevance and severity
+Unknown Events,"Events not classified, risking missed detections"
+"A C-Suite has convened to make decisions on the results and recommendations found in the PenTest report. Who is in this group? (Select all that apply.)
+A.Chief Technical Officer
+B.Developers
+C.Regulators
+D.Chief Information Security Officer","The Chief Technical Officer is in this group as C-Suite refers to top-level management personnel, usually with ""chief"" in their name, such as CEO, CTO, CIO, CSO, CISO, etc.
+The Chief Information Security Officer is in this group as C-Suite refers to top-level management personnel, usually with ""chief"" in their name, such as CEO, CTO, CIO, CSO, CISO, etc.
+Developers are the personnel responsible for creating and maintaining a solution, usually referring to the software development of an application, website, or something similar.
+Regulators are third-Party stakeholders and are not directly involved with the client but who may still be involved in a process related to the penetration test report."
+"Question
+A PenTesting team has submitted a report of findings and recommendations for a recent penetration test. Who will be responsible for implementing these recommendations?
+A.Third-Party stakeholders
+B.C-Suite
+C.Technical Staff
+D.Developers","Technical Staff are the personnel that maintains the systems and are responsible for implementing or aiding in implementing some of the solutions to the issues found during the penetration test.
+Third-Party stakeholders are the people not directly involved with the client but who may still be involved in a process related to the penetration test report.
+C-Suite refers to senior executives that are likely to be responsible for making decisions based on the results and recommendations.
+Developers are the personnel responsible for creating and maintaining a solution, usually referring to the software development of an application, website, or something similar."
+"Question
+An organization is reviewing the contents of a report and has questions about the framework that the PenTesters used to conduct the penetration test. What section of the report is the organization referring to?
+A.Scope
+B.Attack narrative
+C.Findings
+D.Methodology","The organization is referring to the methodology section of the report which is a high-level description of the standards or framework the PenTesters followed to conduct the penetration test.
+The scope section of the report details the scope that the organization and PenTesters defined for the activity during the pre-engagement phase and includes any deviation from the original scope and the reason(s) for it.
+The attack narrative is a detailed explanation of the steps taken while performing the activities and the process performed by the penetration testing team.
+The findings section shows the issues the PenTesters identified during the activity with a table that identifies the vulnerability, the threat level, the risk rating, and whether the PenTesters exploited the vulnerability."
+Storage Availability ,Capacity for storing critical event data
+CPU Utilization,Processor usage during event processing
+Question: The C-Suite is reviewing a report section that details the issues PenTesters discovered during the most recent test and the attack vectors they successfully exploited. What section of the report is this?,"C. Findings  - this is the findings section of the report which shows the PenTesters identified during the activity and includes elements such as critical vulnerabilities, attack vectors successfully exploited, and other results. The scope section of the report details the scope that the organization and PenTesters defined for the activity during the pre-engagement phase and includes any deviation from the original scope and the reason(s) for it.
+The attack narrative is a detailed explanation of the steps taken while performing the activities and the process performed by the penetration testing team.
+An executive summary is a high-level and concise overview of the penetration test, its findings, and its impact."
+"Question
+An organization is reading a section of a report after a recent PenTest and is reviewing the data points that the report shows contributed to the quantified vulnerability results. What is the organization reviewing?
+A.Conclusion
+B.Metrics
+C.Measures
+D.Appendix","The organization is reviewing the measures which are the specific data points that contribute to a metric, or quantifiable measurement of the status of results or processes.
+The conclusion section wraps up the report. It should include a general summary statement about failures and successes, with supporting evidence written in a sentence or two.
+Metrics are quantifiable measurements of the status of results or processes, and the report generally expresses them on a scale, for example, from 1 to 10.
+The appendix includes any supporting evidence, or attestation of findings and may include printouts of test results, screenshots of network activity, and other evidence obtained during testing."
+"Question
+An organization is reviewing a report from a recent PenTest. Which section of the report will help the organization understand the relationship between the PenTest findings and their implications to the organization?
+A.Risk appetite
+B.Risk prioritization
+C.Business impact analysis
+D.Risk rating","The business impact involves estimating the implications to the client's organization if a malicious actor were to target the issues identified during the activity. Risk appetite refers to the amount and type of potential vulnerabilities and threats the organization is willing to tolerate and endure. Risk rating is the process of assigning quantitative values to the identified risks that organizations complete by following a reference framework, which is a method to consistently rate findings. Risk prioritization is the process of adjusting the final rating of vulnerabilities to the client's needs. The PenTesters need to work together to prioritize the results of testing. "
+"An organization is working to determine their risk appetite. What kinds of issues will the organization need to consider? (Select all that apply.)
+A.Catastrophic losses
+B.Asset availability
+C.Employee turnover
+D.Personnel harm","In determining risk appetite, the organization will need to consider what losses would be catastrophic to the organization and its business operations.
+In determining risk appetite, the organization will need to consider what assets, processes, information, or technology must be available at all times.
+In determining risk appetite, the organization will need to consider if there are any circumstances that could result in Personnel harm to anyone dealing with the organization.
+In determining risk appetite, the organization will not need to consider employee turnover. Employee turnover is an onboarding and offboarding issue."
+Offense Description,Summarizes attributes that triggered the offense.
+Rule Condition,Criteria that must be met to trigger an offense
+Asset Value,Importance of assets involved in an offense.
+Event Type,Specific classification of an event in QRadar. 
+High-Traffic Environment ,Context requiring prioritization of offense investigations
+"Question
+An organization underwent a penetration test and insisted that the PenTesters include the organization's investor on the reported findings. What group does the investor belong to?
+A.C-Suite
+B.Third-Party stakeholders
+C.Technical Staff
+D.Developers","The investor is a third-Party stakeholder that is not directly involved with the client but who may still be involved in a process related to the penetration test report.
+C-Suite refers to top-level management personnel, usually with ""chief"" in their name, such as CEO, CTO, CIO, CSO, CISO, etc.
+Technical Staff are the personnel that maintains the systems and are responsible for implementing or aiding in implementing some of the solutions to the issues found during the penetration test.
+Developers are the personnel responsible for creating and maintaining a solution, usually referring to the software development of an application, website, or something similar."
+"A PenTesting team discovered a backdoor in an organization's application. Who will the organization expect to create a solution for patching the backdoor?
+A.Third-Party stakeholders
+B.C-Suite
+C.Technical Staff
+D.Developers","Developers are the personnel responsible for creating and maintaining a solution, usually referring to the software development of an application, website, or something similar.
+Third-Party stakeholders are the people not directly involved with the client but who may still be involved in a process related to the penetration test report.
+C-Suite refers to senior executives that are likely to be responsible for making decisions based on the results and recommendations.
+Technical Staff are the personnel that maintains the systems and are responsible for implementing or aiding in implementing some of the solutions to the issues found during the penetration test."
+Prioritizing Offenses,Focus on highest magnitude scores for investigation
+Event Trends,Patterns observed in event data over time
+Daily Intervals,Time segments of 24 hours for analysis
+Critical Security Incidents,Important alerts that require immediate attention
+Relevance and Severity,Factors affecting the overall magnitude of offenses
+Monitoring traffic,Observing network activity for suspicious behavior.
+Troubleshooting QRadar Widget,Restart services or verify saved search functionality
+AQL Function,Used to extract specific fields from event data.
+An organization wants to implement video surveillance in all its buildings but is concerned that threat actors might access the video feeds. Which of the following will NOT help the organization mitigate this threat?,"Wi-Fi networks can disconnect the cameras from the network and lose video feed so organizations should use wired over Wi-Fi connections, not Wi-Fi. "
+An organization is following the recommendations in a PenTest and is moving people to different organizations within the the organization in the afternoons. What operational control does this represent?,"This represents job rotation which is the practice of cycling employees through different assigned roles and helps with improving the understanding that staff has in the overall business. Time of day restrictions are types of security controls that rely on normal operating hours for users and limit the access they have when the users don't usually need it.
+Mandatory vacations is making employees take their vacation as users are more likely to make mistakes when they are tired, stressed, or more likely to leave the organization.
+User training involves requiring end-user cybersecurity training for all employees so users can identify why it is important that everyone does their part in keeping the organization and its assets secure."
+Select Function,Defines fields to retrieve in AQL queries. 
+Fully Matched Rule,"All conditions met, generates an offense"
+Partially Matched Rule,"Some conditions met, does not generate an offense"
+"An administrator is implementing a solution that will control sensitive information in the organization. What solution is the administrator configuring?
+A.Certificate management
+B.Certificate pinning
+C.Key rotation
+D.Secret management","The administrator is configuring a secret management solution which is a platform that controls passwords, key pairs, and other sensitive information that organizations must store securely. "
+Event Search,Searches raw logs from specific hosts
+Flow Search,Analyzes packet-level network data
+Drill-Down Capabilities,Access detailed event data from QRadar Pulse Widgets
+Building Blocks in Rules,Misconfiguration affects overall rule functionality
+"Which of the following demonstrate policy recommendations a PenTesting company may provide to a client? (Select all that apply.)
+A.Enable channels of communication
+B.Implement physical security controls
+C.Implement KPIs
+D.Review policies and procedures","Enable channels of communication is a policy recommendation as both end-users and managers will provide key information regarding the implementation of a security policy.
+Implement key performance indicators (KPIs) is a policy recommendation so management can monitor the effectiveness of controls, see security process improvements and return on investment (ROI), and intervene in consistently weak areas.
+Review policies and procedures is a policy recommendation to see if technical controls are working as expected.
+Implement physical security controls is not considered a policy recommendation in this context because physical security measures, such as locks, security guards, and surveillance cameras, are generally categorized separately from policy recommendations that a PenTesting company would provide, which focus more on procedural and technical aspects rather than physical security implementations."
+"Question
+An administrator is installing patches and updates, disabling unused ports, and uninstalling software that the organization doesn't use anymore. What is the administrator engaged in?
+A.Sanitization
+B.Hardening
+C.Escaping
+D.Process-level remediation","The administrator is engaged in system hardening which is the process of securing a device or application, usually to match the standards of the current system or network.
+Sanitization is the process of stripping user-supplied input of unwanted or untrusted data so that the application can safely process that input.
+Escaping, also referred to as encoding, substitutes special characters in HTML markup with representations that the industry refers to as entities.
+Process-level remediation is the concept of resolving a finding by changing how the system uses it or implements it, therefore changing it at the process level."
+Visualization Type,Format for displaying data in a widget
+"An organization is using mobile device management to ensure its mobile device management to ensure that its mobile infrastructure is secure. What are the some of the common feature of mobile device managment solutions? (select all that apply):  A.Fingerprint login
+B.Profiles
+C.Remote lock
+D.Encrypted containersis configuring devices with specific profiles according to access control policies. ",All of the above. A common device of mobile device management solutions is enabling devices to use remote access technologies to use remote access technologies including  remote and lock wipe capabilities. A common feature of mobile device management solutions is constructing an encrypted container on devices in which to keep sensitive organizational data. Implementing a fingerpring login is not a common feature of mobile device management solutions although enforcing a security policy layer on applications is a common feature of mobile device management.
+"An organization is implementing physical controls to secure access to its location. Which of the following are physical controls? (Select all that apply.)
+A.Access control vestibule
+B.System hardening
+C.Biometric controls
+D.Video surveillance","A, C, D: An access control vestibule is a physical control which is the area in which an organization manages the ingress of people according to their permission to enter the building itself or different areas of it. 
+Video surveillance is a physical control which involves monitoring through the use of cameras. A particular consideration for security is the use of network surveillance for remote feed access. System hardening is a technical control which..."
+"An organization is following the recommendations on a PenTesting report by issuing all employees an RFID access card that each employee must use to proceed through the mantrap. What kind of control is this?
+A.Biometric Control
+B.Physical Access Control
+C.Video Surveillance Control
+D.Role-based Access Control",This is a physical access control measure in the form of an access control vestibule which is the area in which the organization manages the ingress of people according to their permission to enter the building itself or different areas of it.
+Query Validation,Ensures saved searches return valid results
+Offense Characteristics ,Criteria used to assign credibility and relevance scores
+Data Extraction,Process of retrieving specific information from datasets
+Analyst Focus ,Prioritizing crticial incidents based on scores
+Rule Misconfigurations,Common cause of low credibility offenses
+Efficiency in Investigation,Enhanced by drill-down capabilities in dashboards 
+"An organization wants to enhance its security posture with multifactor authentication. Currently, they use only passwords for authentication. Which options, when combined with the existing password system, create a true multifactor authentication system? (Select all that apply.)
+A.Implement biometric authentication like fingerprint or facial recognition
+B.Use a security token to generate time-based one-time passwords
+C.Require a smart card for access
+D.Hash the existing password","Implementing biometric authentication like fingerprint or facial recognition adds a 'Something you are' factor. This, combined with a password ('Something you know'), meets the multifactor requirement. Using a security token to generate time-based one-time passwords establishes multifactor authentication. It introduces 'Something you have,' like a hardware token or mobile device generating time-based codes. This, combined with a password, meets the multifactor requirement. Requiring a smart card for access adds another layer of 'Something you have.' This, combined with a password ('Something you know'), meets the multifactor requirement. Hashing the existing password doesn't add a new type of authentication factor to the system. It remains in the 'Something you know' category."
+"An organization wants to implement biometric controls to secure their most sensitive information. What types of biometric controls are available for use? (Select all that apply.)
+A.Security question
+B.Facial recognition
+C.Fingerprint
+D.Retina scanner","The organization can implement a facial recognition feature as a biometric control to secure their most sensitive information. The system must recognize the face to authorize the user. The organization can implement a fingerprint reader as a biometric control to secure their most sensitive information. The system must authorize the fingerprint to authorize the user.The organization can implement a retina scanner as a biometric control to secure their most sensitive information. The system must recognize the user's iris to authorize the user.
+A security question is not a biometric control, it is a technical control that organizations can use as part of a multifactor authentication strategy. "
+Offense Monitoring,Continuous observation of potential threats
+Incident Response,Actions taken following offense detection. 
+Threat Assessment,Evaluating the severity of detected offenses
+Widget Functionality,Determines how data is displayed and interacted with.
+Analytical Queries,Structured requests to receive specific data.
+"A PenTester is cleaning up after a penetration test. What must the PenTester do to remove a Meterpreter payload from a target system? A.Delete the file
+B.Shred the file
+C.Reboot the system
+D.Manually uninstall","Because Metasploit files resides in memory, the PenTester would only need to reboot the target system in order to automatically remove it. A PenTester does not need to delete Metasploit payload files because they reside in memory, although for exploit files that do not reside in memory a superficial deletion of the file may not be enough to rid the system of it. Shredding Metasploit payloads is irrelevant because these files reside in memory, so a simple reboot is all that the system needs to remove them. You may need to manually remove other exploit tools. "
+"Question
+A PenTester created an account in an organization's financial accounting system for testing, but the finance system does not provide a method to delete the account. Where will the PenTester need to remove this account when cleaning up after an exploit?
+A.User database
+B.AD
+C.Local machine
+D.DC","Systems that place a strong emphasis on an audit trail or a change history might not provide a delete account feature. In this case, the PenTester may need to remove the accounts from the user database."
+Misconfigured Building Block,Causes rules to fail triggering offenses
+Correlation Engine Error,QRadar raises an error during rule execution.
+Offense Triggering,Rules activate based on other building blocks. 
+Network Hierarchy Purpose,Distinguishes between internal and external traffic. 
+IP Ranges Assignment,Part of asset modelling in QRadar.
+Reference sets,Dynamic lists enhancing real-time threat detection.
+High-Priority Offenses Monitoring,Filters offenses by department in a dashboard.
+"A PenTesting company is in the follow-up phase of a client engagement. Which follow-up action is the most significant component of gaining client acceptance?
+A.Client acceptance
+B.Attestation of findings
+C.Retest
+D.Lessons learned","Attestation of findings is the most significant component of gaining client acceptance, as the client must believe that what the PenTesters have said about their people, processes, and technology is accurate."
+"A PenTesting company has provided an organization with a cost-benefit analysis to analyze the strengths and weaknesses of alternatives and determine the best options available. Where would the PenTesting company include the cost-benefit analysis?
+A.Client acceptance
+B.Attestation of findings
+C.Retest
+D.Lessons learned",The cost-benefit analysis is part of the client acceptance which is a formal hand-off process where the client agrees the testing is complete and that they accept the findings as presented in the report. 
+"A PenTesting company is researching vulnerabilities for which the team could not recommend a mitigation tactic. Which phase of follow-up actions is the organization in?
+A.Client acceptance
+B.Planning for Retest
+C.Attestation of findings
+D.Lessons learned",The organization is in the retest phase. During this time the focus should be on researching vulnerabilities for which the team could not recommend a mitigation tactic. 
+False Positive Scenario,Failed attempts from a recently migrated email server.
+Email Delivery Attempts,Large failures may indicate potential issues
+Dynamic Search Widgets,Adjust based on offenses for better tracking
+Separate Offense Dashboards,Not efficient for cross-department monitoring
+Event and Flow Data Correlation,Combines different data types for comprehensive analysis
+Performance Optimization Mapping,Helps in organizing network segments effectively
+Malicious IP detection,Reference sets can identify threats in traffic
+Configuring routing rules to use the QRadar Data Store,https://www.ibm.com/docs/en/qsip/7.5?topic=systems-configuring-routing-rules-use-qradar-data-store
+"What are some actions a PenTesting company may need to perform for an organization as a follow-up? (Select all that apply.)
+A.Research vulnerabilities
+B.Schedule tests
+C.Work with the security team
+D.Clean up the environment","As a follow-up activity, the PenTesting company may need to research and test new vulnerabilities that your team discovered during the test or for which the team could not recommend a mitigation tactic."
+"A PenTesting team has undergone a debrief and is discovering things that will help them improve their tools and processes. Which follow-up phase does this fall under?
+A.Client acceptance
+B.Retest
+C.Attestation of findings
+D.Lessons learned",D. Lessons Learned
+"A PenTesting team has completed a penetration test and submitted their report to the organization. What will the team's next steps be? (select all that apply) A.Restore original log files
+B.Restore original files
+C.Make backups
+D.Document exploits","Restoring any original log files is an activity the PenTesting team would perform after completing testing and submitting their report.
+After the PenTesting team completes testing and submits their report, they will restore any original files that the team modified or otherwise compromised."
+"A PenTester has completed testing on a Windows system and is cleaning up. Where will the PenTester go to remove any keys or scheduled tasks (select all that apply)? A./etc/init.d/
+B.crontab
+C.HKLM
+D.HKCU","When cleaning up a Windows system, the PenTester must ensure that they remove any values they added to the HKLM Run Registry keys that start a shell on a  Windows system during boot. When cleaning up a Windows system, the PenTester must make sure they remove any values they added to the HKCU Run Registry keys that start a shell on a Windows system during boot."
+Trusted vs Untrusted Traffic,Critical for accurate offense generation
+Complexity Reduction,Single dashboard simplifies offense management
+Correlating rules,Enhances detection by linking multiple data sources. 
+Incident Detection Accuracy,Improved by real-time updates and reference sets. 
+Server Migration Misconfigurations,Common cause of email delivery failures
+Cross-Department Monitoring,Streamlined by applying departmental filters
+Dynamic Lists Usage,Reference sets adapt to emerging threats
+Email Server Migration,Can lead to increased failed delivery attempts
+Offense Widget Filters,Customize views based on departmental preference
+Compliance Violations,Monitoring access logs for policy breaches.
+Login Failures,Tracking unsuccessful login attempts across servers
+Anomalous Protocol Use,Detecting unusual protocol behavior in logs
+"Answers will vary. Prior to beginning the test they should ask appropriate questions, such as: who will notify security personnel that the team is using a social engineering exercise to enter the building? how many individuals should be testing to see if this type of exploit is possible? can you provide a nonworking key card to make the ploy more believable? ",Correlating large downloads with unknown IP connections. 
+Correlating Data,Linking Event and Flow data for threat detection. 
+Merging Offenses,Combining multiple alerts from the same IP
+SQL Injection Patterns,Suspicious payloads indicating potential SQL attacks
+XSS Patterns,Payloads indicating potential cross-site scripting attacks.
+Widget Details,Accessing underlying search query of a dashboard widget
+Open Search,Directly reviewing a dashboard's search criteria
+Date Range Filter,Limiting Widget Data to a specific time frame
+Widget Constraints,Limiting data based on thresholds
+Scheduled Report Template,A predefined structure for automated report generation.
+Data Source Parameters,Defining the data included in a report.
+Template Permissions,Controlling access to report templates
+Template Output Fields,Specifying the information displayed in a report
+"A PenTester is writing a script to shred data on drives by overwriting the storage with new data several times. Which of the following statements are true when it comes to shredding data on drives? (Select all that apply.)
+A.Shredding data on HDDs is slower because the write algorithm reduces wear
+B.Shredding data on HDDs is faster because the write process is more reliable
+C.Shredding data on SSDs is slower because the write algorithm reduces wear
+D.Shredding data on SSDs is faster because the write process is more reliable","B, C, D: When PenTesters shred data on HDDs (Hard Disk Drives) it is faster and more reliable because the process of writing to a hard drive is reliable.
+When PenTesters shred data on SSDs (Solid State Drives) it is slower and less reliable because SSD write algorithms may write to different locations to reduce wear.
+Shredding data on HDDs is not slower than SSDs. It is faster because the write process for HDDs is predictable and ensures coverage for the entire disk.
+Shredding data on SSDs is slower and less reliable than HDDs because SSD write algorithms may write to different locations to reduce wear."
+Management has gathered the team leaders at 515support.com and outlined the importance of conducting a PenTesting exercise. Your supervisor has asked the group why PenTesting is important. How would you respond. ,Formalized pentesting provides a way to evaluate cyber heatlh and resiliency with the goal of reducing overall organizational risk
+"Management at 515support.com has been working hard at ensuring employees are well trained in identifying a phishing email. Concurrently the IT team has implemented strong spam filters to prevent phishing emails from getting to their employees. What is the RISK of employees falling victim to a phishing attack using the following information?
+
+75% = THREAT of a phishing email reaching an employee
+40% = VULNERABLE employees that might fall for a phishing attack","Knowing that RISK = THREAT x VULNERABILITY, there is a 30% chance the employees will fall victim to a phishing attack"
+"When using a structured approach to PenTesting, each step will serve a purpose with the goal of identifying an infrastructure's defenses by identifying and exploiting any known vulnerabilities. List the four main steps of the CompTIA PenTesting process.","The CompTIA PenTesting process goes through a series of steps that include:Planning and scoping
+Information gathering and vulnerability scanning
+Attacks and exploits
+Reporting and communication "
+The Aircrack-ng suite of utilities is one of the early tools designed for wireless network testing. List one or two of the principal tools in the suite. ,Airmon-ng - will enable and disable monitor mode on a network interface. Airmon-ng can also switch an interface from managed mode to monitor mode. Airodump-ng—provides the ability to capture 802.11 frames and then use the output to identify the Basic Service Set ID (MAC address) of the access point along with the MAC address of a victim client device. Airreplay-ng: A tool that injects frames to generate traffic while attempting to crack an access points' WPA-PSK keys
+Wifite2 is a wireless auditing tool you can use to assess the WLAN. List one or two of the attacks used to retrieve the password of a WAP. ,"WPS (online) brute force PIN attack, WPS (offline) Pixie attack, WPA (offline) crack attempt, WPA Pairwise Master Key (PMKID) (offline) crack attempt"
+List two or three tools that the PenTesting team can use to recover and attempt to crack a wireless access point key.,"Fern, EAPHammer and MDK4"
+Many companies adhere to a structured mobile device implementation model which describes the way employees are provided with devices and applications. Describe two or three deployment models. ,"Bring your own device (BYOD)—the mobile device is owned by the employee; however, it must be corporate compliant in terms of OS version and functionality. Corporate owned, business only (COBO)—the device is the property of the company and may only be used for company business. Corporate owned, personally enabled (COPE)—the device is supplied and owned by the company. The employee may use it to access personal email, social media, and web browsing; however, they must be compliant with any acceptable use policies in force. Choose your own device (CYOD)—much the same as COPE; however, the employee can select a device from a curated list."
+Enterprise mobility management allows administrators to work from a centralized console and provide remote access to managed devices. List four to five features of an EMM solution. ,"Common features of an EMM include: enrolling and authenticating devices, locking and wiping the device, pushing out OS, app, and firmware updates to devices, locating devices through GPS and other technologies, preventing root access or jailbreaking devices, Creating an encrypted container to keep sensitive organization data compartmentalized
+Restricting certain features and services based on access control policies"
+"In an environment where there are multiple types of mobile devices, the organization can face numerous threats and vulnerabilities. List three or four issues that can affect the business logic process.","deperimertization, strained infrastructure, forensics complications, lost or stolen devices, lack of anti-malware complication, using known vulnerable components, dependency vulnerabilities, mobile device storage, passcode vulnerabilities"
+"An IoT device is equipped with sensors, software, and network connectivity. List two ways IoT devices can communicate and exchange data.","Answers will vary.
+
+IoT devices can communicate and pass data in one of two ways:
+
+Machine-to-machine (M2M)—communication between the IoT device and other traditional systems such as a server or gateway
+Machine-to-person (M2P)—communication between the IoT device and the user"
+"In addition to default passwords, it’s important to be familiar with vulnerabilities that can be present in an IoT device when testing. List two or three issues that should be tested.","Answers may vary.
+
+Some of the vulnerabilities that can be present in IoT devices include the following:
+
+Lack of physical security—the small devices (such as IP cameras) can be located in several areas, many in plain sight. Unless access is restricted, these devices can be damaged or stolen.
+Hard-coded configurations—can occur when, for example, the device is configured to phone home as soon as it is activated.
+Outdated firmware/hardware—many IoT devices do not ever receive updates to the system. Even if an update is available, the device may not have an option to automatically update.
+Poorly designed code—can lead to an attack, that can include buffer overflows, SQL injection, SYN flood, and privilege escalation"
+One attack an IoT device can suffer from is a Denial of Sleep attack. Explain how this works. ,"A Denial of Sleep attack continuously sends signals to the device, requiring the device to continuously respond and prevents the device from resting or sleeping, which then drains the battery. "
+"Threat actors folllow the same main process of hacking as a professional PenTester: Reconaissance, Gain Access, Maintain Access and Cover Tracks. What steps are added during a structured PenTest?",1) Planning and scoping along with 2) analysis and reporting
+"Part of completing a PenTesting exercise is following the imposed guidelines of various controls, laws and regulations. Summarize key takeaways of PCI-DSS.","Answers will vary. Payment Card Industry Data Security Standard (PCI DSS) specifies the controls that must be in place to securely handle credit card data. Controls include methods to minimize vulnerabilities, employ strong access control, along with consistently testing and monitoring the infrastructure."
+With PCI DSS a merchant is ranked according to the number of transactions completed in a year. Describe a level 1 merchant.,A level 1 merchant is a large merchant with over six million transactions per year.
+"With PCI DSS, a level 1 merchant must have the external auditor perform the assessment by an approved",Quality Security Assessor (QSA)
+"Another regulation that affects data privacy is GDPR, which outlines specific requirements on how consumer data is protected. List two to three components of GDPR. ","Require consent, rescind consent, global reach & violation reporting. Some of the components of this law include:
+Require consent - means a company must obtain your permission to share your information
+Rescind consent - allows a consumer to opt out at any time
+Global reach - GDPR affects anyone who does business with residents of the EU and Britain
+Restrict data collection to only what is needed to interact with the site
+Violation reporting - a company must report a breach within 72 hours"
+What should a company with over 250 employees do to be compliant with the GDPR?,"Under GDPR, a company with over 250 employees will need to audit their systems take rigorous steps to protect any data that is processed in their systems, either locally or in the cloud. "
+Suspicious External IP,An IP address flagged for unusual outbound traffic. 
+Sensitive Data Leakage,Unauthorized Transfer of confidential information
+Complex Attacks Detection,Identifying sophisticated threats through data correlation.
+Security Analyst Actions,Steps taken by analysts in response to alerts.
+Payload Analysis,Examining data sent to applications for vulnerabilities.
+Thresholds in Security Monitoring,Predefined limits for alerting on specific conditions.
+"A couple of colleagues thought it would be a good idea to share guidance on how the PenTesting team should conduct themselves during the PenTesting process. What topics should be covered so that all members exhibit professional behavior before, during and after the PenTest?","Answers will vary. The team will clearly need to understand that they are to maintain confidentiality before, during, and after a PenTest exercise. Once the testing begins the team will want to proceed with care and notify the team lead if they have observed any illegal behavior."
+"The team is involved with planning a PenTest exercise for 515support.com. Management is concerned that the loading dock is vulnerable to a social engineering attack, whereby someone can gain access to the building by asking someone who is on a smoking break. Prior to conducting the tests, what should the team do to prepare for the test?",
+"The team is involved with planning a PenTest exercise for 515support.com. Management has asked the team to run a series of scans at a satellite facility. Once the team is onsite and begins testing, one of the team members shows you the result of the vulnerability scan. After examining the scan, you realized the team member has scanned the wrong network. How should you proceed?",immediately notify the team lead as the test was outside of the scope of the PenTest.
+"515support.com has an established interactive website, that customers can visit, place orders, and schedule on-site visits. Because the site accepts cedit cards, they have asked the team to PenTest the companies' web applications and web services. To further define the scope of the project, what type of information will your team need from the stakeholders?"," When testing web applications and web services, the team should define some guidelines. For example, the team should have the client provide a percentage or discrete value of total web pages or forms that require user interaction. In addition, the team should obtain different roles and permissions for certain applications."
+Many companies recognize the vulnerabilities that exist when dealing with cloud assets and have turned to professional PenTesters to test the strength of the security mechanisms. 515support.com has asked the team to test several of their cloud assets. What should the team do prior to testing company assets within the cloud?,"Answers will vary. Prior to testing in the cloud, the team will need to obtain the proper permissions from the provider and determine what type of testing will be allowed. They will also need to understand what portions are off-limits. In addition, the team will need to get a complete understanding of what is hosted, and how the cloud is used, so they can identify points of weakness."
+"When dealing with testing physical locations, what type of location might represent a softer target as they are less likely to have as many security controls as headquarters?",An off-site asset provides a service for an organization but is not necessarily located at the same place. Off-site locations may be an easier target because of lack of stringent security measures.
+"When entering into a PenTesting engagement, what are some good practice guidelines for managing time?","Answers may vary. The team should focus on the task at hand, avoid distractions, adhere to the timeline, and keep the status meetings short and to the point. In addition, make sure everyone knows when to ask for help, so they don't spend too much time on any single task."
+Network Traffic Patterns,Behavioral analysis of data flow in networks. 
+Flow Session Duration,Indicates potential unauthorized data transfer or compromise. 
+Export Report to PDF,Allows sharing reports with non-QRadar users. 
+Brute Force Login Detection,Monitors repeated failed logins followed by success
+Offense Name Elements,Severity and type are critical for offense naming.
+POST /reference_data/sets,Adds entries to a reference set via API
+Threat Intelligence Content Pack,Provides pre-configured rules for threat feed integration.
+Short Flow Duration,Typically indicates benign activity and is not suspicious
+Extended Flow Duration,May indicate prolonged unauthorized access or data exfiltration
+Geographical Location in Offense,"Less important for offense name, found in details."
+Automated Threat Detection,Faciliated by threat intelligence content packs
+QRadar REST API,Allows programmatic interaction with QRadar functionalities
+High Port Outbound Connections,Can indicate potential suspicious activity from internal systems
+Multiple Geographic Logins,Flags potential brute force login attempts
+Data Transfer Spikes,May indicate abnormal activity from critical servers
+Offense Severity Level,Helps prioritize incidents based on threat level.
+Succcessful Login After Failures,Characteristic of a brute force pattern
+External Report Link Tool,Non-existent option for QRadar report sharing 
+PDF Format Reports,Ensures compatibility for external shareholders
+Automated Offense Creation,Not a feature of threat intelligence content packs
+Custom Rule Development,Not necessary with pre-configured threat rules
+Malicious IP Address Detection,Enabled through threat intelligence feed correlation
+Remote System Connection,Long durations might indicate attacker control
+Unauthorized Data Transfer,Identified through extended flow session durations
+Critical Server Monitoring,Essential for detecting sudden data transfer spikes
+Security Analysis,Flow Session Duration (session timeout) is a relevant metric
+Correlating Event Data,Combines flow data for comprehensive security analysis
+QRadar Offense Types,"Includes Brute Force, Malware, and Unauthorized Acccess"
+Threat Detection,Identifying potential security breaches in real-time
+Ariel Offenses Search,Investigates correlated security incidents generated by rules
+Flows Search,Analyzes network traffic for detailed insights
+Threat Intelligence Feeds,Data sources for known malicious IP addresses
+Payload Search,Locates events containing specific events in data
+Saved Searches,Stores query criteria for consistent reporting
+Network Activity Logging,Recording network events for security monitoring.
+Malicious Activity,Actions that compromise system integrity or security
+Real-time Threat Analysis,Immediate evaluation of security threats as they occur
+Severity Magnitude,Assessment of the seriousness of an offense
+External IP address,IP address not part of the internal network
+Botnet ,A network of compromised computers used for malicious purposes
+Network Scans,Assessing Network for vulnerabilities or malicious entities
+Data Encryption,Securing data in transit and at rest
+Disaster Recovery,Strategies for recovering data after a loss
+Situational Awareness,Understanding the current security posture of an organization
+Event Data Visualization,Graphical representation of security events
+Connection Count,Number of connections to a specific destination IP
+Query Execution Time,Duration taken to run a database query
+Consistent Reporting,Reliable and repeatable data retrieval for analysis
+"While scanning a subnetwork, a client came up and asked Gamali if he could check his web application to see if it were vulnerable to a Cross Site Scripting (XSS) attack. Gamali replied, ""Let me take a look at my paperwork to see who is testing web applications."" The client stated, ""oh this was included, but I just completed the app and thought you can do a quick check."" How should Gamali respond?","Answers may vary. Gamali should explain that if the test is not specifically in the scope of the PenTest, he cannot do the test due to legal reasons. He can then offer to check with the team lead to see what options they may have."
+"The management team at 515support.com has provided a list of approved tools to be used during the PenTest. Ra'Ta needs to conduct a packet sniffing exercise on one of the networks to see if he can see any passwords or other information in plaintext. However, when checking, he did not see Wireshark, a tool he needed to complete the test. Ra'Ta is frusturated as he assumed Wireshark was on the list and asks you what to do. How should you respond?","Answers may vary. Explain that if it is on the list, he can't use the tool unless approval is granted. However, you can offer to look at the list to see if there are any other tools such as tcpdump, that can achieve the same goal. "
+"In the contract for 515web.net, the timeline restrictions are defined as follows:
+Testing will be conducted from 8:00 A.M. to 6:00 P.M. U.S. Eastern Time, Monday-Friday.
+Team member Eleene tells you she is planning on running a stress test on the web server on Saturday morning. What is your response?","Answers may vary:
+If the contract specifies the stress test can only be conducted from 8:00 AM to 6:00 PM U.S. Eastern Time, Monday-Friday, you should recommend that the team member reschedule the stress test to a time that falls within the specified testing hours to ensure compliance with the rules of engagement and contract."
+Which flow parameter in QRadar is essential for identifying possible internal reconaissance activities?,Source and Destination IP addresses
+"When analyzing a building block that defines network ports, which of the following might be an indication that a rule might require an update?",A new application uses a port not defined in the building block
+Which of the following best describes a scenario where an anomaly rule would outperform a threshold rule in QRadar?,Detecting a sudden drop in traffic to a critical server
+Which right-click investigation action is most suitable for tracing the origin of a suspicious process execution found in an offense?,Right Click > View Process Tree > Trace parent processes
+Which QRadar feature is used to generate a detailed offense report with event and flow data?,Advanced Reporting Tool
+"When maintaining a dashboard, what is the advantage of setting automatic notifications for widget search results?",It triggers real-time alerts when specific thresholds are reached
+"When using a reference set-based filter in an AQL query, which function is necessary to check if an event property matches an entry in the reference set?",ISIN()
+Manual Risk Assessment,Evaluating the risk associated with an IP address
+Correlated Security Incidents,Security events linked by common factors or rules
+Which scenario best describes the need to deploy a QRadar content pack in a Security Operations Center (SOC)?,Preparing the SIEM to monitor and report advanced persistent threats (APT) using the MITRE ATT&CK framework
+What is the primary method for sharing a generated report with another QRadar user?,Distribute PDF via email
+What function in AQL retrieves the top 5 usernames based on the number of login attempts?,ORDER BY count DESC FETCH FIRST FIVE ROWS ONLY
+How would you exclude events that match a specific set of IP addresses using an AQL query?,"WHERE NOT sourceip IN (""10.0.0.1"", ""192.168.1.1"")"
+What is the first step in creating a scheduled report in QRadar?,Select time range for data
+"When analyzing an offense triggered by failed a login attempt, which indicator would most likely suggest that the offense is a false positive?",Multiple login attempts from a single internal IP address
+How does QRadar treat events that only partially match a rule but have potential relevance to security analysis?,They are marked with lower relevance but still logged
+Which factor is most critical to consider when evaluating why an offense was triggered by a rule that monitors multiple types?,the timeframe in which the events occurred
+Which quick search feature in QRadar allows you to view all events related to a specific offense quickly?,"Use ""View Linked Events"""
+How does QRadar handle partially matched rules in terms of data retention and visibility for future offenses?,Partially matched events are stored indefintely and can be used in future correlation rules
+Which QRadar feature allows exporting search results in CSV or XML format directly?,Export from Actions Menu
+Correlated Security Incidents,Security events linked by common factors or rules.
+Which data format should a custom property be configured to extract when focusing on identifying information leakage in email headers?,Email Address
+Which of the following should be prioritized when analyzing IoCs related to phishing attacks?,Identifying malicious file hashes attached to emails
+Which filter would you use to limit the results to logs generated by QRadar rule violations?,ruleTriggered = TRUE
+Network Traffic Analysis,Examination of data packets traveling across a network.
+How can misconfigured building blocks lead to false negatives in QRadar?,By excluding critical user activities from rule evaluation
+"Which of the following regular expressions would be best for matching a specific port number (e.g., port 8080 in log entries)?",port \s8080
+"Which of the following threat groups has been best-known for leveraging spear-phishing techniques to gain initial access, as described in the MITRE ATT&CK Framework?",APT41
+Which feature in QRadar allows you to detect anomalies by comparing current network traffic to detecting anomalies by comparing current network traffic to to historical patterns?,Behavioral analysis
+"In QRadar, which type of reference set would be most appropriate for storing and checking unique user IDs seen in login events?",String-based reference set
+"When creating offense names for QRadar, which of the following will most help in identifying false positives?",Use a standard prefix for offenses triggered by non-critical events
+What is a common cause of inconsistent data across QRadar Pulse Widgets?,Differing saved search parameters
+Which QRadar filter would help exclude logs where the source IP is an internal address (10.0.0.0/8)?,sourceIP NOT LIKE '10.%'
+Which tool in QRadar is most helpful when identifying and troubleshooting 'unknown' events?,Log Source Management app
+How does QRadar handle events from a log source that has not been fully defined yet in the system?,The system automatically classifies them under the 'Unknown' log source
+"In QRadar, what is the main advantage of using the ""Saved Searches"" option when building a dashboard?",It simplifies the process of adding pre-configured searches to widgets. 
+Compare the difference between a Statement of Work (SOW) and an Master Services Agreement (MSA). ,"The Master Service Agreement is a contract that establishes precedence and guidelines for any business documents that are executed between two parties. Once you have a MSA to solidify the legal terms between the parties, you can then create one or more SOW to outline project-specific services and payment terms."
+Offense Triage,Analyzing multiple offenses from a single IP address
+Query Past Offenses,Investigate historical data using a specific IP
+Command and Control Server,Remote server used by malware for control
+Indicators of Compromise (IoC),Signs suggesting potential malicious activity
+DNS Query for Suspicious Domain,Indicates malware communication with C2 servers
+Threshold-based rules,Static rules that trigger on predefined event counts
+Behavioral rules,Dynamic rules adapting to changing traffic patterns
+Partial Matches,Incompletely matched rules due to high thresholds
+Outline a couple of laws that require an organization to maintain the confidentiality of an organization's information.,The Graham-Leach-Bliley Act requires financial institutions ensure the security and confidentiality of customer information and take steps to keep customer information secure. Driver's Privacy Protection Act governs the privacy and disclosure of personal information gathered by state Departments of Motor Vehicles. The Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule establishes national standards to protect the privacy of individuals' medical records
+"When the team begins to finalize the documentation to provide the PenTest, what are the elements that are included in the contracts?","Some of the elements should include details on the following:
+Project scope and a definition of the work that is to be completed.
+Compensation specifics that include invoicing and any reports required when submitted.
+Requirements for any permits, licensing, or certifications.
+Safety guidelines and environmental concerns
+Insurances such as general and liability."
+"When searching for basic information on a target, such as on the details on the leadership of an organization, what is one option you can use?","To find some basic information on a target, the team can try the ""about us"" page of a company website"
+"While searching the social media profiles of a target organization, the team reads a series of Facebook posts by a network administrator. The employee is dissatisfied with their colleagues and complains that they have a lax attitude toward securing and monitoring the network. How could the team use this information?",The team can focus on finding the weaknesses that may exist due to the negligent employees.
+Rule Thresholds,Minimum events required for a rule to search.
+Data Visualization Integrity,Ensuring accuracy in QRadar Pulse Dashboards
+Validating saved searches,Cross-checking saved searches against raw data
+Reference set-based filters,Filters using predefined sets for log analysis
+Optimize reference sets,Removing outdated entries to improve performance
+Event Count,Number of events within a specific time frame
+Outbound Traffic,Data sent from a network to an external destination.
+Privileged Account Creation,Unauthorized creation of accounts with elevated access.
+False Negatives,Missed detections of actual threats in low traffic.
+Network Flow Data,Data representing traffic patterns across a network
+IP Reputation,Assessment of an IP's trustworthiness based on behavior.
+Refresh Interval,Time between updates of dashboard widgets.
+Automatic Rule Tuning,Dynamic adjustment of rules based on performance.
+Event Magnitude,Severity level assigned to detected offenses.
+Historical Data,Past records used for analyzing current threats.
+Malware Communication,Malicious software connecting to external servers.
+Access Restrictions,Limiting user permissions to enhance security.
+Log Analysis Performance,Efficiency in processing and analyzing log data.
+Non-Standard Port,Ports not typically used for common protocols.
+Offense Report,Document detailing security incidents and correlated events.
+Event Details,Specific information about events in an offense report.
+Regex for MAC addresses,(?:[0-9a-fA-F]{2}\:){5}[0-9a-fA-F]{2}
+MAC address format,Six groups of two hexadecimal digits separated by colons
+View Network Activity,Action to see all flow events related to an offense
+IP address,"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+Port Number,"\d{1,5}"
+Protocol,(TCP|UDP|ICMP|GRE)
+Device Time,\w{3}\s\d{2}\s\d{2}:\d{2}:\d{2}
+Whitespace,\s
+Tab,\t
+Match Anything,.*?
+Flow Data,Data representing network traffic events and activities.
+Reference Set,Collection of simple data types in QRadar.
+Nested JSON Objects,Complex data structures not stored in reference sets.
+Custom Property,User-defined field for extracting specific log data.
+User-Agent Field,HTTP log field identifying client software
+AQL Operator,Query language operator for filtering events in QRadar. 
+sourceIP IN Operator,Filters events matching specified IP addresses
+Normalization in QRadar,Converts logs into a common structured format. 
+Log Sources,Origins of log data processed by QRadar.
+Flow Events,Individual records of network traffic captured by QRadar.
+Event Columns,Specific attributes displayed in offense reports.
+Rule Impact Configuration,Setting affecting how rules apply to events.
+Using DNS is common during the footprinting and reconaissance phase of the PenTest. What protocol can be used to search for organizational information?,"When an entity registers a domain name, the registrant will need to provide information, such as organizational and key contact details. The team can use the whois protocol to search for these details. "
+Your team is tasked in evaluating the source code for 515web.net. They know that they are using a source-code repository. How should you proceed?,"The team should check source-code repository sites such as GitHub, Bitbucket, and SourceForge. Once there, they should examine the code to see if the developers had added sensitive information in their code, such as usernames and passwords, or other information that can be used to frame an attack."
+"You have heard that there might possibly be a leadership change in the target's infrastructure. You are fairly sure that there was a press release in the past week about the change, but there is no longer a trace of the story. What can you try to locate this information?","The team could start with searching cached pages, and then try a search using the Wayback Machine. "
+"In order to do a more targeted search, the team is going to use Google Hacking. What advanced operators should the team enter in the search if they are looking for spreadsheets or documents with results that include the text ""confidential"" on 515support.com?",site: 515support.com confidential filetype:xls OR filetype: docx
+"When searching 515support's webpage, the team checks the robots.txt file. To make sure the web-crawlers don't index the wp-admin directory, what should be added to the file?",Disallow: /wp-admin/
+Digital certificates used in SSL/TLS communications are another public resource that can aid in the PenTest process. What are two resources the team can use to discover more information on the company?,The team can search for the target's certificate information using an online SSL checker along with the Certificate Transparency (CT) framework. 
+"Once the team has gathered the intel on the target, you'll want to determine the best plan of attack when preparing the attack phase of the PenTest. List some of the guidelines that will help your team be better prepared. ",Use gathered technology information to identify potential vulnerabilities and consider ways to weaponize them in future phases. Focus on findings that are actionable and relevant. Determine how public IP addresses map to resources like web servers that you can later target. Leverage information from third-party sites to learn more about an organization and its people and consider ways the information can be used in a social engineering test. Document your findings for future reference. 
+How can you identify rules with the highest count using QRadar's metrics?,Sort By Event Count Column
+Which step is required to share a scheduled report with a specific user group?,Assign Group Permissions
+"When investigating a potential security breach, why is the 'Start Time' and 'End Time' parameter of flow data important to QRadar?",It provides context for determining the duration of specific activity
+Which of the following IoCs is most likely to be observed when malware tries to evade detection on a system?,Processes executing with names that mimic legitimate services.
+How can the performance of a customized search in QRadar be optimized when using large datasets?,By narrowing the search to a shorter time window.
+"When analyzing an offense in QRadar, which of the following actions provides the most immediate insight into suspicious behavior originating from a specific IP address?",Correlating the IP address with threat intelligence
+"When an offense involves multiple events from different log sources, how does QRadar aggregate and display the data to simplify triage?",By grouping events based on correlation rules
+What is the correct approach for detecting recurring patterns of login failures over several days using time series analysis?,"Configure a BUCKET(startTime, 1 DAY) and look for spikes."
+What action ensures reports are saved for later access in QRadar?,Configure Report Retention Tab
+"What is the primary benefit of setting a ""Time Filter"" in QRadar dashboard widgets?",It improves the visualization of historical data trends. 
+Which user role is required to create and manage dashboards in QRadar Pulse?,Security Analyst
+"What is the correct QRadar search filter to only show logs that contain a specific username, such as 'admin'?",username = 'admin'
+"Which MITRE ATT&CK technique is most likely to be associated with an insider threat actor, such as the group known as ""The Shadow Brokers""?","Exfiltration Over Web Service - The Shadow Brokers have been linked to exfiltration over web services, a technique used to steal sensitive data and upload it to cloud storage or external servers. This activity is a classic example of insider threat behavior where compromised or malicious insiders use trusted access to siphon data out of an organization undetected."
+Which approach in QRadar is used to process 'unknown' events and eventually assign them to the correct log source?,Manual inspection of raw data and event reclassification
+Which QRadar feature allows an analyst to correlate offenses from a specific IP with potential vulnerabilities associated with that IP?,Vulnerability and Asset Correlation
+"Question 33Incorrect
+During a forensic investigation, which of the following payload details is most critical for identifying the source of an exploit attempt?","The Shellcode within the payload body is most critical for identifying the source of an exploit attempt, as it contains the actual code used in the attack. The Referrer and User-Agent headers provide context about the request origin but not the exploit itself. "
+Which benefit is unique to Ariel logs searches compared to other Ariel search types?,Access to unprocessed raw data
+What key consideration should be taken into account when creating a custom property to extract data from encrypted log payloads?,Verify the encryption format and develop a decryption method. 
+"In IBM QRadar, which feature allows the user to quickly investigate and visualize relationships between network activities?",Network Activity Graph
+Which AQL function is used to join event data and flow data based on common fields like IP addresses?,join
+Case-Sensitive Extraction,Extraction method considering letter case in data.
+Hexadecimal Digits,Base-16 number system used in MAC addresses
+Human-Readable Formats,Formats that make log data understandable to users.
+Duplicate Log Entries,Repeated records in log data that may be filtered.
+"Log Data Encryption
+",Securing log data to prevent unauthorized access.
+Flow Details,Granular information about individual flow events.
+Filter by Offense ID,Narrowing down events related to specific offenses
+Relevant Log Sources,Sources that contain necessary data for custom properties
+Regex Pattern,Sequence of characters representing a search pattern
+Complex Structured Data,"Data organized in a hierarchy, not supported in reference sets"
+Flat Data Structures,Simple data formats suitable for reference sets
+Normalization,Ensures consistency in data for correlation rules
+Custom Search,Identifies anomalies in network traffic
+Log Sources,Relevant data sources for custom searches
+Lazarus Group,Known for cyber-espionage and destructive attacks
+TTPs,"Tactics, Techniques, and Procedures in cyber activities."
+Which of the following is the correct method to create a reference set-based filter that matches multiple event properties in a single query?,Use the ISIN() function in combination with the OR operator for each property
+"When analyzing a building block related to host definitions, which of the following is a common use case for such a building block?",To exclude internal IP addresses from external threat detection rules
+How can you include offense rule details in a generated report?,Select Rule Details in Fields
+"In QRadar, what is the most efficient way to ensure that high-volume log sources do not overwhelm a dashboard widget?",Apply a filter to limit the log sources by volume.
+"When performing an advanced search, what is the purpose of using the ""coalesce"" function in an AQL query?",To replace null values with a default value
+How can custom offense naming mechanisms improve the effectiveness of automated response systems in QRadar?,By allowing the system to trigger playbooks based on offense names
+Which keyword is essential to filter events based on fields that start with a specific prefix?,"In AQL, the LIKE operator is used with a prefix and a wildcard character % to filter fields starting with a specific value. For example, SELECT * FROM events WHERE username LIKE ""admin%"" filters events where the username starts with ""admin."" Options like STARTSWITH, PREFIX, and MATCH are not valid AQL keywords."
+Offense Suppression,Prevents alerts from known false positives
+User-Based Attacks,Attacks associated with specific user activities.
+Identity Info,Displays recent logins and associated usernames. 
+Application Filter,Targets logs for specific applications like SSH
+Schedule Report Generation,Automates report creation at specific intervals.
+Traffic Filtering,Uses network hierarchy to exclude irrelevant traffic. 
+Correlation Rules,Defines relationships between events for detection
+Anomalous Behavior,Unususal patterns indicating potential security threats.
+Network Exploitation,Gaining unauthorized access to network resources.
+Malware Deployment,Installation of malicious software on a system.
+Log Aggregation,Collecting logs from multiple devices for analysis.
+Performance Improvement,Enhancing search efficiency through relevant data.
+Security Analysts,Professionals who investigate and respond to threats.
+Intrusion Detection Systems,Monitors network traffic for suspicious activity.
+SSH Application,"Secure Shell, a protocol for secure network services."
+"Report Frequency Tab
+",Setting for defining report generation intervals.
+Event Name Filter,Targets specific events in log searches.
+Right-Click Actions,Quick access options for analyzing offenses.
+"Your team is tasked with gathering metadata from various documents, to locate any sensitive information, such as Excel spreadsheets containing sensitive data on the employees. What tools can they use?",The team could either use Metagoofil or FOCA to gather metadata from various documents
+"The team leader has tasked your group to test the targets physical security. The target has a main building, loading docks, a parking garage, and a warehouse. Which OSINT could provide the team with valuable intel?","When planning a physical PenTest, the team can use Shodan to attempt to locate the feed of a security camera outside the target's facilities. If successful, the team can get a better picture of the premises and any possible defenses that are in place."
+Your team is tasked with preparing a social engineering attack on the target. One of the team members suggests they research commonalities between the target and a sister organization. What tool do you feel would be a good choice to aggregate and graph this type of information?,"Maltego is the best choice for this exercise, as when searching, the results of the query are placed in graphs and the links are established between each node. This will enable the team to analyze how the target and the sister organization are connected."
+Geraint states he understands some of the phases of the lifecycle of a vulnerability but admits he doesn't know all of the phases. How would you explain the lifecycle to Geraint?,"Stage 1: Discover is when the vulnerability is identified. At this point, a malicious actor may create an exploit, Stage 2: Coordinate is when the vulnerability is defined, listed, and published in the CVE and CWE so that vendors and anyone involved is aware of the vulnerability., Stage 3: Mitigate is when vendors and software designers develop a patch, which is then released to the public., Stage 4: Manage is when the patch has been released and each individual organization applies the patch in order to remediate or mitigate the vulnerability., Stage 5: Document is the final phase, in that the results are recorded, and everyone takes a moment to reflect on lessons learned, in order to prevent further exposure."
+Network Traffic,Data packets transmitted over a network.
+Network-based exclusions,Filter out irrelevant traffic in correlation rules.
+Proxy routing,Direct traffic through a proxy for evaluation. 
+Flow deduplication,Eliminate duplicate data in internal segments.
+IP range exclusions,Exclude traffic from specified IP ranges.
+QRadar's primary purpose,Detect and respond to security incidents. 
+Custom Dashboards,Visualize custom search results for analysis. 
+Indexed Fields Tab,Verify if a property is indexed. 
+CONTAINS operator,Match events against reference set IP addresses
+Offense Rule Mappings,Link offenses to specific rules in QRadar. 
+STARTTIME BETWEEN,Filter results by specific time range in AQL. 
+Correlation rules,Identify anomalies using log and network data.
+What is a zero-day and why are they so dangerous?,"Answers may vary.
+A zero-day vulnerability is when the vendor is aware of a security flaw, but a patch has not been developed or applied on an affected system. At this point, a malicious actor can craft an attack and take advantage of the zero-day vulnerability."
+Why is mapping a network an important step in the PenTesting process?,"Having a topology map of the network is valuable to the PenTest team because it outlines your choice of tools and strategies. For example, you cannot conduct an ARP scan or spoof a MAC address on a remote network without direct access to that network."
+Security monitoring,Analyze data to detect significant threats
+Graphical representations,Display data in formats like charts and graphs
+Pattern recognition,Spot trends and anomalies in visualized data
+Real-time analysis,Analyze logs and data as they are generated
+False positivies reduction,Minimize incorrect alerts in security monitoring
+Forensic analysis,Investigate security incidents using stored logs
+Event properties,Attributes of events for filtering and analysis
+Triggered Offense Viewer,View offenses generated by specific rules
+Compliance audits,Store logs for regulatory and legal requirements
+During the scoping organizational/customer requirements meeting the stakeholders listed several network devices that included three Network Load Balancers. How will this affect the scanning process?,"During scanning, it's important for the team to identify any devices such as load balancers that can misdirect probes or attacks. "
+"One of your team members, Giles, states that the client has listed a WAF that is in use on the network. He asks you what a WAF is and how is it used. How do you respond?",A WAF is a web application firewall that is specifically designed to monitor web application attacks and guard against common attacks such as cross-site scripting and SQL injection attacks. 
+"During the PenTest, the team may need to assess whether or not they are able to create an exploit that can bypass the antivirus protection. How can they achieve this?","One way to achieve this is by using the Social Engineering Toolkit (SET) in Kali Linux. Using SET along with Metasploit, the team can create a malicious payload, such as a virus, worm, or trojan and embed the payload in a PDF"
+"During the footprinting and reconnaissance phase, the team will have used a variety of OSINT tools and security search engines such as Shodan to gather information. What other tool can the team use to scan remote targets for hosts, services, and other details?","When testing for vulnerabilities, one tool the team can use is Censys, an attack surface analyzer that is similar to Shodan, to identify exposed systems. "
+Packet crafting involves altering a normal IP packet before transmitting it on a network. Why would the PenTesting team use packet crafting software?,"Set unusual TCP flags to see if the firewall allows the packet, fragment packets so that a malicious signature is not recognized by the IDS, create fragemented packets that cannot be reassembled, which can consume all of a target's CPU time and cause either a system crash or Denial of Service (DoS). "
+"Web servers are often public-facing, whereas database servers are almost always on the private network. The web server will then have a backend connection to the database server. What are the listening ports for database servers using SQL?",Most database servers using SQL will either listen on TCP port 1433 or UDP port 1434. 
+"The team is ready to scan identified targets on the network. Kimora, one of the junior members of the team isn't sure of the correct process the team should use when scanning the LAN. How would you describe this process?","The team will first scan the LAN for listening hosts, and then, once identified, the team will scan the ports of any listening hosts to determine which services are listening. "
+"When port scanning, the team can either do a full connect or stealth scan to identify listening services. What is the difference?","A full connect scan will connect with the host and learn as much about the target as possible, however this type of scan can be noisier and alert devices of a possible intrusion. In contrast, a stealth scan doesn't create as much noise on the network so the team will have a better chance of remaining undetected."
+Describe the difference between a non-credentialed scan or credentialed vulnerability scan. ,"A credentialed scan uses credentials such as usernames and passwords and is able to take a deep dive into the vulnerability scan to produce more information while auditing the network. In contrast, a non-credentialed scna has fewer permissions and can only find missing patches or updates. "
+"Catrina needs to test the network to see if she can obtain credentials, files, images, messages, and data traveling over the network. What tool can she use to achieve this goal?","Catrina can use Wireshark, a packet sniffing tool. Packet sniffing can take advantage of cleartext protocols and data traveling across the network. The analyst can learn a great deal about the network by monitoring protocols such as: TCP, ARP, SMTP, HTTP, and others."
+Machine learning,Automate the detection of suspicious activities
+Search Result Graphs,Visualize search outcomes for better insights. 
+Traffic evaluation,Assess data flow for security relevance. 
+Security incidents,Events requiring immediate attention and response.
+Raihan explains to the team that the PCI DSS requirements of an organization must require the CDE be properly segmented. What does this mean?,They must test the network to ensure that an out-of-scope network will not have the ability to communicate with the CDE. 
+Data Exfiltration,Unauthorized transfer of data from a network.
+Stealthy Attacks,Covert methods to compromise systems undetected.
+Event Logs,Records of events occurring within a system.
+Magnitude,Overall impact assessment of an offense. 
+Relevance Score,Measures the importance of an offense. 
+Credibility Score,Assesses the trustworthiness of an offense. 
+Source IP address,Originating address of network traffic. 
+Bytes In,Volume of incoming data to a host.
+Bytes Out,Volume of outgoing data from a host.
+Building Block,Defined criteria for filtering network traffic.
+Known Safe Ports,Ports recognized as safe for legitimate traffic.
+Anomaly Detection,Identifying unusual patterns in data.
+QRadar,IBM's security information and event management tool
+Network Communications,Data exchange between devices over a network
+Correlate events,Linking related security events for analysis
+Untrusted Application Activity,Suspicious actions by unauthorized applications
+Traffic Volume Analysis,Assessing data flow to detect anomalies.
+Filter Condition,Criteria used to narrow down query results
+IP Address,Unique identifier for a device on a network. 
+External IP addresses,IP addresses outside the external network
+Critical asset,Essential resource requiring high security
+True Positive,Anomaly detection correctly identifies a real threat.
+False Positive,Anomaly detection incorrectly flags normal behavior.
+"During active reconnaissance, the team will gather MAC addresses in order to launch an ARP poisoning attack. Explain this attack method.","This attack deliberately maps an incorrect MAC address to a correct IP address, which poisons the ARP cache. This then allows an attacker to insert themselves in a man-in-the-middle attack between two legitimate hosts"
+Which of the following scenarios is least likely to be a false positive when triggered by a rule monitoring for data exfiltration?,Large outbound file transfers during off-peak hours to an external IP
+Which of the following techniques is most appropriate for determining if an internal IP address has been compromised during offense analysis?,Examining historical offenses involving the same IP
+Which step ensures all offense-related rules are included in an advanced report?,Select All Event Columns
+"Which widget configuration would be most useful for displaying a count of offenses that meet specific criteria, such as severity or category?",A numerical widget displaying the total count of filtered offenses.
+Which QRadar feature allows you to analyze and fine-tune a building block to ensure that it includes relevant events?,Rule Tester
+A building block contains a critical definition for critical internal servers. Which rule logic would best utilize this building block to detect potential attacks?,Correlate failed login attempts followed by successful connections to these critical servers. 
+Event Pattern Comparison,Analyzing events against baseline behavior for verification
+What happens if an unrecognized log source sends data to QRadar SIEM?,QRadar creates a default log source for processing
+An offense involving multiple IP addresses includes one that has never triggered an offense before. How should this IP be prioritized in the investigation?,Prioritized for analysis to determine its role in the offense
+Which feature enables analysts to filter events correlated in an offense by their security?,Event Filter in Offense Page
+"What is the purpose of the ""Refresh interval"" setting when configuring an external feed for a reference set?",To define how frequently QRadar updates the reference set with new data from the feed
+Which QRadar Feature helps ensure that events contributing to a partially matched rule are still available for future analysis?,Historical Correlation
+Which of the following regex patterns can detect a URL in QRadar log data?,"^https?://[\w\-\.]+\.\w{2,6}$"
+"What is the advantage of using a building block to manage host definitions for different network zones (e.g., DMZ, internal, external)?",It allows specific security policies to be applied within each zone multiple times
+"In QRadar, which method would you use to automatically populate a reference set with IP addresses from network traffic logs?",Creating a custom rule that adds IP addresses to the reference set when a condition is met
+How can you automate exporting search results to CSV on a recurring schedule in QRadar?,Configure a Scheduled Report
+Which step is necessary to verify that a rule's logic accurately reflects the intended security scenario after it has triggered an offense?,Perform a test run of the rule using historical event data
+What option ensures that sensitive information is not included in a shared report?,Restrict Fields in Template
+Which technique should be used to decode a suspicious base64 encoded string found in the payload to determine if it contains malicious content?,Copy the string and manually decode it using an external tool
+Which setting should be configured to ensure that a QRadar pulse widget only shows data relevant to a specific geographic location?,Apply a filter based on IP location
+Which keyword is required in a quick search to identify logs generated from a specific log source?,logSourceName = 'Name'
+How can right-click actions be used to identify if an offense's source IP is part of a known botnet?,"Right-click > ""Check IP Reputation"" > Check if listed in botnet categories."
+What is the primary advantage of using a saved search in QRadar when analyzing security incidents?,It ensures consistency and repeatability in analysis
+"During reconaissance, the PenTest will focus on discovering open and unsecured WAPs the target might have in place. Explain how wardriving can be used during this process.",War-driving is a technique that involves driving or walking around to search for open access points using a laptop or smartphone
+"While searching for open access points, one of the team members suggests using WiGLE. Explain what it is and how it can help during the PenTest process.","WiGLE is an OSINT tool to help during the reconnaissance phase of PenTesting as it can be used to identify open access points. In addition, it can also be used in satellite view to visualize the physical location and nearby landmarks."
+"During a wireless assessment of a manufacturing plant, the team will need to assess the main buildings along with several outbuildings spanning over 16 acres. What type of antenna will work best in this environment?",Answers will vary. An appropriate selection would be a nine dBi omnidirectional antenna. 
+"Kaison, the newest member of your team, asks why the team uses Nmap when there are other scanners available today. What is your response?","Nmap is a powerful open-source scanner that can be used in a variety of ways that include: Host and service discovery, operating system fingerprinting, gathering MAC addresses and detecting vulnerable hosts"
+"One of the team members suggests that when scanning the payroll department it might be more efficient to activate all scripts in the vulnerability category using script=vuln. Knowing that network performance is essential, how would you respond?","If the target has a healthy amount of bandwidth, and the client agrees, the team can scan using multiple concurrent scanners, which will speed up the scanning process. However, the team will need to monitor the network as this type of aggressive scanning can result in an overburdened network."
+"Allison was trying to scan 8080, 443, and port 80 using the command nmap -p [8080, 443,80] scanme.nmap.org and told you the command didn't work. What is wrong with the command?","The command won't work because it is not written correctly and will return a bad pattern error. The correct syntax for this command is nmap -p 8080,443,80 scanme.nmap.org."
+Which of the following is an example of a port definition building block in QRadar?,A list of non-standard ports used by custom applications
+Which option ensures that sensitive data is excluded when exporting search results?,"Applying ""Data Masking Rules"" ensures that sensitive information is excluded during export, maintaining data security. "
+"Which time series configuration would you use to compare event trends over the last week, divided into daily intervals?","BUCKET(startTime, 1 DAY)"
+"If an offense has a high relevance score, but a low severity score, what does this imply about the magnitude?",The magnitude will be medium due to the mixed impact of the two scores
+What is the most likely consequence of a significant volume of 'unknown' events in a QRadar deployment?,Missed opportunities to detect important security incidents
+How can the offense description help in identifying the rule condition that triggered an offense?,"It summarizes the unique attributes which matched the rule conditions - the offense description helps in identifying the rule condition that triggered an offense by summarizing the unique attributes which matched the rule conditions. This information provides a high-level overview of why the offense was triggered, making it easier to trace back to the specific rule logic and conditions involved."
+What is the most effective way to troubleshoot a QRadar Pulse Widget that is failing to display data?,Restart the QRadar system services
+"In addition to phishing, pharming, and baiting the victim, malicious actors use other techniques that are specific to mobile devices. List three or four social engineering techniques that are used with mobile devices.","Answers may vary
+
+Vishing is phishing using Voice over Internet Protocol (VoIP). This attack is possible as it is easy to spoof the sender information when using a VoIP call.
+SMiShing is a form of phishing that uses text messages to entice users to click on a link or provide information.
+Drive by downloads can occur while browsing the internet, as a victim can click on a link that will download malicious software. Many times, the victim is unaware of this activity.
+Spamming is sending unsolicited ads and calls to a mobile user, which can be done either by using a text or phone call.
+Browser Hijackers take a web request and send it to another search engine or display persistent advertising, with the goal of stealing information."
+"When using a Bluetooth-enabled device, best practice techniques will minimize the potential for an attack. List two or three techniques.","Best practice techniques to secure your Bluetooth connection include:
+
+Keep your device non-discoverable.
+Disable Bluetooth when not using the device.
+Don’t accept unfamiliar requests to pair.
+Periodically check your list of paired devices."
+Describe how sandbox analysis can help you understand what happens when a virus executes.,"Sandbox analysis is using virtualization to provide a safe environment to analyze malware. You can create a sandbox using a virtual machine, or use a pre-made sandbox designed to provide a full analysis of malware activity."
+"Answers may vary.
+
+Some of the activities that are completed to ensure secure mobile device infrastructure can include the following:
+
+Mobile Device Assessment—provides an overview of compliance and business logic issues.
+BYOD Approval—selects appropriate devices and creates policies.
+Secure App Development—creates organization specific apps in-line with organizational policy.
+Mobile APP Testing—includes Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST).","Answers may vary.
+
+Some of the activities that are completed to ensure secure mobile device infrastructure can include the following:
+
+Mobile Device Assessment—provides an overview of compliance and business logic issues.
+BYOD Approval—selects appropriate devices and creates policies.
+Secure App Development—creates organization specific apps in-line with organizational policy.
+Mobile APP Testing—includes Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST)."
+"Prior to deployment, it’s good practice to test any APIs in your project. One tool that the team can use is Postman. List three or fours tasks you can do with Postman.","Answers may vary.
+
+Postman has many features so that you can accomplish the following:
+
+Explore and create an API.
+Build and run a test suite.
+Work with other team members.
+Analyze results and run reports.
+Integrate within the DevOps life cycle."
+Some tools work in symphony with one another. Two examples are the tools Frida and Objection. Explain how you would use Frida and Objection when PenTesting.,"When using Objection, the team can run custom Frida scripts and interact with the filesystem on non-jailbroken iOS devices. It uses Frida to inject objects into an application and then monitors the behavior. You can also simulate a jailbroken environment and observe an iOS application within the existing constraints of a sandbox environment or dump the iOS keychain."
+"An IoT device is equipped with sensors, software, and network connectivity. List two ways IoT devices can communicate and exchange data.","Answers will vary.
+
+IoT devices can communicate and pass data in one of two ways:
+
+Machine-to-machine (M2M)—communication between the IoT device and other traditional systems such as a server or gateway
+Machine-to-person (M2P)—communication between the IoT device and the user"
+"In addition to default passwords, it’s important to be familiar with vulnerabilities that can be present in an IoT device when testing. List two or three issues that should be tested.","Some of the vulnerabilities that can be present in IoT devices include the following:
+
+Lack of physical security—the small devices (such as IP cameras) can be located in several areas, many in plain sight. Unless access is restricted, these devices can be damaged or stolen.
+Hard-coded configurations—can occur when, for example, the device is configured to phone home as soon as it is activated.
+Outdated firmware/hardware—many IoT devices do not ever receive updates to the system. Even if an update is available, the device may not have an option to automatically update.
+Poorly designed code—can lead to an attack, that can include buffer overflows, SQL injection, SYN flood, and privilege escalation"
+Describe the different types of storage typically found within a LAN.,"Answers may vary.
+
+Storage examples typically found within a LAN include:
+
+Direct Attached Storage (DAS) storage attached to a system such as a hard drive in a server instead of being accessed over the network
+Network Attached Storage (NAS)—a group of file servers attached to the network dedicated to provisioning data access
+Storage Area Network (SAN)—a separate subnetwork typically consisting of storage devices and servers that house a large amount of data"
+An industrial control system (ICS) is any system that enables users to control industrial and critical infrastructure assets over a network. Describe how a SCADA system works.,An industrial control system (ICS) is any system that enables users to control industrial and critical infrastructure assets over a network. Describe how a SCADA system works.
+Explain how fuzzing can identify system vulnerabilities.,Fuzzing a system is a technique used to see if there are any misconfigurations. Fuzzing sends a running application random and unusual input and monitors how the app responds.
+"When using virtualization, multiple operating systems can be installed and run simultaneously on a single computer. List three components that are required when running a virtual platform.","Answers can vary.
+
+A virtual platform requires:
+
+Host hardware—represents the platform that will host the virtual environment.
+Hypervisor/Virtual Machine Monitor (VMM)—manages the virtual machine environment and facilitates interaction with the computer hardware and network.
+Guest operating systems (Virtual Machines or instances)—represent the operating systems installed under the virtual environment."
+A VM repository is a location that is used to store VM templates or images and contains the configuration files that are used to create additional VMs. What could happen if a template has malware or is not configured correctly?,A VM repository is a location that is used to store VM templates or images and contains the configuration files that are used to create additional VMs. What could happen if a template has malware or is not configured correctly?
+"Hypervisors are generally regarded as well-protected and robust. However, they can suffer from vulnerabilities as well. Describe an attack that can take control of the hypervisor.","Hyperjacking is when a malicious actor takes control of the hypervisor that manages a virtual environment. Once the malicious actor has taken control of the hypervisor, they will have all the required privileges and can take full control of the environment."
+You have been asked to recommend a web framework for an application that incorporates HTML and/or JavaScript code. What would you suggest?,"AngularJS, Ruby on Rails, or Django (Python)."
+You need to choose a query language for your client’s application to write to and read from a database. Which language protocol would you suggest?,Structured Query Language (SQL).
+You have been asked to make a client presentation on the OWASP Top Ten. What are some of the critical security risks that you could discuss?,"Injection, Broken Authentication, Sensitive Data Exposure, XML External Entitites (XXE), Broken Access Control, Security Misconfiguration, Cross-Site Scripting (XSS), Insecure Deserialization, Using Components with Known Vulnerabilities, Insufficient monitoring and logging"
+You have been asked to help make a presentation to your client’s C-level executives. Your assignment is to explain Session Attacks. Which vulnerabilities could you discuss?,"Correct answer can highlight any of the following:
+
+Session hijacking
+Cookie
+Session fixation
+Session replay"
+A user comes to you with a problem. They explain that they wanted to purchase some IT books from the online company bookstore but their shopping cart has changed its contents. They think this is strange because they don’t want 50 of the same book for themself. What could be the cause?,This could be the result of Cross-Site Scripting (CSRF/XSRF)
+You have been asked to PenTest a client’s network. They have asked for you to only use horizontal privilege escalation. What is a benefit of this type of escalation?,"This approach has great potential for information gathering without raising possible suspicion, as irregular user activity is more likely to stay unnoticed than irregular admin activity."
+"Robert is leading a PenTesting team and has asked you for advice. He is thinking about using the command-line utility NetCat. Would you recommend this, and why?",
+"Robert was going to use Telnet to connect to systems, and he also needs the ability to easily copy files. He asks how to copy files with Telnet. What is your response?","Telnet should not be used to access systems and cannot copy files. He should be using Secure Shell (SSH). It is secure, if configured properly, and is commonly used by system administrators to remotely manage servers and other devices. It also has a copy file feature that can be used. As a penetration tester, you need to be familiar with SSH, as it is frequently found on all computer systems."
+Robert has asked whether you know how to easily open a shell on a remote Linux machine. You want to help him out. What is/are the command(s) you would suggest?,"rlogin 192.168.1.50
+
+rsh 192.168.1.50
+"
+Robert is leading a PenTesting team. He wants to download and run a script. He has asked your advice on using a simple one-line of code from PowerShell that can easily do this. What would you recommend?,
+Robert has asked you to suggest a tool to use so that he can enumerate users and assets with a view to attacking the usernames. What would you recommend?,Meterpreter. It is very common and is part of the Metasploit framework. 
+Robert has asked you about reverse engineering. He knows that there are three primary methods of doing this but he cannot remember what they are. Can you help him?,"Decompliation, disassembly, debugging"
+"Your team has a problem. They want to write a script but don’t know how to make things execute in the order they want, or to change the order when circumstances change. What is the concept associated with making a program execute its commands in a prescribed order?",
+"Your colleagues come to you with a question. They want to develop a script to show basic flow and functionality, but they haven’t yet decided which language to write the script in. Can you help?","They should write the script using Pseudocode. Pseudocode is a made-up language used to show flow and logic, but is not based on any programming or scripting language. Once the script is written in Pseudocode, it can easily be adapted to the actual language that will be used."
+Your colleagues want to use a data construct to exfiltrate data from multiple programs in plaintext. They want to be able to make the export portable between applications. What could they use?,"A CSV file and format should be used. A comma-separated value (CSV) file is exactly as its name suggests: a file where entries are separated by commas. Originally used as an export from spreadsheets, CSV files have become a very popular way to import and export data. Complex data files can be transported as a CSV file in plain text. Each entry in the CSV file is a field, and the fields are separated by commas. Typically, each line is an individual record. Considering a CSV as a spreadsheet, each field would be an entry in a column, and each line would be a row. Typically, the first line of a CSV file, defines the field or column headers."
+Your newest team member has been asked to use Python scripting for a PenTest project. They are concerned about writing the script from scratch and think there is a lot of work involved. Do you have any suggestions for them?,Consider using libraries of pre-existing code that can be leveraged to help build the script
+Where would your newest team member get these modules from?,"Inbuilt in Python, Github, or other available library."
+Your newest team member has been asked to use Python scripting for a PenTest project. They need to write a script but do not know how to make the program access the desired libraries that they have downloaded. What command do you recommend that they use?,import
+Which AQL function would you use to extract specific fields from event data in QRadar?,SELECT
+What is the difference between a fully matched rule and a partially matched rule in QRadar?,
+What is a common challenge when triaging offenses with low credibility and low relevance scores?,They are usually false positives
+When should an analyst use an Ariel offense instead of an events or flows search?,"To review triggered correlation rules - Offenses searches in Ariel are tailored to identify triggered correlation rules and offenses in QRadar. Packet-level analysis is performed using flows searches, raw log reviews are done with logs searches, and traffic volume statistics are handled through flows searches."
+What is a key benefit of using drill-down capabilities in QRadar Pulse Dashboards?,Rapidly access detailed event data from a widget
+Malicious IP Investigation,Identifying assets affected by a harmful IP. 
+View Destination Summary,Lists assets communicating with a specific IP
+Your team has been engaged to test a client’s defenses. The team has decided that a password cracking attack would be a good place to start. What are the main attack options they could use?,"They could conduct their assaults online or offline. There are a variety of attacks they could utilize, including:
+
+Offline cracking
+Dictionary attack
+Brute force attack
+Rule attack
+Mask attack
+Spraying
+Phishing
+Malware
+Social engineering
+Shoulder surfing
+Keylogger"
+"Your team has asked advice on some passwords they have found traces of, on Windows devices that are stored in the Security Account Manager (SAM). You inform the team that passwords are usually stored as one of two types of hashes. What are those two types?","LanMan (LM) hash: Before hashing, passwords are converted to uppercase and then either truncated or padded to become 14 characters long. The actual value that is stored is not the password hash itself. Instead, the hash is divided into two 7-byte parts, each of which is used as a 56-bit DES key to encrypt the fixed string ""KGS!@#$%"". Because the hash is unsalted, it is susceptible to dictionary and rainbow table attacks.
+NT hash: This is a simple MD4 hash of the password (encoded as UTF-16 little endian). It is unsalted but allows passwords up to 128 characters long."
+"There are many password-cracking tools available, with many being multi-featured. Your team wants a recommendation for a password-cracking tool that has the ability to use multiple CPUs, enable portability, and can pause the cracking on one device while resuming it on a different one. Which tool would you recommend that can do this?",John the Ripper has the ability to use multiple CPUs and enables portability because it can pause the cracking in one device to resume on a different one. 
+Your team wants to ensure that their test encompasses more than just a narrow selection of resources. They would like to try to gain access to the initial part of the environment and then spread out their attack to compromise additional resources. What is this process called?,Lateral movement
+"The team has heard about a ""pass the hash"" attack but is not sure what it entails. Could you briefly explain it to them?","A pass the hash attack is when you log on to the target operating system or application providing the username and the hash of the password, rather than the password itself. You obtain the hash by inducing the operating system or application to dump them from RAM, the Windows Registry, or a credentials file. "
+"As part of the process of moving through the system, the PenTest team encounters a major challenge: they do not have access to the resources they need. What options should their manager recommend that they try?","Privilege escalation. There are two important ways in which this is performed that need to be taken into consideration.
+
+Vertical Privilege Escalation is to obtain access to an account of higher privilege than the one you currently have, in order to enable administrative resources that the regular user does not have permission for.
+Horizontal Privilege Escalation is obtaining access to a regular user account of different privilege than the one currently in use, to enable private resources you otherwise do not have permission for."
+"What is a major necessity, in regard to your client or employer, during the process of a PenTesting project?",Open lines of communication with the client or employer's IT security team.
+You have been assigned to lead a PenTesting team on a client project. Your first choice is to commence a social engineering attack. What is a major consideration that you should discuss with your client?,"Do they want to keep it secret or will they be telling their employees to expect it? If they tell their employees, the test may fail. "
+You have been assigned to lead a PenTesting team. You need to set up lines of communication. What are some of the categories of contacts you should establish?,Primary contact. Technical contact. Emergency contact. 
+,"Some reasons to initiate client communication (the correct answer is any, or all, of the following):
+
+Status reports
+Critical findings
+Indicators of prior compromise
+Goal reprioritization"
+What is one way the situation could be addressed if your team's PenTest attempt is discovered?,"One option is to de-escalate the test—to scale it back, until the defense has been halted. From the client side, the team that is aware of the PenTest could de-conflict the breach, enabling it to continue."
+Automated scans have the potential to produce a large number of false positives. There are several tactics you can employ to identify false positives. What is one of the most effective?,"Results validation. Through a validation process, you compare what you've learned about the target environment to individual scan results and identify whether or not the results are truly applicable and accurate."
+"When your team begins creating their final PenTest report, what are some of the general considerations about the target audience that they must think about before they start writing?","The systems that were tested, the stakeholders, and whether your team is an external or internal entity. "
+"When the final target of your team's final PenTest report is C-Suite executives, what is an important consideration?",To ensure that they understand impact of the findings. (They make their decisions based on results and recommendations).
+"In cases where the PenTest target was a project for which developers are particularly responsible, they will also be directly involved in implementing the resolution and mitigation techniques that need to be addressed. What type of practices would your team recommend that they adopt?","Often, these can be addressed through the adoption of Secure Development Software Practices."
+"The written report is likely to be read by a variety of audiences. This might include board members, end users, and technical administrators. They all need to be able to read and understand the information you provide. So you need to target your report to account for these differences. What is a common way of achieving this?",
+"Your team’s PenTest report should account for your client’s risk appetite. At the beginning of the PenTest process, what kinds of questions could you ask them to assess the amount of risk they would be willing to accept?","The client's key stakeholders need to determine their risk appetite by answering questions such as:
+
+What losses would be catastrophic to the organization?
+What processes, technology, or other assets can be unavailable and still enable the organization to function, and for how long?
+What assets, processes, information, or technology must be available at all times and cannot be made public or be accessed by unapproved persons?
+Are there any circumstances that could result in personal harm to anyone dealing with the organization, be it employees, customers, business partners, or visitors?"
+"As a result of your team's report, your client has asked for some suggestions for physical instrusion recommendations. What would you suggest?","Security cameras, security guards, motion detectors, fencing and gates, RFID systems that use encryption. "
+What is a good standard to use when presenting your team's penetration test findings?,Penetration Testing Execution Standard (PTES). 
+How should you present your team's findings/results?,In a way that is easily readable and meaningful
+"When using the PTES standard, what classifications of vulnerabilities might your team address?",Technical and Logical
+"Your colleague, who has just overseen and concluded a PenTest project, is requesting some advice on the best practices for the secure handling of their PenTest reports. What would you suggest?","The following are some best practices for the secure handling of reports:
+
+Maintain the confidentiality of reports and their contents.
+Maintain the integrity of reports and their contents.
+Ensure reports are always available to the relevant audience.
+Ensure reports are secure in transit (including across a network).
+Minimize the transmission of reports across a public network like the internet.
+Ensure reports are secure in storage.
+Protect reports and their contents from accidental disclosure.
+Maintain audit logs for users accessing reports.
+Maintain a chain of custody when transferring ownership of reports.
+Maintain version control for changes to reports."
+Your client has asked about the common root causes of vulnerabilities. What are some recurring conditions or common themes that can cause vulnerabilities to emerge?,"Some recurring conditions and/or common themes that can be the root cause of vulnerabilities are:
+
+Lax physical security
+Employees not following corporate policy or best practices
+Lack of adequate cybersecurity training
+Lack of software patching and updating
+Lack of operating system hardening
+Poor software development practices
+Use of outdated networking protocols
+Use of obsolete cryptographic protocols"
+Your colleague is writing their first PenTest report and has asked you for advice. What are some of the sections you would suggest that they consider including in their report?,"They should consider including the following sections in their report:
+
+Executive summary
+Scope details
+Methodology
+Attack narrative
+Findings
+Risk rating
+Risk prioritization
+Metrics and measures
+Remediation
+Conclusion
+Appendix or supporting evidence"
+Your client wants to harden their system. They have asked you for advice. What are some of the techniques available to achieve this?,
+Your company has become very security-aware and wants to protect themselves from malicious actors. They have heard about multi-factor authentication. They have asked you to explain it to them so that they understand what it is. What would you say?,"Generally, authentication is classified as one of three types: something you know, something you are, something you have. Multi-factor authentication is simply a combination of two, or more, of these types. "
+You have been asked to segment your client’s network to strengthen their security posture. What is a basic or common method of doing this?,"You would determine which services need to be internet-facing, which ones need to be both internet-facing and internally accessible, and which should be kept internal only. Network segmentation would separate these into different locations and only certain users and services would be allowed to communicate between the different segments."
+"Your company started small but is growing. They used to allow everyone access to all areas of the business. Now that the company has become significantly larger, they have asked you to recommend a solution for the problem of segmentation for security purposes. What would you suggest?","Your company started small but is growing. They used to allow everyone access to all areas of the business. Now that the company has become significantly larger, they have asked you to recommend a solution for the problem of segmentation for security purposes. What would you suggest?"
+You have been asked to train your client’s IT team with a view to improving the standard of password storage and transmission within the company. What initial advice will you provide?,"Answer can be any/all of the following:
+
+Don't allow developers to hard-code credentials in apps.
+Hash stored passwords rather than storing them in plaintext.
+Use cryptographically strong hash functions, like SHA-256 and bcrypt.
+Avoid cryptographically weak hash functions, like MD5 and SHA-1.
+Use network access protocols that encrypt passwords in transit.
+For example, use SSH instead of Telnet, HTTPS instead of HTTP, FTPS instead of FTP, etc.
+Ensure network access protocols are using strong ciphers, like AES-256 and RC6.
+Avoid using network access protocols that incorporate weak cryptographic ciphers, like DES and 3DES.
+Disallow or reconfigure services that allow themselves to be negotiated down to a weaker cryptographic or protocol version.
+Ensure security solutions like IDS and data loss prevention (DLP) can monitor and manage unencrypted traffic in the network."
+You have been asked for advice by your client. They need to know what very basic training they should give to their general employees about cybersecurity awareness. What would you say?,"Employees/users should be able to identify why it is important that everyone does their part in keeping the organization and its assets secure. Their training should include:
+
+How to spot threats they might encounter on the job
+The consequences of succumbing to threats
+If users find a suspicious device, they should be aware that they need to let the IT department know about the device"
+"The company wishes to harden their physical access. They have asked you to suggest methods of securing physical access into the building. Apart from the RFID card in the elevator, what other suggestions could you make for locations at which physical access control can be implemented?","The entry door to the building can be hardened with a keypad/passcode. Biometric controls, i.e., fingerprint scanners, could also be added. Alternately, multi-factor authentication—a combination of access controls – could be implemented (passcode + RFID pass, etc.)."
+The company has decided to implement biometric controls. They would like two options to consider. You have been asked to recommend these. What could they be?,The company could implement fingerprint or iris scanners. It has been proven that these are unique to the individual and can be controlled by security to prevent an individual's access to the building in the event of a dismissal (face id is also becoming popular)
+The company has asked you to provide a report on video surveillance. What are two main security vulnerabilities in using video surveillance?,"The system can be turned off (or wires cut or wires jammed), thus leaving the company without optical security. Alternatively, the system can be infiltrated and used against you. "
+You are advising the PenTesting team on post-PenTest engagement cleanup. What are some of the common cleanup tasks that they should perform?,"Some common cleanup tasks can include, but are not limited to:
+
+Delete any new files you created from the affected systems.
+Remove any credentials or accounts you created from the affected systems.
+Restore any original configurations you modified.
+Restore any original files that you modified or otherwise compromised.
+Restore any log files you deleted.
+Restore any original log files you modified or otherwise compromised.
+Remove any shells, RATs, or other backdoors from the affected systems.
+Remove any additional tools you may have left on the affected systems.
+Purge any sensitive data exposed in plaintext.
+Restore a clean backup copy of any apps that you compromised."
+"While you are advising the PenTesting team on cleanup, you should remind them about a possible tricky situation when removing their active directory (AD) account from a workstation. What is the thing that they need to watch out for?","If they created an AD account from a domain controller (DC) and then used that account to sign into a workstation, simply removing the account from the workstation will not remove it from the domain. They will need access to the DC to delete the AD account, otherwise a real attacker might be able to leverage this account by using it to sign into a DC."
+"Your team is asking whether the deletion tool is good enough to get rid of their artifacts, tools, etc. What should you tell them?","Some of their tools are loaded into memory and are therefore automatically removed on system reboot (certain Metasploit payloads), whereas others linger on the target system until manually uninstalled. For the latter, a superficial deletion of the tool is not necessarily enough - they may need to, when possible, securely destroy (also referred to as shredding or purging) the tool's data and any associated files so that they cannot be recovered by an attacker or curious user. "
+"As PenTest team lead, and in order to gain client acceptance of your final report, you need to provide something to the client to give them confidence in you. What is it?","Attestation. (Providing evidence to the client that the findings detailed in the PenTest report are true. In other words, by signing off on the report given to the client, you are attesting that you believe the information and conclusions in the report are authentic."
+What should your team recommend to the client to help analyze the progress made in applying the mitigations to the attack vectors that were found during the penetration test.,A retest.
+Your team has asked for help in drafting a Lessons Learned Report (LLR). What fundamental questions should you ask and answer about the PenTest in the report?,"Those questions can include:
+
+What about the test went well?
+What about the test didn't go well or didn't go as well as planned?
+What can the team do to improve its people skills, processes, and technology for future client engagements?
+What new vulnerabilities, exploits, etc., did the team learn about?
+Do the answers to these questions necessitate a change in approach or testing methodology?
+How will you remediate any issues that you identified?"
+What is a key benefit of using drill-down capabilities in QRadar Pulse dashboards?,Rapidly access detailed event data from a widget. 
