@@ -1,0 +1,4 @@
+        git lfs install
+        git lfs track "*.docx" # Replace *.psd with the file types you want to track
+        git add .gitattributes
+#We are no longer on an ec2 server but still being charged 
