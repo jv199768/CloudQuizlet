@@ -1,0 +1,22 @@
+In the United States, credit card fraud involving $250 is often treated as a felony, as many state laws define theft over $250 as a felony. Penalties can include jail time, fines, and restitution to the victim. The specific consequences vary by state, but they are often more severe than misdemeanor theft, which applies to smaller amounts. 
+Legal classification: In many states, any credit card fraud over $250 is classified as a felony, according to FindLaw. For example, a state might define theft over $250 as a felony.
+State-by-state variation: The exact classification and penalties are determined by state law, so they can differ significantly depending on the location of the crime, explains Cron Israels and Stark and FindLaw.
+Potential consequences: A felony conviction for credit card fraud can result in jail time, probation, and fines. Perpetrators are often required to pay restitution to the victim to cover the costs of the fraud. 
+
+Credit card fraud in the U.S. is a federal crime addressed through laws like the Credit and Debit Card Counterfeiting and Fraud Act of 1984, and is investigated by agencies like the Department of Justice. For students in an AP Gov class, this issue can be framed through the lens of federal jurisdiction, the legislative process (passing laws), the executive branch's role in enforcement (FBI, Secret Service, agency investigations), and the judicial process (sentencing guidelines). It also connects to issues of government spending and accountability, particularly with government credit card misuse. 
+Federal laws and jurisdiction
+The Credit and Debit Card Counterfeiting and Fraud Act of 1984 makes it a federal crime to use or possess counterfeit, forged, lost, or stolen credit or debit cards with intent to defraud.
+The Department of Justice (DOJ) prosecutes credit card fraud cases, which can involve various statutes and agencies.
+The Government Credit Card Abuse Prevention Act of 2008 mandates audits to prevent waste and fraud involving government purchase and travel cards. 
+Law enforcement and enforcement
+Enforcement involves federal agencies like the Defense Criminal Investigative Service (DCIS) and the FBI, which investigate fraud, especially when it involves government funds.
+The U.S. Sentencing Commission tracks sentencing data, showing that a significant percentage of federal convictions result in prison time and are subject to sentencing guidelines. 
+Key concepts for AP Gov
+Federalism: Credit card fraud demonstrates the overlap between federal and state powers. While states have their own laws (like Arizona's statute example), federal laws, agencies, and courts address the issue on a national level.
+Separation of Powers:
+Legislative: Congress passes laws like the 1984 act to address the crime.
+Executive: Federal agencies (FBI, Secret Service, agency inspectors general) investigate and prosecute the crime.
+Judicial: Federal courts handle prosecutions, and the U.S. Sentencing Commission provides guidelines for judges.
+Checks and balances: Government credit card misuse, and the subsequent audits and investigations, highlight the government's system of checks and balances to ensure accountability and prevent abuse of public funds.
+Economic impact: The high median loss amounts in federal cases ($116,545 in one study) show the significant economic impact of financial crimes and the importance of fraud prevention measures.
+Due process and rights: Cases involve due process, where individuals are entitled to rights throughout the legal process, from investigation to sentencing. The U.S. Sentencing Commission's data also shows the use of guideline ranges and departures, which are critical components of the federal sentencing process. 
