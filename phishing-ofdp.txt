@@ -1,0 +1,26 @@
+This is an automatic reply from the Internal Revenue Service (IRS) Online Fraud Detection and Prevention (OFDP) team.
+
+The IRS values your report, and encourages individuals to report scams referencing the IRS, the U.S. Treasury Department, and/or tax-related scams, so that we can report these incidents and potentially limit the number of possible victims.
+
+Please use phishing@irs.gov to report scams that involve IRS, U.S. Treasury Department, and/or are tax-related. Additional information on reporting scams is available here, please see https://www.irs.gov/privacy-disclosure/report-phishing.
+
+Please DO NOT email:
+    - tax-related questions
+    - your personal or financial information
+    - tax documents or forms for verification
+    - requests to verify IRS employees
+
+Please call 800-829-1040 if you have tax-related questions or visit IRS.gov for more information.
+
+Additional reporting information
+
+Emails:
+If you are reporting an email that you received, please provide the full email headers. Please see https://www.irs.gov/privacy-disclosure/how-to-forward-the-header-of-a-phishing-email. If the full email headers cannot be provided, please forward the email.
+
+Text/SMS/MMS:
+If you are providing a text message you received, please provide the Caller ID and the text of the message that you received. You may need to press and hold on the message itself to copy the text message. If possible, please include the date, time, time zone, the Caller ID, and the number that received the message in your submission. Some text messages include an attachment. Please save that attachment as a file and send that attachment with your submission. Screenshots do *not* always capture all of the necessary information to facilitate reporting to the appropriate service provider.
+
+Social Media:
+If you are reporting a social media account, please provide the full URL of the account you are reporting in your submission.
+
+We review each email we receive.  We cannot guarantee a personal response to your message due to the volume of emails received. To limit email volume, you will only receive one auto-response per day for any of your submissions.
