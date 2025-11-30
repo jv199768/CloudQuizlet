@@ -1,0 +1,70 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://ebill.onlineebillcenter.com/odletters/authentication.do
+Subject: 
+Date: Sun, 30 Nov 2025 18:22:38 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--bc8En3QTA9SbOguluELJbdeCXOmwATVDRhNIY6py2i----"
+
+
+------MultipartBoundary--bc8En3QTA9SbOguluELJbdeCXOmwATVDRhNIY6py2i----
+Content-Type: text/html
+Content-ID: <frame-6B34F85A6635EF7BB7FFDFE59531F673@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://ebill.onlineebillcenter.com/odletters/authentication.do
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<link href="https://ebill.onlineebillcenter.com/Ecom-Web/odletters/css/style.css" rel="stylesheet" type="text/css">
+ 
+
+
+ </head>
+ <body>
+
+ <object id="pdfobj" width="100%" height="100%" data="https://ebill.onlineebillcenter.com/odletters/retrivepdf.do" type="application/pdf">
+        <!-- <embed src="/odletters/retrivepdf.do" width="100%" height="100%" type='application/pdf'> -->
+        </object>
+
+
+</body></html>
+------MultipartBoundary--bc8En3QTA9SbOguluELJbdeCXOmwATVDRhNIY6py2i----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://ebill.onlineebillcenter.com/Ecom-Web/odletters/css/style.css
+
+@charset "windows-1252";
+
+.authenticate_subtable_border { border: 1px solid rgb(107, 105, 107); width: 100%; }
+
+table { border-spacing: 0px; padding: 0px; }
+
+.authenticate_secheader_graybg { background-color: rgb(169, 191, 211); height: 38px; width: 710px; text-align: center; }
+
+.authenticate_table_width { width: 40%; }
+
+.authenticateText { color: rgb(0, 0, 0); font-family: verdana; font-size: 10pt; font-weight: normal; }
+
+.authenticate_table_width_align { text-align: right; width: 50%; }
+
+.authenticate_inputtxt { font-family: Verdana, Arial; font-size: 8pt; }
+
+.authenticate_error { color: rgb(255, 0, 0); }
+
+.authenticate_errormsg { text-align: center; width: 100%; color: rgb(255, 0, 0); }
+
+#space { padding-top: 1em; }
+
+.systemerror { text-align: center; color: red; font-family: verdana; font-size: 10pt; font-weight: normal; margin-top: 17%; }
+
+.authenticationerror { text-align: center; color: rgb(0, 0, 0); font-family: verdana; font-size: 10pt; font-weight: normal; margin-top: 17%; }
+
+.color { color: red; }
+
+div.container { text-align: center; }
+
+table.center { margin-left: auto; margin-right: auto; border-spacing: 0px; padding: 0px; }
+
+ul li:first-child { margin-right: -1em; }
+------MultipartBoundary--bc8En3QTA9SbOguluELJbdeCXOmwATVDRhNIY6py2i------
