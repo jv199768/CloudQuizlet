@@ -1,0 +1,2 @@
+DATA(go_session)   = /aws1/cl_rt_session_aws=>create( 'ZFINANCE' ).
+DATA(go_ein)       = /aws1/cl_ein_factory=>create( go_session ).
