@@ -1,0 +1,55 @@
+What I learned using Claude Sonnet to migrate Python to Rust
+feature
+Mar 4, 2026
+11 mins
+
+Using an AI coding assistant to migrate an application from one programming language to another wasn’t as easy as it looked. Here are three takeaways.
+
+Credit: Peopleimages.com / Shutterstock
+If there’s one universal experience with AI-powered code development tools, it’s how they feel like magic until they don’t.
+
+One moment, you’re watching an AI agent slurp up your codebase and deliver a remarkably sharp analysis of its architecture and design choices. And the next, it’s spamming the console with “CoreCoreCoreCore” until the scroll-back buffer fills up and you’ve run out of tokens.
+
+As AI-powered coding and development tools advance, we’ve formed a clearer sense of what they do well, do badly, and in some cases, should not do at all. Theoretically, they empower developers by doing the kind of work that would otherwise be tedious or overwhelming: generating tests, refactoring, creating examples for documentation, etc. In practice, such “empowerment” often comes at a cost. What the AI makes easier up front only makes things harder later on.
+
+One golden-dream scenario I’ve mulled over is using AI tools to port code from one language to another. If I’d spun up a Python project, then decided later to migrate it to Rust, would an AI agent put me in the driver’s seat faster? Or could it at least ride shotgun with me?
+
+A question like that deserves a hands-on answer—yes, even if I ended up burning my fingers doing it. So, here’s what happened when I tried using Claude Code to port one of my Python projects to Rust.
+
+Project setup and why I chose Rust
+
+I decided to try porting a Python-based blogging system I wrote, a server-side app that generates static HTML and provides a WordPress-like interface. I chose it, in part, because it has relatively few features: a per-blog templating system, categories and tags, and an interface that lets you write posts in HTML, with a rich-text editor, or via plaintext Markdown.
+
+I made sure all the features—the templating system, the ORM, the web framework—had one or more parallels in the Rust ecosystem. The project also included some JavaScript front-end code, so I could potentially use it to test how well the tooling dealt with a mixed codebase.
+
+I chose Rust as the porting target largely because Rust’s correctness and safety guarantees come at compile time, not runtime. I reasoned the AI ought to benefit from useful feedback from the compiler along the way, and that would and make the porting process more fruitful. (Hope springs eternal, right?)
+
+For the AI, I initially chose Claude Sonnet 4.5, then had to upgrade to Claude Sonnet 4.6 when the older version was abruptly discontinued. I also used Google’s own Antigravity IDE, which I’ve previously reviewed.
+
+The first directive
+
+I made a copy of my Python codebase directory, opened Antigravity there, and started with a simple directive:
+
+This directory contains a Python project, a blogging system. Examine the code and devise a plan for how to migrate this project to Rust, using native Rust libraries but preserving the same functionality.
+
+After chewing on the code, Claude recommended the following components as part of the plan to “transition to a modern, high-performance Rust stack”:
+
+Axum for the web layer.
+SeaORM for database interactions.
+Tera for templating.
+Tokio for asynchronous task handling (replacing Python’s multiprocessing).
+Claude didn’t have any obvious difficulties finding appropriate substitutes for the Python libraries, or with mapping operations from one language to the other—such as using tokio for async to replace Python multiprocessing. I suspect part of what made this part relatively easy was the design of my original program, which didn’t rely on tricky Python features like dynamic imports. It also helped that Claude proceeded by analyzing and re-implementing program behaviors rather than individual interfaces or functions. (This approach also had some limitations, which I’ll discuss below.)
+
+I looked over the generated plan and noted it didn’t create any placeholder data for a newly initialized database—a sample user, a blog with a sample post in it, etc. Claude added this in and I confirmed it worked by restarting the program and inspecting the created database. So far, so good.
+
+A few missing pieces
+
+The next stage involved discovering just how much Claude didn’t do. Despite discovering and building my app’s core page-rendering logic, it didn’t create any of the user-facing infrastructure—the admin panel for logging in and editing and managing posts. Admittedly, though, my instructions said nothing about that interface. Should I blame Claude for not being diligent enough to look, or blame myself for not being explicit in my original instructions? Either way, I pointed out the omission and got back a plan for doing that work:
+
+I'm now addressing the missing Admin UI by analyzing the original Bottle templates and planning their migration to Tera, including the login screen and main dashboard.
+
+Note: Bottle was the web framework I used for my Python project. This formed a test of its own: How well would Claude cope with migrating from a lesser-known library? This by itself turned out not to be a significant issue, but far bigger problems lurked elsewhere.
+
+It was at this point where the bulk of my back-and-forth with Claude began. For developers already working with AI tools, this cycle will be familiar: the prompt—>generate—>test—>re-prompt loop. Basically, I’d have Claude implement some missing feature (in this case, each element of the admin UI), fire up the program to test it for myself, run into various errors or omissions, and cadge Claude into fixing them.
+
+The first problem I found in the admin UI was an un-caught runtime error from the web templates, something not addressed by Rust’s compile-time checking. Then the login page for the admin panel came up blank. Then, after the login page worked, it led me to a placeholder page reading “Login logic not yet implemented.” Then, the logic for accepting usernames and passwords proved faulty. And so on, all through each of the original application components.
