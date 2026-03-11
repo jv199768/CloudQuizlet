@@ -1,0 +1,49 @@
+Discusiones y estrategia
+
+Inicio
+Los proyectos piloto de IA generativa
+Evaluaciones en la era de la IA
+Discusiones y estrategia
+
+Rediseño de debates
+En la era de la IA generativa, el enfoque tradicional de las asignaciones de foros de discusión en la educación superior enfrenta una necesidad crítica de rediseño. La llegada de herramientas como ChatGPT ha alterado significativamente el panorama de lo que constituyen tareas efectivas y atractivas. En esta página, ofreceremos estrategias y ejemplos de diseños de discusión que enfatizan habilidades de pensamiento de orden superior que la IA no puede replicar fácilmente. Esto implica pasar de preguntas que piden simplemente recordar información a aquellas que requieren análisis, síntesis y evaluación.
+
+Muchos estudiantes perciben las tareas de los foros de discusión en los cursos en línea como “trabajo ocupado” si no fomentan de manera efectiva una interacción significativa o no les permiten conectarse con sus compañeros de una manera que se sienta relevante y atractiva. Cuando las actividades de discusión se perciben como un mero ejercicio de marcar casillas en lugar de una oportunidad para un aprendizaje e intercambio de ideas genuinos, es menos probable que los estudiantes inviertan su tiempo y esfuerzo en elaborar respuestas reflexivas. Para contrarrestar estos problemas y mejorar el valor educativo de los foros de discusión, los profesores pueden adoptar enfoques más dinámicos e interactivos.
+
+Estrategias
+Para garantizar que las actividades del foro de discusión sean atractivas y resistentes a su finalización mediante herramientas de inteligencia artificial generativa, considere las siguientes estrategias que tienen como objetivo promover el pensamiento crítico, la creatividad y la reflexión personal.
+
+Incorporar preguntas reflexivas: Diseñe indicaciones que requieran que los estudiantes conecten el material del curso con sus experiencias personales o eventos actuales. Preguntas como "¿Cómo se aplica este concepto a una experiencia que hayas tenido?" o “Relacionar una noticia actual con lo que hemos aprendido esta semana y explicar sus implicaciones” fomentan respuestas únicas y personalizadas que la IA no puede generar.
+Facilitar la revisión y respuesta por pares: Asigne a los estudiantes que critiquen o se basen en los argumentos, análisis o resultados creativos de sus compañeros. Esto no sólo fomenta un compromiso más profundo con el material y el trabajo de cada uno, sino que también requiere un pensamiento y un análisis originales que las herramientas de IA no pueden imitar.
+Implementar preguntas socráticas: Diseñe mensajes de discusión que utilicen técnicas de cuestionamiento socrático, pidiendo explicaciones de por qué un estudiante tiene un determinado punto de vista, cómo concilia piezas de evidencia contradictorias o cuáles cree que son las fortalezas y debilidades de un argumento en particular. Este enfoque fomenta el pensamiento crítico y una comprensión más profunda del tema.
+Utilice estudios de casos y aprendizaje basado en problemas: Plantee problemas complejos del mundo real para que los estudiantes los resuelvan de forma colaborativa en los foros de discusión. Anímelos a aplicar los conceptos del curso, debatir soluciones y justificar sus elecciones. Este método promueve la aplicación del conocimiento en nuevos contextos, una tarea que requiere juicio y creatividad humanos.
+Fomente los resultados creativos: Pida a los estudiantes que creen contenido original relacionado con los temas del curso, como arte digital, poesía o cuentos, y comparta estas creaciones en el foro de discusión para recibir comentarios de sus pares. Esto aprovecha la creatividad y los intereses personales de los estudiantes, áreas donde la IA carece de autenticidad.
+Debate temas controvertidos: Diseñe debates sobre temas controvertidos relacionados con el contenido del curso, incitando a los estudiantes a adoptar una postura, respaldar sus posiciones con evidencia y desafiar respetuosamente los puntos de vista de los demás. Esto fomenta la participación activa y el análisis crítico, yendo más allá de las capacidades de la IA.
+Asignar debates basados en investigaciones: Exija a los estudiantes que realicen una investigación sobre un tema antes de participar en la discusión. Se les podría asignar la tarea de encontrar estudios recientes, artículos de noticias u otros recursos que probablemente no estén dentro de los datos de entrenamiento de las herramientas de IA, asegurando que sus contribuciones sean actuales y únicas.
+Integrar multimedia: Anime a los estudiantes a incorporar elementos multimedia en sus publicaciones de debate, como reflexiones en video, podcasts o infografías que hayan creado. Esto diversifica los tipos de inteligencia y habilidades que se utilizan y evalúan en el curso.
+
+Ejemplos
+A continuación se muestra un ejemplo abreviado de una actividad de discusión problemática. En este ejemplo, el mensaje inicial podría ingresarse fácilmente en ChatGPT, proporcionando al estudiante una respuesta sonora, probablemente indistinguible de una conversación humana.
+
+Hay dos problemas principales asociados a menudo con este tipo de aviso.
+
+Interacción limitada entre pares: Las instrucciones a menudo dicen: "Publicar una vez, responder dos veces" y, como resultado, las respuestas posteriores son memorizadas y fácilmente imitadas como humanas por un chatbot GenAI.
+Instrucciones de evaluación vagas: Los criterios de calificación son limitados, como “Incluye uno puesto sustantivo y dos respuestas.” Las instrucciones vagas a menudo conducen a publicaciones que requieren poco más que recordar hechos. Una vez más, este tipo de conversaciones pueden clonarse fácilmente como humanas.
+A continuación se explica cómo se podrían mejorar este mensaje y las instrucciones de discusión para generar una conversación más humana a persona.
+
+Actividad revisada
+
+Las filosofías de tratamiento son fundamentales para diversas intervenciones. Comprender varios enfoques le permitirá adaptarse mejor a los entornos y situaciones de atención sanitaria. Dadas las diferencias entre los modelos biomecánico y biopsicosocial del dolor, ¿cómo ha visto esto en sus experiencias profesionales o personales?
+
+Interacción entre pares
+A los estudiantes se les asignarán compañeros. Pregunta: ¿Cómo habrías interpretado y respondido al problema si estuvieras en la misma situación?
+
+Evaluación de rúbricas
+La AACU proporciona 16 tipos de rúbricas, incluyendo la Rúbrica VALOR de Participación Cívica publicado en la parte superior del documento vinculado.
+
+Observe en esta revisión cómo la indicación podría conducir a muchas respuestas correctas, cada una de las cuales requiere sus propias justificaciones subjetivas. Además, observe cómo se amplía la conversación al pedirles a los estudiantes que relacionen sus experiencias personales y profesionales con la pregunta. Se fomentan las interacciones entre pares limitando el tamaño del grupo y exigiendo a los estudiantes que participen en las experiencias personales de sus compañeros. Finalmente, se especifican criterios de evaluación detallados. Las rúbricas se modelan en detalle en los ejemplos siguientes.
+
+Como se demuestra en los ejemplos a continuación, incorporar conversaciones en vivo en grupos pequeños después de discusiones asincrónicas puede mejorar la participación y la instrucción entre estudiantes. Los grupos de 2 a 4 estudiantes formados en torno a una disponibilidad común pueden programar sesiones en horarios convenientes para ambos, y estas interacciones pueden ser beneficiosas para establecer equipos que trabajen durante todo el semestre en proyectos sumativos.
+
+Ejemplo de historia: Mensaje de debate sobre historia en un mundo de IA generativa
+Ejemplo de enfermería: Tema de debate sobre enfermería en un mundo de IA generativa
