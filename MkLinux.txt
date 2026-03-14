@@ -1,0 +1,45 @@
+Linux is an accepted OS in the tech world, but that hasn't stopped Linux developers from trying to shake things up. Sometimes it works, but here are the times it hasn't.
+
+Debian 2.1 in a box
+Make sure people can actually use it before the shrink wrap goes on
+
+About as long as Linux has existed, there have been attempts to sell Linux distributions to ordinary computer users. In the '90s, most people still bought computer software in boxes, with discs and printed manuals. This went for operating systems as well. You might remember the hype over the launch of Windows 95 in the summer of 1995.
+
+ '90s, most people still bought computer software in boxes, with discs and printed manuals. This went for operating systems as well. You might remember the hype over the launch of Windows 95 in the summer of 1995.
+
+You could also buy boxed copies of Linux distros in computer stores. YouTube NCommander happened to open a boxed copy of Debian 2.1 from 1999. While it might have sounded like a great idea on paper, anyone who was tasked with installing it from the CD was met with a text-based installation that, more often than not, would fail to detect your hardware. NCommander demonstrates how painful it would have been to install Debian back then:
+
+Surprisingly, Debian did not seem to undercut the Windows 95/98 juggernaut. The tagline on the box was that this would be "the last Linux you will ever need to buy." That claim might have been truth in advertising. The big deal was that you could download and update your system over the internet, which was a novel concept in the dot-com days. Most people still had dial-up internet, and the actual updates would have been prohibitively slow if they could actually connect over Linux in the first place. I'm sure anyone who bought the package wouldn't feel the need to buy another boxed copy of Linux.
+
+Of course, Debian itself is going strong without boxes as the basis for other popular distros like Ubuntu, becoming my distro of choice. It's a lot easier to install than it was back then.
+
+Eazel and Nautilus
+Even Apple alums couldn't make it pay
+
+While Nautilus isn't actually a distro, it was a Linux concept that was another ambitious attempt to market Linux to normal people. Nautilus was created by Eazel, a startup that was attempting to create what we would now call "cloud storage." Nautilus was the vehicle to market such a service, as well as to bring Linux to the masses by making it easy to use. The company was notable for employing a bunch of veterans of the original Macintosh design team, such as Andy Hertzfeld, Bud Tribble, and icon designer Susan Kare.
+
+The dot-com bust meant that Eazel would eventually go bust on its own. The day that Nautilus was released was the same day most of the staff at Eazel were laid off. As with Debian updates, Eazel's plan just wasn't feasible in the dial-up era. Nautilus would live on as the file browser of GNOME and eventually evolve into the current GNOME Files app. Eazel already had an uphill battle competing against Windows and a resurgent macOS without any compelling desktop apps of its own. File managers are useful but can only do so much.
+
+Xandros
+Sometimes being early on a new product category isn't always the best
+
+Xandros was a Linux distribution that, as with Eazel, was an attempt to market Linux to ordinary computer users, the kind who would want to surf the web and send emails rather than sling code. It was also the name of the commercial company that sponsored its development, based in Canada. They bought the former Corel Linux, the company best known for marketing WordPerfect.
+
+Xandros was very close to the look and feel of Windows XP when it was actively developed. A modified version was the original default OS of the ASUS Eee PC, one of the first netbooks. YouTuber ShoupTech demonstrates Xandros running on an Eee PC from the late 2000s:
+
+The interface seems simplified even for the era. As netbooks started to gain traction in the market, people wanted a more familiar experience. That meant pressing Windows XP back into service even though Vista was the current version. This meant the end of Xandros as the dominant operating system on the Eee PC. The rise of smartphones and tablets meant that Android would be the Linux-based OS of choice for internet-connected handheld computers.
+
+Xandros soldiered on as an independent OS, but very few people wanted to buy a desktop Linux system when they could download user-friendly versions for free.
+
+MkLinux
+Two kernels for the price of one
+
+MkLinux was not only an ambitious project to port Linux to the PowerPC platform, but it was also a way to run Linux on top of the Mach microkernel. Microkernels were all the rage in computer science as a way to simplify the development of kernels. The idea was that there would be a small, stripped-down kernel and all of the major services would be implemented as user-level servers. This would include things like device drivers and networking.
+
+MkLinux was sponsored by Apple while the company was trying to figure out how to replace its aging macOS in the late '90s. Mach also powered NeXT Computer's NextStep. NeXT was founded by Steve Jobs after his initial departure from Apple in the mid-1980s. Apple ultimately acquired NeXT and what became the modern macOS was largely adapted from NextStep. Some of the ideas of MkLinux therefore live on in modern Macs.
+
+MkLinux's '90s-tastic website, complete with a 3D-animated GIF of a penguin with sunglasses, which looks very professional.
+
+Some distros win, some distros lose
+Taking risks is part of creating technology, even in the open-source world. Some of the risks pay off by transforming the way we use our computers. A lot of them don't in the short run, as I've shown in this article, even though they linger on in modern devices.
+
