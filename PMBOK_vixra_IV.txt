@@ -1,0 +1,2138 @@
+A Guide to the PROJECT
+
+MANAGEMENT BODY OF
+
+KNOWLEDGE
+
+(PMBOK® GUIDE)
+
+Sixth Edition
+
+This book was printed utilizing a patented anti-counterfeit print technology designed to prevent
+
+unauthorized reproductions. The paper color is gray instead of white. When the pages of the book are
+
+copied or scanned a hidden warning message will appear in the background. This security feature is
+
+intended to discourage anyone from attempting to illegally reproduce or counterfeit this book.
+
+
+This book was printed utilizing a patented anti-counterfeit print technology designed to prevent
+unauthorized reproductions. The paper color is gray instead of white. When the pages of the book are
+copied or scanned a hidden warning message will appear in the background. This security feature is
+intended to discourage anyone from attempting to illegally reproduce or counterfeit this book.
+
+Library of Congress Cataloging-in-Publication Data
+
+Names: Project Management Institute, publisher.
+
+Title: A guide to the project management body of knowledge (PMBOK guide) / Project Management Institute.
+
+Other titles: PMBOK guide
+
+Description: Sixth edition. | Newtown Square, PA: Project Management Institute, 2017. | Series: PMBOK guide |
+
+Includes bibliographical references and index.
+
+Identifiers: LCCN 2017032505 (print) | LCCN 2017035597 (ebook) | ISBN 9781628253900 (ePUP) | ISBN
+
+9781628253917 (kindle) | ISBN 9781628253924 ( Web PDF) | ISBN 9781628251845 (paperback)
+
+Subjects: LCSH: Project management. | BISAC: BUSINESS & ECONOMICS / Project Management.
+
+Classification: LCC HD69.P75 (ebook) | LCC HD69.P75 G845 2017 (print) | DDC 658.4/04--dc23
+
+LC record available at https://lccn.loc.gov/2017032505
+
+
+ISBN: 978-1-62825-184-5
+
+Published by:
+
+Project Management Institute, Inc.
+
+14 Campus Boulevard
+
+Newtown Square, Pennsylvania 19073-3299 USA
+
+Phone: +1 610-356-4600
+
+Fax: +1 610-356-4647
+
+Email: customercare@pmi.org
+
+Website: www.PMI.org
+
+©2017 Project Management Institute, Inc. All rights reserved.
+
+Project Management Institute, Inc. content is copyright protected by U.S. intellectual property law that is recognized
+
+by most countries. To republish or reproduce PMI's content, you must obtain our permission. Please go to
+
+http://www.pmi.org/permissions for details.
+
+To place a Trade Order or for pricing information, please contact Independent Publishers Group:
+
+Independent Publishers Group
+
+Order Department
+
+814 North Franklin Street
+
+Chicago, IL 60610 USA
+
+Phone: +1 800-888-4741
+
+Fax: +1 312- 337-5985
+
+Email: orders@ipgbook.com (For orders only)
+
+For all other inquiries, please contact the PMI Book Service Center.
+
+PMI Book Service Center
+
+P.O. Box 932683, Atlanta, GA 31193-2683 USA
+
+Phone: 1-866-276-4764 (within the U.S. or Canada) or +1-770-280-4129 (globally)
+
+Fax: +1-770-280-4113
+
+Email: info@bookorders.pmi.org
+
+Printed in the United States of America. No part of this work may be reproduced or transmitted in any form or by any
+
+means, electronic, manual, photocopying, recording, or by any information storage and retrieval system, without prior
+
+written permission of the publisher.
+
+The paper used in this book complies with the Permanent Paper Standard issued by the National Information
+
+Standards Organization (Z39.48—1984).
+
+PMI, the PMI logo, PMBOK, OPM3, PMP, CAPM, PgMP, PfMP, PMI-RMP, PMI-SP, PMI-ACP, PMI-PBA,
+
+PROJECT MANAGEMENT JOURNAL, PM NETWORK, PMI TODAY, PULSE OF THE PROFESSION and the slogan MAKING PROJECT MANAGEMENT INDISPENSABLE FOR BUSINESS RESULTS. are all marks of
+
+Project Management Institute, Inc. For a comprehensive list of PMI trademarks, contact the PMI Legal Department.
+
+All other trademarks, service marks, trade names, trade dress, product names and logos appearing herein are the
+
+property of their respective owners. Any rights not expressly granted herein are reserved.
+
+10 9 8 7 6 5 4 3 2 1
+
+4
+
+The Project Management Institute, Inc. (PMI) standards and guideline publications, of
+
+which the document contained herein is one, are developed through a voluntary consensus
+
+standards development process. This process brings together volunteers and/or seeks out
+
+the views of persons who have an interest in the topic covered by this publication. While
+
+PMI administers the process and establishes rules to promote fairness in the development of
+
+consensus, it does not write the document and it does not independently test, evaluate, or
+
+verify the accuracy or completeness of any information or the soundness of any judgments
+
+contained in its standards and guideline publications.
+
+PMI disclaims liability for any personal injury, property or other damages of any nature
+
+whatsoever, whether special, indirect, consequential or compensatory, directly or indirectly
+
+resulting from the publication, use of application, or reliance on this document. PMI
+
+disclaims and makes no guaranty or warranty, expressed or implied, as to the accuracy or
+
+completeness of any information published herein, and disclaims and makes no warranty
+
+that the information in this document will fulfill any of your particular purposes or needs.
+
+PMI does not undertake to guarantee the performance of any individual manufacturer or
+
+seller's products or services by virtue of this standard or guide.
+
+In publishing and making this document available, PMI is not undertaking to render
+
+professional or other services for or on behalf of any person or entity, nor is PMI
+
+undertaking to perform any duty owed by any person or entity to someone else. Anyone
+
+using this document should rely on his or her own independent judgment or, as
+
+appropriate, seek the advice of a competent professional in determining the exercise of
+
+reasonable care in any given circumstances. Information and other standards on the topic
+
+covered by this publication may be available from other sources, which the user may wish
+
+to consult for additional views or information not covered by this publication.
+
+PMI has no power, nor does it undertake to police or enforce compliance with the
+
+contents of this document. PMI does not certify, test, or inspect products, designs, or
+
+installations for safety or health purposes. Any certification or other statement of
+
+compliance with any health or safety-related information in this document shall not be
+
+attributable to PMI and is solely the responsibility of the certifier or maker of the
+
+statement.
+
+TABLE OF CONTENTS
+
+PART 1.
+
+A GUIDE TO THE PROJECT MANAGEMENT BODY OF
+
+KNOWLEDGE (PMBOK® Guide)
+
+1. INTRODUCTION
+
+1.1 Overview and Purpose of this Guide
+
+1.1.1 The Standard for Project Management
+
+1.1.2 Common Vocabulary
+
+1.1.3 Code of Ethics and Professional Conduct
+
+1.2 Foundational Elements
+
+1.2.1 Projects
+
+1.2.2 The Importance of Project Management
+
+1.2.3 Relationship of Project, Program, Portfolio, and Operations
+
+Management
+
+1.2.4 Components of the Guide
+
+1.2.5 Tailoring
+
+1.2.6 Project Management Business Documents
+
+2. THE ENVIRONMENT IN WHICH PROJECTS OPERATE
+
+2.1 Overview
+
+2.2 Enterprise Environmental Factors
+
+2.2.1 EEFs Internal to the Organization
+
+2.2.2 EEFs External to the Organization
+
+2.3 Organizational Process Assets
+
+2.3.1 Processes, Policies, and Procedures
+
+2.3.2 Organizational Knowledge Repositories
+
+2.4 Organizational Systems
+
+2.4.1 Overview
+
+2.4.2 Organizational Governance Frameworks 3. THE ROLE OF THE PROJECT MANAGER
+
+3.1 Overview
+
+3.2 Definition of a Project Manager
+
+3.3 The Project Manager's Sphere of Influence
+
+3.3.1 Overview
+
+3.3.2 The Project
+
+3.3.3 The Organization
+
+3.3.4 The Industry
+
+3.3.5 Professional Discipline
+
+3.3.6 Across Disciplines
+
+3.4 Project Manager Competences
+
+3.4.1 Overview
+
+3.4.2 Technical Project Management Skills
+
+3.4.3 Strategic and Business Management Skills
+
+3.4.4 Leadership Skills
+
+3.4.5 Comparison of Leadership and Management
+
+3.5 Performing Integration
+
+3.5.1 Performing Integration at the Process Level
+
+3.5.2 Integration at the Cognitive Level
+
+3.5.3 Integration at the Context Level
+
+3.5.4 Integration and Complexity
+
+4. PROJECT INTEGRATION MANAGEMENT
+
+4.1 Develop Project Charter
+
+4.1.1 Develop Project Charter: Inputs
+
+4.1.2 Develop Project Charter: Tools and Techniques
+
+4.1.3 Develop Project Charter: Outputs
+
+4.2 Develop Project Management Plan
+
+4.2.1 Develop Project Management Plan: Inputs
+
+4.2.2 Develop Project Management Plan: Tools and Techniques
+
+4.2.3 Develop Project Management Plan: Outputs
+
+4.3 Direct and Manage Project Work
+
+4.3.1 Direct and Manage Project Work: Inputs
+
+4.3.2 Direct and Manage Project Work: Tools and Techniques
+
+4.3.3 Direct and Manage Project Work: Outputs
+
+7 4.4 Manage Project Knowledge
+
+4.4.1 Manage Project Knowledge: Inputs
+
+4.4.2 Manage Project Knowledge: Tools and Techniques
+
+4.4.3 Manage Project Knowledge: Outputs
+
+4.5 Monitor and Control Project Work
+
+4.5.1 Monitor and Control Project Work: Inputs
+
+4.5.2 Monitor and Control Project Work: Tools and Techniques
+
+4.5.3 Monitor and Control Project Work: Outputs
+
+4.6 Perform Integrated Change Control
+
+4.6.1 Perform Integrated Change Control: Inputs
+
+4.6.2 Perform Integrated Change Control: Tools and Techniques
+
+4.6.3 Perform Integrated Change Control: Outputs
+
+4.7 Close Project or Phase
+
+4.7.1 Close Project or Phase: Inputs
+
+4.7.2 Close Project or Phase: Tools and Techniques
+
+4.7.3 Close Project or Phase: Outputs
+
+5. PROJECT SCOPE MANAGEMENT
+
+5.1 Plan Scope Management
+
+5.1.1 Plan Scope Management: Inputs
+
+5.1.2 Plan Scope Management: Tools and Techniques
+
+5.1.3 Plan Scope Management: Outputs
+
+5.2 Collect Requirements
+
+5.2.1 Collect Requirements: Inputs
+
+5.2.2 Collect Requirements: Tools and Techniques
+
+5.2.3 Collect Requirements: Outputs
+
+5.3 Define Scope
+
+5.3.1 Define Scope: Inputs
+
+5.3.2 Define Scope: Tools and Techniques
+
+5.3.3 Define Scope: Outputs
+
+5.4 Create WBS
+
+5.4.1 Create WBS: Inputs
+
+5.4.2 Create WBS: Tools and Techniques
+
+5.4.3 Create WBS: Outputs
+
+5.5 Validate Scope
+
+5.12.1 Project Management Plan Components
+
+5.12.2 Project Documents Examples
+
+5.12.3 Project Management Plan Updates
+
+5.12.4 Project Documents Updates
+
+6. CLOSING PROCESS GROUP
+
+6.1 Close Project or Phase
+
+6.1.1 Project Management Plan Components
+
+6.1.2 Project Documents Examples
+
+6.1.3 Project Documents Updates
+
+PART 3.
+
+APPENDICES, GLOSSARY, AND INDEX
+
+APPENDIX X1
+
+SIXTH EDITION CHANGES
+
+APPENDIX X2
+
+CONTRIBUTORS AND REVIEWERS OF THE PMBOK® GUIDE—
+
+SIXTH EDITION
+
+APPENDIX X3
+
+AGILE, ITERATIVE, ADAPTIVE, AND HYBRID PROJECT
+
+ENVIRONMENTS
+
+APPENDIX X4
+
+SUMMARY OF KEY CONCEPTS FOR KNOWLEDGE AREAS
+
+APPENDIX X5
+
+SUMMARY OF TAILORING CONSIDERATIONS FOR KNOWLEDGE
+
+AREAS
+
+APPENDIX X6
+
+TOOLS AND TECHNIQUES
+
+GLOSSARY
+
+20
+
+INTRODUCTION
+
+1.1 OVERVIEW AND PURPOSE OF THIS GUIDE
+
+Project management is not new. It has been in use for hundreds of years. Examples of
+
+project outcomes include:
+
+Pyramids of Giza,
+
+Olympic games,
+
+Great Wall of China,
+
+Taj Mahal,
+
+Publication of a children's book,
+
+Panama Canal,
+
+Development of commercial jet airplanes,
+
+Polio vaccine,
+
+Human beings landing on the moon,
+
+Commercial software applications,
+
+Portable devices to use the global positioning system (GPS), and
+
+Placement of the International Space Station into Earth's orbit.
+
+The outcomes of these projects were the result of leaders and managers applying project
+
+management practices, principles, processes, tools, and techniques to their work. The
+
+managers of these projects used a set of key skills and applied knowledge to satisfy their
+
+customers and other people involved in and affected by the project. By the mid-20th
+
+century, project managers began the work of seeking recognition for project management as
+
+a profession. One aspect of this work involved obtaining agreement on the content of the
+
+body of knowledge (BOK) called project management. This BOK became known as the
+
+Project Management Body of Knowledge (PMBOK). The Project Management Institute
+
+(PMI) produced a baseline of charts and glossaries for the PMBOK. Project managers soon
+
+realized that no single book could contain the entire PMBOK. Therefore, PMI developed PMI defines the project management body of knowledge (PMBOK) as a term that
+
+describes the knowledge within the profession of project management. The project
+
+management body of knowledge includes proven traditional practices that are widely
+
+applied as well as innovative practices that are emerging in the profession.
+
+The body of knowledge (BOK) includes both published and unpublished materials.
+
+This body of knowledge is constantly evolving. This PMBOK® Guide identifies a subset of
+
+the project management body of knowledge that is generally recognized as good practice.
+
+Generally recognized means the knowledge and practices described are
+
+applicable to most projects most of the time, and there is consensus about their
+
+value and usefulness.
+
+Good practice means there is general agreement that the application of the
+
+knowledge, skills, tools, and techniques to project management processes can
+
+enhance the chance of success over many projects in delivering the expected
+
+business values and results.
+
+The project manager works with the project team and other stakeholders to determine
+
+and use the appropriate generally recognized good practices for each project. Determining
+
+the appropriate combination of processes, inputs, tools, techniques, outputs and life cycle
+
+phases to manage a project is referred to as “tailoring” the application of the knowledge
+
+described in this guide.
+
+This PMBOK® Guide is different from a methodology. A methodology is a system of
+
+practices, techniques, procedures, and rules used by those who work in a discipline. This
+
+PMBOK® Guide is a foundation upon which organizations can build methodologies,
+
+policies, procedures, rules, tools and techniques, and life cycle phases needed to practice
+
+project management.
+
+1.1.1 THE STANDARD FOR PROJECT MANAGEMENT
+
+This guide is based on The Standard for Project Management [1]. A standard is a
+
+document established by an authority, custom, or general consent as a model or example.
+
+As an American National Standards Institute (ANSI) standard, The Standard for Project
+
+Management was developed using a process based on the concepts of consensus, openness,
+
+due process, and balance. The Standard for Project Management is a foundational reference
+
+for PMI's project management professional development programs and the practice of
+
+project management. Because project management needs to be tailored to fit the needs of
+
+the project, the standard and the guide are both based on descriptive practices, rather than
+
+prescriptive practices. Therefore, the standard identifies the processes that are considered
+
+good practices on most projects, most of the time. The standard also identifies the inputs
+
+and outputs that are usually associated with those processes. The standard does not require
+
+that any particular process or practice be performed. The Standard for Project Management
+
+is included as Part II of A Guide to the Project Management Body of Knowledge (PMBOK®
+
+34 Guide).
+
+The PMBOK® Guide provides more detail about key concepts, emerging trends,
+
+considerations for tailoring the project management processes, and information on how
+
+tools and techniques are applied to projects. Project managers may use one or more
+
+methodologies to implement the project management processes outlined in the standard.
+
+The scope of this guide is limited to the discipline of project management, rather than
+
+the full spectrum of portfolios, programs, and projects. Portfolios and programs will be
+
+addressed only to the degree they interact with projects. PMI publishes two other standards
+
+that address the management of portfolios and programs:
+
+The Standard for Portfolio Management [2], and
+
+The Standard for Program Management [3].
+
+1.1.2 COMMON VOCABULARY
+
+A common vocabulary is an essential element of a professional discipline. The PMI
+
+Lexicon of Project Management Terms [4] provides the foundational professional vocabulary
+
+that can be consistently used by organizations, portfolio, program, and project managers
+
+and other project stakeholders. The Lexicon will continue to evolve over time. The glossary
+
+to this guide includes the vocabulary in the Lexicon along with additional definitions. There
+
+may be other industry-specific terms used in projects that are defined by that industry's
+
+literature.
+
+1.1.3 CODE OF ETHICS AND PROFESSIONAL CONDUCT
+
+PMI publishes the Code of Ethics and Professional Conduct [5] to instill confidence in the
+
+project management profession and to help an individual in making wise decisions,
+
+particularly when faced with difficult situations where the individual may be asked to
+
+compromise his or her integrity or values. The values that the global project management
+
+community defined as most important were responsibility, respect, fairness, and honesty.
+
+The Code of Ethics and Professional Conduct affirms these four values as its foundation.
+
+The Code of Ethics and Professional Conduct includes both aspirational standards and
+
+mandatory standards. The aspirational standards describe the conduct that practitioners,
+
+who are also PMI members, certification holders, or volunteers, strive to uphold. Although
+
+adherence to the aspirational standards is not easily measured, conduct in accordance with
+
+these is an expectation for those who consider themselves to be professionals—it is not
+
+optional. The mandatory standards establish firm requirements and, in some cases, limit or
+
+prohibit practitioner behavior. Practitioners who are also PMI members, certification
+
+holders, or volunteers and who do not conduct themselves in accordance with these
+
+standards will be subject to disciplinary procedures before PMI's Ethics Review Committee.
+
+35 1.2 FOUNDATIONAL ELEMENTS
+
+This section describes foundational elements necessary for working in and
+
+understanding the discipline of project management.
+
+1.2.1 PROJECTS
+
+A project is a temporary endeavor undertaken to create a unique product, service, or
+
+result.
+
+Unique product, service, or result. Projects are undertaken to fulfill objectives
+
+by producing deliverables. An objective is defined as an outcome toward which
+
+work is to be directed, a strategic position to be attained, a purpose to be
+
+achieved, a result to be obtained, a product to be produced, or a service to be
+
+performed. A deliverable is defined as any unique and verifiable product, result,
+
+or capability to perform a service that is required to be produced to complete a
+
+process, phase, or project. Deliverables may be tangible or intangible.
+
+Fulfillment of project objectives may produce one or more of the following
+
+deliverables:
+
+A unique product that can be either a component of another item, an
+
+enhancement or correction to an item, or a new end item in itself (e.g., the
+
+correction of a defect in an end item);
+
+A unique service or a capability to perform a service (e.g., a business function
+
+that supports production or distribution);
+
+A unique result, such as an outcome or document (e.g., a research project that
+
+develops knowledge that can be used to determine whether a trend exists or a
+
+new process will benefit society); and
+
+A unique combination of one or more products, services, or results (e.g., a
+
+software application, its associated documentation, and help desk services).
+
+Repetitive elements may be present in some project deliverables and activities. This
+
+repetition does not change the fundamental and unique characteristics of the project
+
+work. For example, office buildings can be constructed with the same or similar
+
+materials and by the same or different teams. However, each building project remains
+
+unique in key characteristics (e.g., location, design, environment, situation, people
+
+involved).
+
+Projects are undertaken at all organizational levels. A project can involve a single
+
+individual or a group. A project can involve a single organizational unit or multiple
+
+organizational units from multiple organizations.
+
+Examples of projects include but are not limited to:
+
+36 Developing a new pharmaceutical compound for market,
+
+Expanding a tour guide service,
+
+Merging two organizations,
+
+Improving a business process within an organization,
+
+Acquiring and installing a new computer hardware system for use in an
+
+organization,
+
+Exploring for oil in a region,
+
+Modifying a computer software program used in an organization,
+
+Conducting research to develop a new manufacturing process, and
+
+Constructing a building.
+
+Temporary endeavor. The temporary nature of projects indicates that a
+
+project has a definite beginning and end. Temporary does not necessarily mean
+
+a project has a short duration. The end of the project is reached when one or
+
+more of the following is true:
+
+The project's objectives have been achieved;
+
+The objectives will not or cannot be met;
+
+Funding is exhausted or no longer available for allocation to the project;
+
+The need for the project no longer exists (e.g., the customer no longer wants
+
+the project completed, a change in strategy or priority ends the project, the
+
+organizational management provides direction to end the project);
+
+The human or physical resources are no longer available; or
+
+The project is terminated for legal cause or convenience.
+
+Projects are temporary, but their deliverables may exist beyond the end of the project.
+
+Projects may produce deliverables of a social, economic, material, or environmental
+
+nature. For example, a project to build a national monument will create a deliverable
+
+expected to last for centuries.
+
+Projects drive change. Projects drive change in organizations. From a business
+
+perspective, a project is aimed at moving an organization from one state to
+
+another state in order to achieve a specific objective (see Figure 1-1). Before the
+
+project begins, the organization is commonly referred to as being in the current
+
+state. The desired result of the change driven by the project is described as the
+
+future state.
+
+For some projects, this may involve creating a transition state where multiple
+
+steps are made along a continuum to achieve the future state. The successful
+
+completion of a project results in the organization moving to the future state
+
+37 and achieving the specific objective. For more information on project
+
+management and change, see Managing Change in Organizations: A Practice
+
+Guide [6].
+
+
+Projects enable business value creation. PMI defines business value as the net
+
+quantifiable benefit derived from a business endeavor. The benefit may be
+
+tangible, intangible, or both. In business analysis, business value is considered
+
+the return, in the form of elements such as time, money, goods, or intangibles
+
+in return for something exchanged (see Business Analysis for Practitioners: A
+
+Practice Guide, p. 185 [7]).
+
+Business value in projects refers to the benefit that the results of a specific project
+
+provide to its stakeholders. The benefit from projects may be tangible, intangible, or
+
+both.
+
+Examples of tangible elements include:
+
+Monetary assets,
+
+Stockholder equity,
+
+Utility,
+
+Fixtures,
+
+Tools, and
+
+Market share.
+
+Examples of intangible elements include:
+
+Goodwill,
+
+Brand recognition,
+
+Public benefit,
+
+Trademarks,
+
+Strategic alignment, and
+
+Reputation.
+
+Project Initiation Context. Organizational leaders initiate projects in response
+
+to factors acting upon their organizations. There are four fundamental
+
+categories for these factors, which illustrate the context of a project (see Figure
+
+1-2):
+
+Meet regulatory, legal, or social requirements;
+
+Satisfy stakeholder requests or needs;
+
+Implement or change business or technological strategies; and
+
+Create, improve, or fix products, processes, or services.
+
+
+1.2.2 THE IMPORTANCE OF PROJECT MANAGEMENT
+
+Project management is the application of knowledge, skills, tools, and techniques to
+
+project activities to meet the project requirements. Project management is accomplished
+
+through the appropriate application and integration of the project management processes
+
+identified for the project. Project management enables organizations to execute projects
+
+effectively and efficiently.
+
+Effective project management helps individuals, groups, and public and private
+
+organizations to:
+
+Meet business objectives;
+
+Satisfy stakeholder expectations;
+
+Be more predictable;
+
+Increase chances of success;
+
+
+Deliver the right products at the right time;
+
+Resolve problems and issues;
+
+Respond to risks in a timely manner;
+
+Optimize the use of organizational resources;
+
+Identify, recover, or terminate failing projects;
+
+Manage constraints (e.g., scope, quality, schedule, costs, resources);
+
+Balance the influence of constraints on the project (e.g., increased scope may
+
+increase cost or schedule); and
+
+Manage change in a better manner.
+
+Poorly managed projects or the absence of project management may result in:
+
+Missed deadlines,
+
+Cost overruns,
+
+Poor quality,
+
+Rework,
+
+Uncontrolled expansion of the project,
+
+Loss of reputation for the organization,
+
+Unsatisfied stakeholders, and
+
+Failure in achieving the objectives for which the project was undertaken.
+
+Projects are a key way to create value and benefits in organizations. In today's business
+
+environment, organizational leaders need to be able to manage with tighter budgets, shorter
+
+timelines, scarcity of resources, and rapidly changing technology. The business
+
+environment is dynamic with an accelerating rate of change. To remain competitive in the
+
+world economy, companies are embracing project management to consistently deliver
+
+business value.
+
+Effective and efficient project management should be considered a strategic competency
+
+within organizations. It enables organizations to:
+
+Tie project results to business goals,
+
+Compete more effectively in their markets,
+
+Sustain the organization, and
+
+Respond to the impact of business environment changes on projects by
+
+appropriately adjusting project management plans (see Section 4.2).
+
+1.2.3 RELATIONSHIP OF PROJECT, PROGRAM, PORTFOLIO, AND OPERATIONS MANAGEMENT
+
+1.2.3.1 OVERVIEW
+
+Using project management processes, tools, and techniques puts in place a sound
+
+foundation for organizations to achieve their goals and objectives. A project may be
+
+managed in three separate scenarios: as a stand-alone project (outside of a portfolio or
+
+program), within a program, or within a portfolio. Project managers interact with portfolio
+
+and program managers when a project is within a program or portfolio. For example,
+
+multiple projects may be needed to accomplish a set of goals and objectives for an
+
+organization. In those situations, projects may be grouped together into a program. A
+
+program is defined as a group of related projects, subsidiary programs, and program
+
+activities managed in a coordinated manner to obtain benefits not available from managing
+
+them individually. Programs are not large projects. A very large project may be referred to
+
+as a megaproject. As a guideline, megaprojects cost US$1billion or more, affect 1 million or
+
+more people, and run for years.
+
+Some organizations may employ the use of a project portfolio to effectively manage
+
+multiple programs and projects that are underway at any given time. A portfolio is defined
+
+as projects, programs, subsidiary portfolios, and operations managed as a group to achieve
+
+strategic objectives. Figure 1-3 illustrates an example of how portfolios, programs, projects,
+
+and operations are related in a specific situation.
+
+Program management and portfolio management differ from project management in
+
+their life cycles, activities, objectives, focus, and benefits. However, portfolios, programs,
+
+projects, and operations often engage with the same stakeholders and may need to use the
+
+same resources (see Figure 1-3), which may result in a conflict in the organization. This
+
+type of a situation increases the need for coordination within the organization through the
+
+use of portfolio, program, and project management to achieve a workable balance in the
+
+organization.
+
+Figure 1-3 illustrates a sample portfolio structure indicating relationships between the
+
+programs, projects, shared resources, and stakeholders. The portfolio components are
+
+grouped together in order to facilitate the effective governance and management of the
+
+work that helps to achieve organizational strategies and priorities. Organizational and
+
+portfolio planning impact the components by means of prioritization based on risk,
+
+funding, and other considerations. The portfolio view allows organizations to see how the
+
+strategic goals are reflected in the portfolio. This portfolio view also enables the
+
+implementation and coordination of appropriate portfolio, program, and project
+
+governance. This coordinated governance allows authorized allocation of human, financial,
+
+and physical resources based on expected performance and benefits.
+
+42 Looking at project, program, and portfolio management from an organizational
+
+perspective:
+
+Program and project management focus on doing programs and projects the
+
+“right” way; and
+
+Portfolio management focuses on doing the “right” programs and projects.
+
+Table 1-2 gives a comparative overview of portfolios, programs, and projects.
+
+43 1.2.3.2 PROGRAM MANAGEMENT
+
+Program management is defined as the application of knowledge, skills, and principles
+
+to a program to achieve the program objectives and to obtain benefits and control not
+
+available by managing program components individually. A program component refers to
+
+projects and other programs within a program. Project management focuses on
+
+interdependencies within a project to determine the optimal approach for managing the
+
+project. Program management focuses on the interdependencies between projects and
+
+between projects and the program level to determine the optimal approach for managing
+
+them. Actions related to these program and project-level interdependencies may include:
+
+Aligning with the organizational or strategic direction that affects program and
+
+project goals and objectives;
+
+Allocating the program scope into program components;
+
+Managing interdependencies among the components of the program to best
+
+serve the program;
+
+Managing program risks that may impact multiple projects in the program;
+
+44 Resolving constraints and conflicts that affect multiple projects within the
+
+program;
+
+Resolving issues between component projects and the program level;
+
+Managing change requests within a shared governance framework;
+
+Allocating budgets across multiple projects within the program; and
+
+Assuring benefits realization from the program and component projects.
+
+An example of a program is a new communications satellite system with projects for the
+
+design and construction of the satellite and the ground stations, the launch of the satellite,
+
+and the integration of the system.
+
+For more information on program management, see The Standard for Program
+
+Management [3].
+
+1.2.3.3 PORTFOLIO MANAGEMENT
+
+A portfolio is defined as projects, programs, subsidiary portfolios, and operations
+
+managed as a group to achieve strategic objectives.
+
+Portfolio management is defined as the centralized management of one or more
+
+portfolios to achieve strategic objectives. The programs or projects of the portfolio may not
+
+necessarily be interdependent or directly related.
+
+The aim of portfolio management is to:
+
+Guide organizational investment decisions
+
+Select the optimal mix of programs and projects to meet strategic objectives.
+
+Provide decision-making transparency.
+
+Prioritize team and physical resource allocation.
+
+Increase the likelihood of realizing the desired return on investment.
+
+Centralize the management of the aggregate risk profile of all components.
+
+Portfolio management also confirms that the portfolio is consistent with and aligned
+
+with organizational strategies.
+
+Maximizing the value of the portfolio requires careful examination of the components
+
+that comprise the portfolio. Components are prioritized so that those contributing the most
+
+to the organization's strategic objectives have the required financial, team, and physical
+
+resources.
+
+For example, an infrastructure organization that has the strategic objective of
+
+maximizing the return on its investments may put together a portfolio that includes a mix
+
+of projects in oil and gas, power, water, roads, rail, and airports. From this mix, the
+
+organization may choose to manage related projects as one portfolio. All of the power
+
+
+projects may be grouped together as a power portfolio. Similarly, all of the water projects
+
+may be grouped together as a water portfolio. However, when the organization has projects
+
+in designing and constructing a power plant and then operates the power plant to generate
+
+energy, those related projects can be grouped in one program. Thus, the power program
+
+and similar water program become integral components of the portfolio of the
+
+infrastructure organization.
+
+For more information on portfolio management, see The Standard for Portfolio
+
+Management [2].
+
+1.2.3.4 OPERATIONS MANAGEMENT
+
+Operations management is an area that is outside the scope of formal project
+
+management as described in this guide.
+
+Operations management is concerned with the ongoing production of goods and/or
+
+services. It ensures that business operations continue efficiently by using the optimal
+
+resources needed to meet customer demands. It is concerned with managing processes that
+
+transform inputs (e.g., materials, components, energy, and labor) into outputs (e.g.,
+
+products, goods, and/or services).
+
+1.2.3.5 OPERATIONS AND PROJECT MANAGEMENT
+
+Changes in business or organizational operations may be the focus of a project—
+
+especially when there are substantial changes to business operations as a result of a new
+
+product or service delivery. Ongoing operations are outside of the scope of a project;
+
+however, there are intersecting points where the two areas cross.
+
+Projects can intersect with operations at various points during the product life cycle,
+
+such as;
+
+When developing a new product, upgrading a product, or expanding outputs;
+
+While improving operations or the product development process;
+
+At the end of the product life cycle; and
+
+At each closeout phase.
+
+At each point, deliverables and knowledge are transferred between the project and
+
+operations for implementation of the delivered work. This implementation occurs through
+
+a transfer of project resources or knowledge to operations or through a transfer of
+
+operational resources to the project.
+
+1.2.3.6 ORGANIZATIONAL PROJECT MANAGEMENT (OPM) AND
+
+STRATEGIES
+
+Portfolios, programs, and projects are aligned with or driven by organizational strategies and differ in the way each contributes to the achievement of strategic goals:
+
+Portfolio management aligns portfolios with organizational strategies by
+
+selecting the right programs or projects, prioritizing the work, and providing
+
+the needed resources.
+
+Program management harmonizes its program components and controls
+
+interdependencies in order to realize specified benefits.
+
+Project management enables the achievement of organizational goals and
+
+objectives.
+
+Within portfolios or programs, projects are a means of achieving organizational goals
+
+and objectives. This is often accomplished in the context of a strategic plan that is the
+
+primary factor guiding investments in projects. Alignment with the organization's strategic
+
+business goals can be achieved through the systematic management of portfolios, programs,
+
+and projects through the application of organizational project management (OPM). OPM
+
+is defined as a framework in which portfolio, program, and project management are
+
+integrated with organizational enablers in order to achieve strategic objectives.
+
+The purpose of OPM is to ensure that the organization undertakes the right projects
+
+and allocates critical resources appropriately. OPM also helps to ensure that all levels in the
+
+organization understand the strategic vision, the initiatives that support the vision, the
+
+objectives, and the deliverables. Figure 1-4 shows the organizational environment where
+
+strategy, portfolio, programs, projects, and operations interact.
+
+For more information on OPM, refer to Implementing Organizational Project
+
+Management: A Practice Guide [8].
+
+47 1.2.4 COMPONENTS OF THE GUIDE
+
+Projects comprise several key components that, when effectively managed, result in their
+
+successful completion. This guide identifies and explains these components. The various
+
+components interrelate to one another during the management of a project.
+
+The key components are described briefly in Table 1-3. These components are more
+
+fully explained in the sections that follow the table.
+
+Table 1-3. Description of PMBOK® Guide Key Components
+
+PMBOK® Guide Key Component Brief Description
+
+Project life cycle (Section 1.2.4.1) The series of phases that a project passes through from its start to
+
+its completion.
+
+Project phase (Section 1.2.4.2) A collection of logically related project activities that culminates in
+
+the completion of one or more deliverables.
+
+Phase gate (Section 1.2.4.3) A review at the end of a phase in which a decision is made to
+
+continue to the next phase, to continue with modification, or to
+
+end a program or project.
+
+Project management processes (Section
+
+1.2.4.4)
+
+A systematic series of activities directed toward causing an end
+
+result where one or more inputs will be acted upon to create one
+
+or more outputs.
+
+Project Management Process Group
+
+(Section 1.2.4.5)
+
+A logical grouping of project management inputs, tools and
+
+techniques, and outputs. The Project Management Process
+
+Groups include Initiating, Planning, Executing, Monitoring and
+
+Controlling, and Closing. Project Management Process Groups
+
+are not project phases.
+
+Project Management Knowledge Area
+
+(Section 1.2.4.6)
+
+An identified area of project management defined by its
+
+knowledge requirements and described in terms of its component
+
+processes, practices, inputs, outputs, tools, and techniques.
+
+48
+
+1.2.4.1 PROJECT AND DEVELOPMENT LIFE CYCLES
+
+A project life cycle is the series of phases that a project passes through from its start to its
+
+completion. It provides the basic framework for managing the project. This basic
+
+framework applies regardless of the specific project work involved. The phases may be
+
+sequential, iterative, or overlapping. All projects can be mapped to the generic life cycle
+
+shown in Figure 1-5.
+
+Project life cycles can be predictive or adaptive. Within a project life cycle, there are
+
+generally one or more phases that are associated with the development of the product,
+
+service, or result. These are called a development life cycle. Development life cycles can be
+
+predictive, iterative, incremental, adaptive, or a hybrid model:
+
+In a predictive life cycle, the project scope, time, and cost are determined in the
+
+early phases of the life cycle. Any changes to the scope are carefully managed.
+
+Predictive life cycles may also be referred to as waterfall life cycles.
+
+In an iterative life cycle, the project scope is generally determined early in the project life cycle. 
+
+
+but time and cost estimates are routinely modified as the
+
+project team's understanding of the product increases. Iterations develop the
+
+product through a series of repeated cycles, while increments successively add
+
+to the functionality of the product.
+
+In an incremental life cycle, the deliverable is produced through a series of
+
+iterations that successively add functionality within a predetermined time
+
+frame. The deliverable contains the necessary and sufficient capability to be
+
+considered complete only after the final iteration.
+
+Adaptive life cycles are agile, iterative, or incremental. The detailed scope is
+
+defined and approved before the start of an iteration. Adaptive life cycles are
+
+also referred to as agile or change-driven life cycles. See Appendix X3.
+
+A hybrid life cycle is a combination of a predictive and an adaptive life cycle.
+
+Those elements of the project that are well known or have fixed requirements
+
+follow a predictive development life cycle, and those elements that are still
+
+evolving follow an adaptive development life cycle.
+
+It is up to the project management team to determine the best life cycle for each project.
+
+The project life cycle needs to be flexible enough to deal with the variety of factors included
+
+in the project. Life cycle flexibility may be accomplished by:
+
+Identifying the process or processes needed to be performed in each phase,
+
+Performing the process or processes identified in the appropriate phase,
+
+Adjusting the various attributes of a phase (e.g., name, duration, exit criteria,
+
+and entrance criteria).
+
+Project life cycles are independent of product life cycles, which may be produced by a
+
+project. A product life cycle is the series of phases that represent the evolution of a product,
+
+from concept through delivery, growth, maturity, and to retirement.
+
+1.2.4.2 PROJECT PHASE
+
+A project phase is a collection of logically related project activities that culminates in the
+
+completion of one or more deliverables. The phases in a life cycle can be described by a
+
+variety of attributes. Attributes may be measurable and unique to a specific phase.
+
+Attributes may include but are not limited to:
+
+Name (e.g., Phase A, Phase B, Phase 1, Phase 2, proposal phase),
+
+Number (e.g., three phases in the project, five phases in the project),
+
+Duration (e.g., 1 week, 1 month, 1 quarter),
+
+Resource requirements (e.g., people, buildings, equipment),
+
+Entrance criteria for a project to move into that phase (e.g., specified approvals documented, specified documents completed), and
+
+Exit criteria for a project to complete a phase (e.g., documented approvals,
+
+completed documents, completed deliverables).
+
+Projects may be separated into distinct phases or subcomponents. These phases or
+
+subcomponents are generally given names that indicate the type of work done in that
+
+phase. Examples of phase names include but are not limited to:
+
+Concept development,
+
+Feasibility study,
+
+Customer requirements,
+
+Solution development,
+
+Design,
+
+Prototype,
+
+Build,
+
+Test,
+
+Transition,
+
+Commissioning,
+
+Milestone review, and
+
+Lessons learned.
+
+The project phases may be established based on various factors including, but not
+
+limited to:
+
+Management needs;
+
+Nature of the project;
+
+Unique characteristics of the organization, industry, or technology;
+
+Project elements including, but not limited to, technology, engineering,
+
+business, process, or legal; and
+
+Decision points (e.g., funding, project go/no-go, and milestone review).
+
+Using multiple phases may provide better insight to managing the project. It also
+
+provides an opportunity to assess the project performance and take necessary corrective or
+
+preventive actions in subsequent phases. A key component used with project phases is the
+
+phase review (see Section 1.2.4.3).
+
+1.2.4.3 PHASE GATE
+
+A phase gate, is held at the end of a phase. The project's performance and progress are
+
+compared to project and business documents including but not limited to:
+
+51 Project business case (see Section 1.2.6.1),
+
+Project charter (see Section 4.1),
+
+Project management plan (see Section 4.2), and
+
+Benefits management plan (see Section 1.2.6.2).
+
+A decision (e.g., go/no-go decision) is made as a result of this comparison to:
+
+Continue to the next phase,
+
+Continue to the next phase with modification,
+
+End the project,
+
+Remain in the phase, or
+
+Repeat the phase or elements of it.
+
+Depending on the organization, industry, or type of work, phase gates may be referred
+
+to by other terms such as, phase review, stage gate, kill point, and phase entrance or phase
+
+exit. Organizations may use these reviews to examine other pertinent items which are
+
+beyond the scope of this guide, such as product-related documents or models.
+
+1.2.4.4 PROJECT MANAGEMENT PROCESSES
+
+The project life cycle is managed by executing a series of project management activities
+
+known as project management processes. Every project management process produces one
+
+or more outputs from one or more inputs by using appropriate project management tools
+
+and techniques. The output can be a deliverable or an outcome. Outcomes are an end
+
+result of a process. Project management processes apply globally across industries.
+
+Project management processes are logically linked by the outputs they produce.
+
+Processes may contain overlapping activities that occur throughout the project. The output
+
+of one process generally results in either:
+
+An input to another process, or
+
+A deliverable of the project or project phase.
+
+Figure 1-6 shows an example of how inputs, tools and techniques, and outputs relate to
+
+each other within a process, and with other processes.
+
+52 The number of process iterations and interactions between processes varies based on the
+
+needs of the project. Processes generally fall into one of three categories:
+
+Processes used once or at predefined points in the project. The processes
+
+Develop Project Charter and Close Project or Phase are examples.
+
+Processes that are performed periodically as needed. The process Acquire
+
+Resources is performed as resources are needed. The process Conduct
+
+Procurements is performed prior to needing the procured item.
+
+Processes that are performed continuously throughout the project. The
+
+process Define Activities may occur throughout the project life cycle, especially
+
+if the project uses rolling wave planning or an adaptive development approach.
+
+Many of the monitoring and control processes are ongoing from the start of the
+
+project, until it is closed out.
+
+Project management is accomplished through the appropriate application and
+
+integration of logically grouped project management processes. While there are different
+
+ways of grouping processes, the PMBOK® Guide groups processes into five categories called
+
+Process Groups.
+
+1.2.4.7 PROJECT MANAGEMENT DATA AND INFORMATION
+
+Throughout the life cycle of a project, a significant amount of data is collected, analyzed,
+
+and transformed. Project data are collected as a result of various processes and are shared
+
+within the project team. The collected data are analyzed in context, aggregated, and transformed to become project information during various processes. Information is
+
+communicated verbally or stored and distributed in various formats as reports. See Section
+
+4.3 for more detail on this topic.
+
+Project data are regularly collected and analyzed throughout the project life cycle. The
+
+following definitions identify key terminology regarding project data and information:
+
+Work performance data. The raw observations and measurements identified
+
+during activities performed to carry out the project work. Examples include
+
+reported percent of work physically completed, quality and technical
+
+performance measures, start and finish dates of schedule activities, number of
+
+change requests, number of defects, actual costs, actual durations, etc. Project
+
+data are usually recorded in a Project Management Information System (PMIS)
+
+(see Section 4.3.2.2) and in project documents.
+
+Work performance information. The performance data collected from various
+
+controlling processes, analyzed in context and integrated based on relationships
+
+across areas. Examples of performance information are status of deliverables,
+
+implementation status for change requests, and forecast estimates to complete.
+
+Work performance reports. The physical or electronic representation of work
+
+performance information compiled in project documents, which is intended to
+
+generate decisions or raise issues, actions, or awareness. Examples include status
+
+reports, memos, justifications, information notes, electronic dashboards,
+
+recommendations, and updates.
+
+Figure 1-7 shows the flow of project information across the various processes used in
+
+managing the project.
+
+56 1.2.5 TAILORING
+
+Usually, project managers apply a project management methodology to their work. A
+
+methodology is a system of practices, techniques, procedures, and rules used by those who
+
+work in a discipline. This definition makes it clear that this guide itself is not a
+
+methodology.
+
+This guide and The Standard for Project Management [1] are recommended references
+
+for tailoring, because these standard documents identify the subset of the project
+
+management body of knowledge that is generally recognized as good practice. “Good
+
+practice” does not mean that the knowledge described should always be applied uniformly
+
+to all projects. Specific methodology recommendations are outside the scope of this guide.
+
+Project management methodologies may be:
+
+Developed by experts within the organization,
+
+Purchased from vendors,
+
+57 Obtained from professional associations, or
+
+Acquired from government agencies.
+
+The appropriate project management processes, inputs, tools, techniques, outputs, and
+
+life cycle phases should be selected to manage a project. This selection activity is known as
+
+tailoring project management to the project. The project manager collaborates with the
+
+project team, sponsor, organizational management, or some combination thereof, in the
+
+tailoring. In some cases, the organization may require specific project management
+
+methodologies be used.
+
+Tailoring is necessary because each project is unique; not every process, tool, technique,
+
+input, or output identified in the PMBOK® Guide is required on every project. Tailoring
+
+should address the competing constraints of scope, schedule, cost, resources, quality, and
+
+risk. The importance of each constraint is different for each project, and the project
+
+manager tailors the approach for managing these constraints based on the project
+
+environment, organizational culture, stakeholder needs, and other variables.
+
+In tailoring project management, the project manager should also consider the varying
+
+levels of governance that may be required and within which the project will operate, as well
+
+as considering the culture of the organization. In addition, consideration of whether the
+
+customer of the project is internal or external to the organization may affect project
+
+management tailoring decisions.
+
+Sound project management methodologies take into account the unique nature of
+
+projects and allow tailoring, to some extent, by the project manager. However, the tailoring
+
+that is included in the methodology may still require additional tailoring for a given
+
+project.
+
+1.2.6 PROJECT MANAGEMENT BUSINESS DOCUMENTS
+
+The project manager needs to ensure that the project management approach captures
+
+the intent of business documents. These documents are defined in Table 1-5. These two
+
+documents are interdependent and iteratively developed and maintained throughout the
+
+life cycle of the project.
+
+Table 1-5. Project Business Documents
+
+Project Business Documents Definition
+
+Project business case A documented economic feasibility study used to establish the
+
+validity of the benefits of a selected component lacking sufficient
+
+definition and that is used as a basis for the authorization of
+
+further project management activities.
+
+Project benefits management plan The documented explanation defining the processes for creating,
+
+maximizing, and sustaining the benefits provided by a project.
+
+58 The project sponsor is generally accountable for the development and maintenance of
+
+the project business case document. The project manager is responsible for providing
+
+recommendations and oversight to keep the project business case, project management
+
+plan, project charter, and project benefits management plan success measures in alignment
+
+with one another and with the goals and objectives of the organization.
+
+Project managers should appropriately tailor the noted project management documents
+
+for their projects. In some organizations, the business case and benefits management plan
+
+are maintained at the program level. Project managers should work with the appropriate
+
+program managers to ensure the project management documents are aligned with the
+
+program documents. Figure 1-8 illustrates the interrelationship of these critical project
+
+management business documents and the needs assessment. Figure 1-8 shows an
+
+approximation of the life cycle of these various documents against the project life cycle.
+
+1.2.6.1 PROJECT BUSINESS CASE
+
+The project business case is a documented economic feasibility study used to establish
+
+the validity of the benefits of a selected component lacking sufficient definition and that is
+
+used as a basis for the authorization of further project management activities. The business
+
+case lists the objectives and reasons for project initiation. It helps measure the project
+
+success at the end of the project against the project objectives. The business case is a project
+
+59 business document that is used throughout the project life cycle. The business case may be
+
+used before the project initiation and may result in a go/no-go decision for the project.
+
+A needs assessment often precedes the business case. The needs assessment involves
+
+understanding business goals and objectives, issues, and opportunities and recommending
+
+proposals to address them. The results of the needs assessment may be summarized in the
+
+business case document.
+
+The process of defining the business need, analyzing the situation, making
+
+recommendations, and defining evaluation criteria is applicable to any organization's
+
+projects. A business case may include but is not limited to documenting the following:
+
+Business needs:
+
+Determination of what is prompting the need for action;
+
+Situational statement documenting the business problem or opportunity to
+
+be addressed including the value to be delivered to the organization;
+
+Identification of stakeholders affected; and
+
+Identification of the scope.
+
+Analysis of the situation:
+
+Identification of organizational strategies, goals, and objectives;
+
+Identification of root cause(s) of the problem or main contributors of an
+
+opportunity;
+
+Gap analysis of capabilities needed for the project versus existing capabilities
+
+of the organization;
+
+Identification of known risks;
+
+Identification of critical success factors;
+
+Identification of decision criteria by which the various courses of action may
+
+be assessed;
+
+Examples of criteria categories used for analysis of a situation are:
+
+Required. This is a criterion that is “required” to be fulfilled to address
+
+the problem or opportunity.
+
+Desired. This is a criterion that is “desired” to be fulfilled to address the
+
+problem or opportunity.
+
+Optional. This is a criterion that is not essential. Fulfillment of this
+
+criterion may become a differentiator between alternative courses of
+
+action.
+
+Identification of a set of options to be considered for addressing the business
+
+60 problem or opportunity. Options are alternative courses of action that may be
+
+taken by the organization. Options may also be described as business
+
+scenarios. For example, a business case could present the following three
+
+options:
+
+Do nothing. This is also referred to as the “business as usual” option.
+
+Selection of this option results in the project not being authorized.
+
+Do the minimum work possible to address the problem or opportunity. The
+
+minimum may be established by identifying the set of documented
+
+criteria that are key in addressing the problem or opportunity.
+
+Do more than the minimum work possible to address the problem or
+
+opportunity. This option meets the minimum set of criteria and some or
+
+all of the other documented criteria. There may be more than one of
+
+these options documented in the business case.
+
+Recommendation:
+
+A statement of the recommended option to pursue in the project;
+
+Items to include in the statement may include but are not limited to:
+
+Analysis results for the potential option;
+
+Constraints, assumptions, risks, and dependencies for the potential
+
+options; and
+
+Success measures (see Section 1.2.6.4).
+
+An implementation approach that may include but is not limited to:
+
+Milestones,
+
+Dependencies, and
+
+Roles and responsibilities.
+
+Evaluation:
+
+Statement describing the plan for measuring benefits the project will deliver.
+
+This should include any ongoing operational aspects of the recommended
+
+option beyond initial implementation.
+
+The business case document provides the basis to measure success and progress
+
+throughout the project life cycle by comparing the results with the objectives and the
+
+identified success criteria. See Business Analysis for Practitioners: A Practice Guide [7].
+
+1.2.6.2 PROJECT BENEFITS MANAGEMENT PLAN
+
+The project benefits management plan is the document that describes how and when the
+
+benefits of the project will be delivered, and describes the mechanisms that should be in
+
+place to measure those benefits. A project benefit is defined as an outcome of actions,
+
+61 behaviors, products, services, or results that provide value to the sponsoring organization as
+
+well as to the project's intended beneficiaries. Development of the benefits management
+
+plan begins early in the project life cycle with the definition of the target benefits to be
+
+realized. The benefits management plan describes key elements of the benefits and may
+
+include but is not limited to documenting the following:
+
+Target benefits (e.g., the expected tangible and intangible value to be gained
+
+by the implementation of the project; financial value is expressed as net present
+
+value);
+
+Strategic alignment (e.g., how well the project benefits align to the business
+
+strategies of the organization);
+
+Timeframe for realizing benefits (e.g., benefits by phase, short-term, long-
+
+term, and ongoing);
+
+Benefits owner (e.g., the accountable person to monitor, record, and report
+
+realized benefits throughout the timeframe established in the plan);
+
+Metrics (e.g., the measures to be used to show benefits realized, direct
+
+measures, and indirect measures);
+
+Assumptions (e.g., factors expected to be in place or to be in evidence); and
+
+Risks (e.g., risks for realization of benefits).
+
+Developing the benefits management plan makes use of the data and information
+
+documented in the business case and needs assessment. For example, the cost-benefit
+
+analyses recorded in the documents illustrate the estimate of costs compared to the value of
+
+the benefits realized by the project. The benefits management plan and the project
+
+management plan include a description of how the business value resulting from the project
+
+becomes part of the organization's ongoing operations, including the metrics to be used.
+
+The metrics provide verification of the business value and validation of the project's
+
+success.
+
+Development and maintenance of the project benefits management plan is an iterative
+
+activity. This document complements the business case, project charter, and project
+
+management plan. The project manager works with the sponsor to ensure that the project
+
+charter, project management plan, and the benefits management plan remain in alignment
+
+throughout the life cycle of the project. See Business Analysis for Practitioners: A Practice
+
+Guide [7], The Standard for Program Management [3], and The Standard for Portfolio
+
+Management [2].
+
+1.2.6.3 PROJECT CHARTER AND PROJECT MANAGEMENT PLAN
+
+The project charter is defined as a document issued by the project sponsor that formally
+
+authorizes the existence of a project and provides the project manager with the authority to
+
+apply organizational resources to project activities.
+
+62 The project management plan is defined as the document that describes how the project
+
+will be executed, monitored, and controlled.
+
+See Section 4 on Project Integration Management for more information on the project
+
+charter and the project management plan.
+
+1.2.6.4 PROJECT SUCCESS MEASURES
+
+One of the most common challenges in project management is determining whether or
+
+not a project is successful.
+
+Traditionally, the project management metrics of time, cost, scope, and quality have
+
+been the most important factors in defining the success of a project. More recently,
+
+practitioners and scholars have determined that project success should also be measured
+
+with consideration toward achievement of the project objectives.
+
+Project stakeholders may have different ideas as to what the successful completion of a
+
+project will look like and which factors are the most important. It is critical to clearly
+
+document the project objectives and to select objectives that are measurable. Three
+
+questions that the key stakeholders and the project manager should answer are:
+
+What does success look like for this project?
+
+How will success be measured?
+
+What factors may impact success?
+
+The answer to these questions should be documented and agreed upon by the key
+
+stakeholders and the project manager.
+
+Project success may include additional criteria linked to the organizational strategy and
+
+to the delivery of business results. These project objectives may include but are not limited
+
+to:
+
+Completing the project benefits management plan;
+
+Meeting the agreed-upon financial measures documented in the business case.
+
+These financial measures may include but are not limited to:
+
+Net present value (NPV),
+
+Return on investment (ROI),
+
+Internal rate of return (IRR),
+
+Payback period (PBP), and
+
+Benefit-cost ratio (BCR).
+
+Meeting business case nonfinancial objectives;
+
+Completing movement of an organization from its current state to the desired
+
+future state;
+
+63 Fulfilling contract terms and conditions;
+
+Meeting organizational strategy, goals, and objectives;
+
+Achieving stakeholder satisfaction;
+
+Acceptable customer/end-user adoption;
+
+Integration of deliverables into the organization's operating environment;
+
+Achieving agreed-upon quality of delivery;
+
+Meeting governance criteria; and
+
+Achieving other agreed-upon success measures or criteria (e.g., process
+
+throughput).
+
+The project team needs to be able to assess the project situation, balance the demands,
+
+and maintain proactive communication with stakeholders in order to deliver a successful
+
+project.
+
+When the business alignment for a project is constant, the chance for project success
+
+greatly increases because the project remains aligned with the strategic direction of the
+
+organization.
+
+It is possible for a project to be successful from a scope/schedule/budget viewpoint, and
+
+to be unsuccessful from a business viewpoint. This can occur when there is a change in the
+
+business needs or the market environment before the project is completed.
+
+64 2
+
+THE ENVIRONMENT IN WHICH PROJECTS
+
+OPERATE
+
+2.1 OVERVIEW
+
+Projects exist and operate in environments that may have an influence on them. These
+
+influences can have a favorable or unfavorable impact on the project. Two major categories
+
+of influences are enterprise environmental factors (EEFs) and organizational process assets
+
+(OPAs).
+
+EEFs originate from the environment outside of the project and often outside of the
+
+enterprise. EEFs may have an impact at the organizational, portfolio, program, or project
+
+level. See Section 2.2 for additional information on EEFs.
+
+OPAs are internal to the organization. These may arise from the organization itself, a
+
+portfolio, a program, another project, or a combination of these. Figure 2-1 shows the
+
+breakdown of project influences into EEFs and OPAs. See Section 2.3 for additional
+
+information on OPAs.
+
+In addition to EEFs and OPAs, organizational systems play a significant role in the life
+
+65 cycle of the project. System factors that impact the power, influence, interests,
+
+competencies, and political capabilities of the people to act within the organizational system
+
+are discussed further in the section on organizational systems (see Section 2.4).
+
+2.2 ENTERPRISE ENVIRONMENTAL FACTORS
+
+Enterprise environmental factors (EEFs) refer to conditions, not under the control of the
+
+project team, that influence, constrain, or direct the project. These conditions can be
+
+internal and/or external to the organization. EEFs are considered as inputs to many project
+
+management processes, specifically for most planning processes. These factors may enhance
+
+or constrain project management options. In addition, these factors may have a positive or
+
+negative influence on the outcome.
+
+EEFs vary widely in type or nature. These factors need to be considered if the project is
+
+to be effective. EEFs include but are not limited to the factors described in Sections 2.2.1
+
+and 2.2.2.
+
+2.2.1 EEFS INTERNAL TO THE ORGANIZATION
+
+The following EEFs are internal to the organization:
+
+Organizational culture, structure, and governance. Examples include vision,
+
+mission, values, beliefs, cultural norms, leadership style, hierarchy and
+
+authority relationships, organizational style, ethics, and code of conduct.
+
+Geographic distribution of facilities and resources. Examples include factory
+
+locations, virtual teams, shared systems, and cloud computing.
+
+Infrastructure. Examples include existing facilities, equipment, organizational
+
+telecommunications channels, information technology hardware, availability,
+
+and capacity.
+
+Information technology software. Examples include scheduling software tools,
+
+configuration management systems, web interfaces to other online automated
+
+systems, and work authorization systems.
+
+Resource availability. Examples include contracting and purchasing
+
+constraints, approved providers and subcontractors, and collaboration
+
+agreements.
+
+Employee capability. Examples include existing human resources expertise,
+
+skills, competencies, and specialized knowledge.
+
+2.2.2 EEFS EXTERNAL TO THE ORGANIZATION
+
+66 The following EEFs are external to the organization.
+
+Marketplace conditions. Examples include competitors, market share brand
+
+recognition, and trademarks.
+
+Social and cultural influences and issues. Examples include political climate,
+
