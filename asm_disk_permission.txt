@@ -1,0 +1,9 @@
+chown oracle:dba /dev/raw/raw1
+chown oracle:dba /dev/raw/raw2
+chown oracle:dba /dev/raw/raw3
+chown oracle:dba /dev/raw/raw4
+
+chmod 660 /dev/raw/raw1
+chmod 660 /dev/raw/raw2
+chmod 660 /dev/raw/raw3
+chmod 660 /dev/raw/raw4
