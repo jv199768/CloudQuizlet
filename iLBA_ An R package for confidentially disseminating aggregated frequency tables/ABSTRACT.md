@@ -1,0 +1,4 @@
+Statistical agencies frequently release tables derived from micro-data, but small frequency cells may lead to disclosure risks. We present iLBA, an open-source R package for confidential dissemination of aggregated frequency tables. The package implements the Information-Loss-Bounded Aggregation (iLBA) algorithm, which combines Small Cell Adjustment (SCA) at the finest level table with an aggregation procedure that introduces controlled ambiguity while bounding information loss. The software enables users to construct masked finest level tables, generate confidential aggregated tables for selected variables, and obtain masked frequencies for single-cell queries. By providing an accessible implementation of the iLBA method, the package facilitates reproducible and efficient disclosure control for tabular data derived from microdata. 
+
+Keywords: statistical disclosure control, small cell adjustment, k-cell anonymity, information loss, frequency tables 
+
